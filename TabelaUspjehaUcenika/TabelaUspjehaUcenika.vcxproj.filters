@@ -18,9 +18,27 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ucenik.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Razred.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Skola.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ucenik.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Razred.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Skola.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

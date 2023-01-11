@@ -2,7 +2,11 @@
 #include <vector>
 #include <string>
 
+
 namespace TabelaUspjehaUcenika {
+	#include "Ucenik.h"
+	#include "Razred.h"
+	#include "Skola.h"
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -11,6 +15,9 @@ namespace TabelaUspjehaUcenika {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace std;
+
+	vector <Ucenik> sviUcenici;
+	vector <Razred> sviRazredi;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -594,6 +601,7 @@ private: System::Windows::Forms::Button^ button17;
 			// 
 			// psBtnUcenici
 			// 
+			this->psBtnUcenici->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->psBtnUcenici->Font = (gcnew System::Drawing::Font(L"Open Sans", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->psBtnUcenici->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
@@ -2835,6 +2843,7 @@ private: System::Windows::Forms::Button^ button17;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1024, 720);
+			this->Controls->Add(this->pocetnaStrana);
 			this->Controls->Add(this->uceniciStrana);
 			this->Controls->Add(this->izmjeniRazredStrana);
 			this->Controls->Add(this->dodajRazredStrana);
@@ -2843,7 +2852,6 @@ private: System::Windows::Forms::Button^ button17;
 			this->Controls->Add(this->unesiOcjeneStrana);
 			this->Controls->Add(this->rasporediUcenikeStrana);
 			this->Controls->Add(this->razrediStrana);
-			this->Controls->Add(this->pocetnaStrana);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -2927,6 +2935,10 @@ private: System::Windows::Forms::Button^ button17;
 		}
 #pragma endregion
 
+		string spojiImePrezime(string ime, string prezime) {
+			return ime + " " + prezime;
+		}
+
 		//	************* X - IKSEVI - EXIT BUTTONS *************
 
 	private: System::Void xPocetnaStrana_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2971,13 +2983,16 @@ private: System::Windows::Forms::Button^ button17;
 		uceniciStrana->Visible = true;
 		listaUceniciNeURazredu->Items->Clear();
 		listaUceniciURazredu->Items->Clear();
+		Ucenik noviUcenik;
+		noviUcenik.ime = "test";
+		noviUcenik.prezime = "test2";
+		sviUcenici.push_back(noviUcenik);
+		
+		
 		
 
-		vector <string> ucenici{ "Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Al2len Al-Shamali", "Ahmedd Agic", "Emraf durmic", "Edmra helja","Allen Al-Sdhamali", "Ahmed Agdic", "Emrah durfmic", "Emra heslja","Allen Al-Sahamali", "Ahmed Agdic", "Emrah dusrmic", "Emra hfelja","Allen Al-Shamaali", "Ahmed Agdic", "Emrah dufrmic", "Emrsa helja","Aldlen Al-Shamasli", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja","Allen Al-Shamali", "Ahmed Agic", "Emrah durmic", "Emra helja", };
-		
-
-		for (string ime : ucenici) {
-			listaUceniciNeURazredu->Items->Add(gcnew String(ime.c_str()));
+		for (auto ucenik : sviUcenici) {
+			listaUceniciNeURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.ime,ucenik.prezime).c_str()));
 		}
 			
 		
@@ -3063,6 +3078,5 @@ private: System::Void rBtnUnesiOcjene_Click(System::Object^ sender, System::Even
 	razrediStrana->Visible = false;
 	unesiOcjeneStrana->Visible = true;
 }
-
 };
 }
