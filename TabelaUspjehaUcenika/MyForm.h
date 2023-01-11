@@ -3062,6 +3062,13 @@ private: System::Void uoBtnNazad_Click(System::Object^ sender, System::EventArgs
 private: System::Void rBtnUnesiOcjene_Click(System::Object^ sender, System::EventArgs^ e) {
 	razrediStrana->Visible = false;
 	unesiOcjeneStrana->Visible = true;
+	razrediStrana->Visible = false;
+	unesiOcjeneStrana->Visible = true;
+	razrediStrana->Visible = false;
+	unesiOcjeneStrana->Visible = true;
+	razrediStrana->Visible = false;
+	unesiOcjeneStrana->Visible = true;
+
 }
 
 };
