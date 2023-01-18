@@ -8,7 +8,6 @@
 namespace TabelaUspjehaUcenika {
 #include "Ucenik.h"
 #include "Razred.h"
-#include "Skola.h"
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -19,7 +18,10 @@ namespace TabelaUspjehaUcenika {
 	using namespace std;
 
 	vector <Ucenik> sviUcenici;
-	//vector <Razred> sviRazredi;
+	vector <Razred> sviRazredi;
+
+	//pomočni vektori
+	vector <string> predmetiZaNoviRazred;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -196,18 +198,18 @@ private: System::Windows::Forms::Button^ duBtnDodajUcenika;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Panel^ dodajRazredStrana;
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button6;
-	private: System::Windows::Forms::Button^ button7;
-	private: System::Windows::Forms::ListBox^ listBox3;
+private: System::Windows::Forms::Button^ drBtnDodajRazred;
+
+private: System::Windows::Forms::Button^ drBtnIzbrisiPredmet;
+
+private: System::Windows::Forms::Button^ drBtnDodajPredmet;
+private: System::Windows::Forms::ListBox^ drListaPredmeti;
+
+
 	private: System::Windows::Forms::Label^ label19;
 	private: System::Windows::Forms::GroupBox^ groupBox9;
-
-
-	private:
-
-	public protected:
-
+private: System::Windows::Forms::TextBox^ drTFImeRazrednika;
+private: System::Windows::Forms::TextBox^ drTFImeRazreda;
 
 
 
@@ -218,17 +220,28 @@ private: System::Windows::Forms::Button^ duBtnDodajUcenika;
 
 
 
+	private:
 
-	private: System::Windows::Forms::TextBox^ textBox11;
-	private: System::Windows::Forms::TextBox^ textBox12;
+	public protected:
+
+
+
+
+
+
+
+
 
 	private: System::Windows::Forms::Label^ label20;
 
 	private: System::Windows::Forms::Label^ label21;
+private: System::Windows::Forms::TextBox^ drTFPredmet;
 
 
 
-	private: System::Windows::Forms::TextBox^ textBox15;
+
+
+
 	private: System::Windows::Forms::Label^ label25;
 	private: System::Windows::Forms::Panel^ panel10;
 	private: System::Windows::Forms::Button^ drBtnNazad;
@@ -494,17 +507,17 @@ private: System::Windows::Forms::Label^ label44;
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->dodajRazredStrana = (gcnew System::Windows::Forms::Panel());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
+			this->drBtnDodajRazred = (gcnew System::Windows::Forms::Button());
+			this->drBtnIzbrisiPredmet = (gcnew System::Windows::Forms::Button());
+			this->drBtnDodajPredmet = (gcnew System::Windows::Forms::Button());
+			this->drListaPredmeti = (gcnew System::Windows::Forms::ListBox());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->groupBox9 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->drTFImeRazrednika = (gcnew System::Windows::Forms::TextBox());
+			this->drTFImeRazreda = (gcnew System::Windows::Forms::TextBox());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label21 = (gcnew System::Windows::Forms::Label());
-			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
+			this->drTFPredmet = (gcnew System::Windows::Forms::TextBox());
 			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->drBtnNazad = (gcnew System::Windows::Forms::Button());
@@ -1919,10 +1932,10 @@ private: System::Windows::Forms::Label^ label44;
 			// 
 			// dodajRazredStrana
 			// 
-			this->dodajRazredStrana->Controls->Add(this->button5);
-			this->dodajRazredStrana->Controls->Add(this->button6);
-			this->dodajRazredStrana->Controls->Add(this->button7);
-			this->dodajRazredStrana->Controls->Add(this->listBox3);
+			this->dodajRazredStrana->Controls->Add(this->drBtnDodajRazred);
+			this->dodajRazredStrana->Controls->Add(this->drBtnIzbrisiPredmet);
+			this->dodajRazredStrana->Controls->Add(this->drBtnDodajPredmet);
+			this->dodajRazredStrana->Controls->Add(this->drListaPredmeti);
 			this->dodajRazredStrana->Controls->Add(this->label19);
 			this->dodajRazredStrana->Controls->Add(this->groupBox9);
 			this->dodajRazredStrana->Controls->Add(this->panel10);
@@ -1935,66 +1948,70 @@ private: System::Windows::Forms::Label^ label44;
 			this->dodajRazredStrana->Size = System::Drawing::Size(1024, 720);
 			this->dodajRazredStrana->TabIndex = 28;
 			this->dodajRazredStrana->Visible = false;
+			this->dodajRazredStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::dodajRazredStrana_VisibleChanged);
 			// 
-			// button5
+			// drBtnDodajRazred
 			// 
-			this->button5->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->drBtnDodajRazred->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->drBtnDodajRazred->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
-			this->button5->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button5->Location = System::Drawing::Point(269, 434);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(235, 84);
-			this->button5->TabIndex = 27;
-			this->button5->Text = L"Dodaj razred";
-			this->button5->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button5->UseVisualStyleBackColor = false;
+			this->drBtnDodajRazred->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->drBtnDodajRazred->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"drBtnDodajRazred.Image")));
+			this->drBtnDodajRazred->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->drBtnDodajRazred->Location = System::Drawing::Point(269, 434);
+			this->drBtnDodajRazred->Name = L"drBtnDodajRazred";
+			this->drBtnDodajRazred->Size = System::Drawing::Size(235, 84);
+			this->drBtnDodajRazred->TabIndex = 27;
+			this->drBtnDodajRazred->Text = L"Dodaj razred";
+			this->drBtnDodajRazred->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->drBtnDodajRazred->UseVisualStyleBackColor = false;
+			this->drBtnDodajRazred->Click += gcnew System::EventHandler(this, &MyForm::drBtnDodajRazred_Click);
 			// 
-			// button6
+			// drBtnIzbrisiPredmet
 			// 
-			this->button6->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->drBtnIzbrisiPredmet->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->drBtnIzbrisiPredmet->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
-			this->button6->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button6->Location = System::Drawing::Point(406, 329);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(235, 84);
-			this->button6->TabIndex = 26;
-			this->button6->Text = L"izbriši predmet";
-			this->button6->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button6->UseVisualStyleBackColor = false;
+			this->drBtnIzbrisiPredmet->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->drBtnIzbrisiPredmet->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"drBtnIzbrisiPredmet.Image")));
+			this->drBtnIzbrisiPredmet->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->drBtnIzbrisiPredmet->Location = System::Drawing::Point(406, 329);
+			this->drBtnIzbrisiPredmet->Name = L"drBtnIzbrisiPredmet";
+			this->drBtnIzbrisiPredmet->Size = System::Drawing::Size(235, 84);
+			this->drBtnIzbrisiPredmet->TabIndex = 26;
+			this->drBtnIzbrisiPredmet->Text = L"izbriši predmet";
+			this->drBtnIzbrisiPredmet->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->drBtnIzbrisiPredmet->UseVisualStyleBackColor = false;
+			this->drBtnIzbrisiPredmet->Click += gcnew System::EventHandler(this, &MyForm::drBtnIzbrisiPredmet_Click);
 			// 
-			// button7
+			// drBtnDodajPredmet
 			// 
-			this->button7->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button7->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->drBtnDodajPredmet->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->drBtnDodajPredmet->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button7->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.Image")));
-			this->button7->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button7->Location = System::Drawing::Point(135, 330);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(235, 84);
-			this->button7->TabIndex = 25;
-			this->button7->Text = L"Dodaj Predmet";
-			this->button7->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button7->UseVisualStyleBackColor = false;
+			this->drBtnDodajPredmet->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->drBtnDodajPredmet->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"drBtnDodajPredmet.Image")));
+			this->drBtnDodajPredmet->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->drBtnDodajPredmet->Location = System::Drawing::Point(135, 330);
+			this->drBtnDodajPredmet->Name = L"drBtnDodajPredmet";
+			this->drBtnDodajPredmet->Size = System::Drawing::Size(235, 84);
+			this->drBtnDodajPredmet->TabIndex = 25;
+			this->drBtnDodajPredmet->Text = L"Dodaj Predmet";
+			this->drBtnDodajPredmet->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->drBtnDodajPredmet->UseVisualStyleBackColor = false;
+			this->drBtnDodajPredmet->Click += gcnew System::EventHandler(this, &MyForm::drBtnDodajPredmet_Click);
 			// 
-			// listBox3
+			// drListaPredmeti
 			// 
-			this->listBox3->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->drListaPredmeti->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listBox3->FormattingEnabled = true;
-			this->listBox3->ItemHeight = 26;
-			this->listBox3->Location = System::Drawing::Point(703, 132);
-			this->listBox3->Name = L"listBox3";
-			this->listBox3->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listBox3->Size = System::Drawing::Size(188, 446);
-			this->listBox3->TabIndex = 24;
+			this->drListaPredmeti->FormattingEnabled = true;
+			this->drListaPredmeti->ItemHeight = 26;
+			this->drListaPredmeti->Location = System::Drawing::Point(703, 132);
+			this->drListaPredmeti->Name = L"drListaPredmeti";
+			this->drListaPredmeti->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->drListaPredmeti->Size = System::Drawing::Size(188, 446);
+			this->drListaPredmeti->TabIndex = 24;
 			// 
 			// label19
 			// 
@@ -2009,11 +2026,11 @@ private: System::Windows::Forms::Label^ label44;
 			// 
 			// groupBox9
 			// 
-			this->groupBox9->Controls->Add(this->textBox11);
-			this->groupBox9->Controls->Add(this->textBox12);
+			this->groupBox9->Controls->Add(this->drTFImeRazrednika);
+			this->groupBox9->Controls->Add(this->drTFImeRazreda);
 			this->groupBox9->Controls->Add(this->label20);
 			this->groupBox9->Controls->Add(this->label21);
-			this->groupBox9->Controls->Add(this->textBox15);
+			this->groupBox9->Controls->Add(this->drTFPredmet);
 			this->groupBox9->Controls->Add(this->label25);
 			this->groupBox9->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -2024,23 +2041,23 @@ private: System::Windows::Forms::Label^ label44;
 			this->groupBox9->TabStop = false;
 			this->groupBox9->Text = L"Unesite tražene podatke";
 			// 
-			// textBox11
+			// drTFImeRazrednika
 			// 
-			this->textBox11->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->drTFImeRazrednika->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox11->Location = System::Drawing::Point(234, 96);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(176, 33);
-			this->textBox11->TabIndex = 8;
+			this->drTFImeRazrednika->Location = System::Drawing::Point(234, 96);
+			this->drTFImeRazrednika->Name = L"drTFImeRazrednika";
+			this->drTFImeRazrednika->Size = System::Drawing::Size(176, 33);
+			this->drTFImeRazrednika->TabIndex = 8;
 			// 
-			// textBox12
+			// drTFImeRazreda
 			// 
-			this->textBox12->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->drTFImeRazreda->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox12->Location = System::Drawing::Point(234, 48);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(176, 33);
-			this->textBox12->TabIndex = 6;
+			this->drTFImeRazreda->Location = System::Drawing::Point(234, 48);
+			this->drTFImeRazreda->Name = L"drTFImeRazreda";
+			this->drTFImeRazreda->Size = System::Drawing::Size(176, 33);
+			this->drTFImeRazreda->TabIndex = 6;
 			// 
 			// label20
 			// 
@@ -2066,14 +2083,14 @@ private: System::Windows::Forms::Label^ label44;
 			this->label21->Text = L"Ime razrednika:";
 			this->label21->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// textBox15
+			// drTFPredmet
 			// 
-			this->textBox15->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->drTFPredmet->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox15->Location = System::Drawing::Point(234, 144);
-			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(176, 33);
-			this->textBox15->TabIndex = 12;
+			this->drTFPredmet->Location = System::Drawing::Point(234, 144);
+			this->drTFPredmet->Name = L"drTFPredmet";
+			this->drTFPredmet->Size = System::Drawing::Size(176, 33);
+			this->drTFPredmet->TabIndex = 12;
 			// 
 			// label25
 			// 
@@ -3137,17 +3154,17 @@ private: System::Windows::Forms::Label^ label44;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1023, 720);
+			this->Controls->Add(this->razrediStrana);
+			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
+			this->Controls->Add(this->pocetnaStrana);
+			this->Controls->Add(this->tabeleStrana);
+			this->Controls->Add(this->uceniciStrana);
 			this->Controls->Add(this->izmjeniRazredStrana);
 			this->Controls->Add(this->dodajRazredStrana);
 			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->Controls->Add(this->dodajUcenikaStrana);
 			this->Controls->Add(this->unesiOcjeneStrana);
 			this->Controls->Add(this->rasporediUcenikeStrana);
-			this->Controls->Add(this->razrediStrana);
-			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
-			this->Controls->Add(this->pocetnaStrana);
-			this->Controls->Add(this->tabeleStrana);
-			this->Controls->Add(this->uceniciStrana);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -3236,6 +3253,8 @@ private: System::Windows::Forms::Label^ label44;
 		}
 #pragma endregion
 
+		//pomoćne funkcije
+
 		string spojiImePrezime(string ime, string prezime, int ucenikID) {
 			return to_string(ucenikID+1) + " " + ime + " " + prezime;
 		}
@@ -3257,6 +3276,14 @@ private: System::Windows::Forms::Label^ label44;
 			return novoVladanje;
 		}
 
+		bool provjeraUcenikRazredID(int razredID, vector <Ucenik> ucenici) {
+			for (auto ucenik : ucenici) {
+				if (ucenik.getUcenikRazredID() == razredID)
+					return true;
+				else
+					return false;
+			}
+		}
 		/*String^ spojiImePrezime(string ime, string prezime) {
 			return gcnew String(ime.c_str()) + " " + gcnew String(prezime.c_str());
 		}*/
@@ -3294,7 +3321,9 @@ private: System::Windows::Forms::Label^ label44;
 		Application::Exit();
 	}
 
-		   //  ************* X - IKSEVI - EXIT BUTTONS END *************
+		   ///////////////////////////////////////////////////////////////////////////////
+		   //////////////////////		 OTVARANJE FORME    		 /////////////////////
+		   ///////////////////////////////////////////////////////////////////////////////
 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		
@@ -3311,26 +3340,42 @@ private: System::Windows::Forms::Label^ label44;
 		Ukori noviUkor;
 		int ucenikRazredID;
 
-		ifstream inFile("my_file.txt");
+		ifstream inFileUcenici("Ucenici.txt");
 	
 
-		while (inFile >> ucenikID) {
-			inFile >> imeUcenika;
-			inFile >> prezimeUcenika;
-			inFile >> spol;
-			inFile >> vladanje;
-			inFile >> opravdani;
-			inFile >> neopravdani;
-			inFile >> pohvala;
-			inFile >> ukor;
-			inFile >> ucenikRazredID;
+		while (inFileUcenici >> ucenikID) {
+			inFileUcenici >> imeUcenika;
+			inFileUcenici >> prezimeUcenika;
+			inFileUcenici >> spol;
+			inFileUcenici >> vladanje;
+			inFileUcenici >> opravdani;
+			inFileUcenici >> neopravdani;
+			inFileUcenici >> pohvala;
+			inFileUcenici >> ukor;
+			inFileUcenici >> ucenikRazredID;
 
 			novoVladanje = provjeriVladanjeInt(novoVladanje, vladanje);
 
 			Ucenik ucenikBaza(imeUcenika, prezimeUcenika,spol, opravdani, neopravdani, ucenikID, ucenikRazredID ,novoVladanje);
 			sviUcenici.push_back(ucenikBaza);
 		}
-		inFile.close();
+		inFileUcenici.close();
+
+		int razredID;
+		string imeRazreda;
+		string imeRazrednika;
+		vector <string> predmeti;
+
+		ifstream inFileRazredi("Razredi.txt");
+
+
+		while (inFileRazredi >> razredID) {
+			inFileRazredi >> imeRazreda;
+			inFileRazredi >> imeRazrednika;
+			
+		
+		
+		}
 	}
 
 	private: System::Void umBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3386,11 +3431,6 @@ private: System::Windows::Forms::Label^ label44;
 		razrediStrana->Visible = true;
 	}
 
-
-	private: System::Void drBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
-		dodajRazredStrana->Visible = false;
-		razrediStrana->Visible = true;
-	}
 	private: System::Void rBtnDodajRazred_Click(System::Object^ sender, System::EventArgs^ e) {
 		dodajRazredStrana->Visible = true;
 		razrediStrana->Visible = false;
@@ -3519,9 +3559,12 @@ private: System::Windows::Forms::Label^ label44;
 		job2->AutoSize = true;
 		stranaTabelaUspjehaUcenika->Controls->Add(job2);*/
 	}
+		   ///////////////////////////////////////////////////////////////////////////////
+		   //////////////////////		 STRANA DODAJ RAZRED		 /////////////////////
+		   ///////////////////////////////////////////////////////////////////////////////
+			
+
 	private: System::Void duBtnDodajUcenika_Click(System::Object^ sender, System::EventArgs^ e) {
-		//	DODAVANJE UČENIKA //
-		
 		string novoIme = msclr::interop::marshal_as< std::string >(duTFIme->Text); 
 		string novoPrezime = msclr::interop::marshal_as< std::string >(duTFPrezime->Text);
 		string noviSpol = msclr::interop::marshal_as< std::string >(duComboSpol ->Text);
@@ -3587,7 +3630,7 @@ private: System::Windows::Forms::Label^ label44;
 
 		fstream myFile;
 
-		myFile.open("my_file.txt", fstream::app);
+		myFile.open("Ucenici.txt", fstream::app);
 		if (!myFile) {
 			Application::Exit();
 		}
@@ -3605,7 +3648,82 @@ private: System::Windows::Forms::Label^ label44;
 		for (auto ucenik : sviUcenici)
 			duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
 	}
+		   ///////////////////////////////////////////////////////////////////////////////
+		   //////////////////////		 STRANA DODAJ RAZRED		 /////////////////////
+		   ///////////////////////////////////////////////////////////////////////////////
 
+		   
+	string ispisiPredmete(vector <string> predmeti) {
+		size_t brojac{ predmeti.size() };
+	    string ispis = " ";
+		string prazanPredmet = "nema";
+		for (auto predmet : predmeti)
+			ispis += predmet + " ";
+		for (; brojac < 16; brojac++)
+			ispis += prazanPredmet + to_string(brojac) + " ";
+		return ispis;
+	}
+
+	private: System::Void drBtnDodajRazred_Click(System::Object^ sender, System::EventArgs^ e) {
+		int noviRazredID{ 0 };
+
+		for (auto Razred : sviRazredi)
+			noviRazredID++;
+
+		string novoImeRazreda = msclr::interop::marshal_as< std::string >(drTFImeRazreda->Text);
+		string novoImeRazrednika = msclr::interop::marshal_as< std::string >(drTFImeRazrednika->Text);
+		vector <string> noviPredmeti;
+		for (auto predmet : predmetiZaNoviRazred)
+			noviPredmeti.push_back(predmet);
+
+
+
+		Razred noviRazred(noviRazredID, novoImeRazreda, novoImeRazrednika, noviPredmeti);
+		sviRazredi.push_back(noviRazred);
+
+		fstream myFile;
+
+		myFile.open("Razredi.txt", fstream::app);
+		if (!myFile) {
+			Application::Exit();
+		}
+		else {
+			myFile << " \n" <<noviRazred.getRazredID() << " " << noviRazred.getImeRazreda() << " " << noviRazred.getImeRazrednika() << " " << ispisiPredmete(noviRazred.getPredmeti()) << " ";
+		}
+		myFile.close();
+
+		drTFImeRazreda->Clear();
+		drTFImeRazrednika->Clear();
+		drTFPredmet->Clear();
+
+	}
+
+	private: System::Void drBtnDodajPredmet_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (drTFPredmet->TextLength!=0) {
+			drListaPredmeti->Items->Add(drTFPredmet->Text);
+			predmetiZaNoviRazred.push_back(msclr::interop::marshal_as< std::string >(drTFPredmet->Text));
+			drTFPredmet->Clear();
+		}
+		
+	}
+
+	private: System::Void drBtnIzbrisiPredmet_Click(System::Object^ sender, System::EventArgs^ e) {
+		//drListaPredmeti->SelectedItems
+	}
+
+	private: System::Void drBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
+		dodajRazredStrana->Visible = false;
+		razrediStrana->Visible = true;
+	}
+
+	private: System::Void dodajRazredStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+		listaRazredaSaUčenicima->Items->Clear();
+		for (auto razred : sviRazredi)
+			listaRazredaSaUčenicima->Items->Add(gcnew String(razred.getImeRazreda().c_str()));
+
+		listaRazrediBezUcenika->Items->Clear();
+
+	}
 };
 }
 

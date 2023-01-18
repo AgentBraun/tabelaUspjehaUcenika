@@ -21,10 +21,10 @@
     <ClCompile Include="Ucenik.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Razred.cpp">
+    <ClCompile Include="Skola.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Skola.cpp">
+    <ClCompile Include="Razred.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,10 +35,10 @@
     <ClInclude Include="Ucenik.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Razred.h">
+    <ClInclude Include="Skola.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Skola.h">
+    <ClInclude Include="Razred.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
