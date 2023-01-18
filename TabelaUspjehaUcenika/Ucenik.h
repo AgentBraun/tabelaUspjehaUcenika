@@ -2,7 +2,6 @@
 #include <vector>
 #include <string>
 
-
 using namespace std;
 
 struct StructIzostanci {
@@ -30,28 +29,41 @@ enum Ukori {
 
 
 class Ucenik {
-	//private:
-public:
+	private:
+//public:
+	//unešeni podaci
+	int ucenikID;
 	string ime;
 	string prezime;
-	vector <int> nizOcjena;
-	int spol;
-	int opciUspjeh;
+	string spol;
+	Vladanje vladanje; //napraviti funkciju koja će na osnovu neopravdanih časova smanjiti vladanje.
+	
+	int opravdaniIzostanci;
+	int neopravdanIzostanci;
+	bool pohvala{ false };
+	Ukori ukor;
+	vector <int> nizOcjena{};
+
+	
+	int ucenikRazredID;
+
+	//izračunati podaci
+	int opciUspjeh{};
 	int brojNedovoljnih{ 0 };
 	bool neocjenjen{ false };
+	int ukupnoIzostanci{};
 
-	StructIzostanci izostanci;
 
-	Vladanje vladanje; //napraviti funkciju koja će na osnovu neopravdanih časova smanjiti vladanje. 
 	//ako slučajno neko napusti razred, zbog rednog broja, 
-	//umjesto ocjena napisati će se da učenik nije aktivan.
 	bool aktivan{ true };
-	//Staviti checkbox u formi za pohvalu.
-	bool pohvala{ false };
 	bool dioRazreda{ false };
-	Ukori ukor{ nema };
 
-	//public:
+
+	public:
+
+		// Konstrukcija
+	Ucenik(string ime = "Ime", string prezime = "Prezime", string spol = "Musko", int opravdaniSati = 0, int neopravdaniSati = 0, int noviUcenikID=0, Vladanje vladanje = primjerno, Ukori ukor = nema);
+
 		//funkcije
 	void izracunajProsjekOcjena();
 	void izracunajUkupnoIzostanke();
@@ -61,8 +73,9 @@ public:
 	void toggleDioRazreda();
 
 	//Seteri
-	void setimeUcenika(string ime);
-	void setPrezimeUcenika(string prezime);
+	void setUcenikID(int noviID) { this->ucenikID = noviID; }
+	void setimeUcenika(string novoIme) { this->ime = novoIme; }
+	void setPrezimeUcenika(string novoPrezime) { this->prezime = novoPrezime; }
 	void setNizOcjena(vector <int> ocjene);
 	void setIzostanci(int opravdano, int neopravdano);
 	void setVladanje(int ocjena);
@@ -71,17 +84,38 @@ public:
 	void setUkor(int ukor); // provjeriti kako uraditi unos
 
 	//Geteri
-	string getImeUcenika();
-	string getPrezimeUcenika();
-	vector <int> getNizOcjena();
+	int getIDUcenika() { return ucenikID; }
+	string getImeUcenika() {return ime;}
+	string getPrezimeUcenika() { return prezime; }
+	string getSpolUcenika() { return spol; }
+	Vladanje getVladanjeUcenika() { return vladanje; }
+	vector <int> getNizOcjena() {return nizOcjena; }
+	int getOpravdani() { return opravdaniIzostanci; }
+	int getNeopravdani() { return neopravdanIzostanci; }
+	bool getPohvala() {	return pohvala;}
+	Ukori getUkor() { return ukor; }
+	int getUcenikRazredID() { return ucenikRazredID; }
 	int getOpciUspjeh();
 	int getBrojNedovoljnih();
 	bool getNeocjenjen();
-	StructIzostanci getIzostanke() { return izostanci; }
-	string getVladanje(Vladanje vladanje);
+	//string getVladanje(Vladanje vladanje);
 	bool getAktivan();
 	bool getDioRazreda();
-	string getUkor(Ukori ukor);
+	
 };
 
+Ucenik::Ucenik(string novoIme, string novoPrezime, string noviSpol, int noviOpravdaniSati, int noviNeopravdaniSati, int noviUcenikID, Vladanje novoVladanje, Ukori noviUkor) {
+ime = novoIme;
+prezime = novoPrezime;
+spol = noviSpol;
+opravdaniIzostanci = noviOpravdaniSati;
+neopravdanIzostanci = noviNeopravdaniSati;
+ucenikID = noviUcenikID;
+vladanje = novoVladanje;
+ukor = noviUkor;
+}
+// ime(novoIme), prezime(novoPrezime), spol(noviSpol), opravdaniIzostanci(noviOpravdaniSati), neopravdanIzostanci(noviNeopravdaniSati), ucenikID(noviUcenikID), vladanje(novoVladanje), ukor(noviUkor) 
 
+void Ucenik::izracunajUkupnoIzostanke() {
+	this->ukupnoIzostanci = this->opravdaniIzostanci + this->neopravdanIzostanci;
+}

@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include <vector>
 #include <string>
+#include <msclr/marshal_cppstd.h>
+#include <fstream>
 
 
 namespace TabelaUspjehaUcenika {
@@ -17,7 +19,7 @@ namespace TabelaUspjehaUcenika {
 	using namespace std;
 
 	vector <Ucenik> sviUcenici;
-	vector <Razred> sviRazredi;
+	//vector <Razred> sviRazredi;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -102,34 +104,42 @@ namespace TabelaUspjehaUcenika {
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 
 
-	private: System::Windows::Forms::GroupBox^ groupBox2;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox6;
+
+
+
+
+
+
+
+	private: System::Windows::Forms::TextBox^ duTFIme;
+	private: System::Windows::Forms::TextBox^ duTFNeopravdani;
+
+
 	private: System::Windows::Forms::Label^ labelduIme;
-	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::TextBox^ duTFOpravdani;
+
 	private: System::Windows::Forms::Label^ labelduPrezime;
 	private: System::Windows::Forms::Label^ labelduIzostanciNP;
 	private: System::Windows::Forms::Label^ labelduIzostanciOP;
 	private: System::Windows::Forms::Label^ labelduIzostanci;
-	private: System::Windows::Forms::TextBox^ textBox4;
+
+
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::GroupBox^ groupBox4;
-	private: System::Windows::Forms::RadioButton^ radioButton5;
-	public protected: System::Windows::Forms::RadioButton^ radioButton6;
+	private: System::Windows::Forms::ListBox^ duListaSviUcenici;
+
+
+
 	private:
 
-	private: System::Windows::Forms::GroupBox^ groupBox3;
-	private: System::Windows::Forms::RadioButton^ radioButton3;
-	private: System::Windows::Forms::RadioButton^ radioButton4;
-	private: System::Windows::Forms::RadioButton^ radioButton9;
-	private: System::Windows::Forms::RadioButton^ radioButton8;
-	private: System::Windows::Forms::RadioButton^ radioButton7;
-	private: System::Windows::Forms::ListBox^ listBox1;
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^ label2;
-	public protected: System::Windows::Forms::RadioButton^ radioButton10;
+
 	private:
 	private: System::Windows::Forms::Button^ button3;
 	public protected:
@@ -166,7 +176,8 @@ namespace TabelaUspjehaUcenika {
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::TextBox^ textBox10;
 	private: System::Windows::Forms::Label^ label14;
-	private: System::Windows::Forms::Button^ button4;
+private: System::Windows::Forms::Button^ duBtnDodajUcenika;
+
 	private: System::Windows::Forms::Panel^ razrediStrana;
 	private: System::Windows::Forms::Panel^ panel8;
 	private: System::Windows::Forms::Button^ rBtnIzmjeniRazred;
@@ -306,6 +317,14 @@ namespace TabelaUspjehaUcenika {
 	private: System::Windows::Forms::Button^ button20;
 	private: System::Windows::Forms::Button^ button19;
 	private: System::Windows::Forms::Button^ tabBtnTabelaUspjehaUcenika;
+private: System::Windows::Forms::ComboBox^ duComboVladanje;
+private: System::Windows::Forms::TextBox^ duTFPrezime;
+private: System::Windows::Forms::ComboBox^ duComboUkor;
+
+private: System::Windows::Forms::Label^ label49;
+private: System::Windows::Forms::ComboBox^ duComboSpol;
+
+private: System::Windows::Forms::Label^ label44;
 
 
 
@@ -400,33 +419,24 @@ namespace TabelaUspjehaUcenika {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->dodajUcenikaStrana = (gcnew System::Windows::Forms::Panel());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->duBtnDodajUcenika = (gcnew System::Windows::Forms::Button());
+			this->duListaSviUcenici = (gcnew System::Windows::Forms::ListBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioButton10 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton9 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton8 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton6 = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->duComboUkor = (gcnew System::Windows::Forms::ComboBox());
+			this->label49 = (gcnew System::Windows::Forms::Label());
+			this->duComboSpol = (gcnew System::Windows::Forms::ComboBox());
+			this->label44 = (gcnew System::Windows::Forms::Label());
+			this->duComboVladanje = (gcnew System::Windows::Forms::ComboBox());
+			this->duTFPrezime = (gcnew System::Windows::Forms::TextBox());
+			this->duTFIme = (gcnew System::Windows::Forms::TextBox());
+			this->duTFNeopravdani = (gcnew System::Windows::Forms::TextBox());
 			this->labelduIme = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->duTFOpravdani = (gcnew System::Windows::Forms::TextBox());
 			this->labelduPrezime = (gcnew System::Windows::Forms::Label());
 			this->labelduIzostanciNP = (gcnew System::Windows::Forms::Label());
 			this->labelduIzostanciOP = (gcnew System::Windows::Forms::Label());
 			this->labelduIzostanci = (gcnew System::Windows::Forms::Label());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->duBtnIzmjeniUcenika = (gcnew System::Windows::Forms::Button());
@@ -567,6 +577,9 @@ namespace TabelaUspjehaUcenika {
 			this->label46 = (gcnew System::Windows::Forms::Label());
 			this->label45 = (gcnew System::Windows::Forms::Label());
 			this->tabeleStrana = (gcnew System::Windows::Forms::Panel());
+			this->button20 = (gcnew System::Windows::Forms::Button());
+			this->button19 = (gcnew System::Windows::Forms::Button());
+			this->tabBtnTabelaUspjehaUcenika = (gcnew System::Windows::Forms::Button());
 			this->panel19 = (gcnew System::Windows::Forms::Panel());
 			this->tabBtnNazad = (gcnew System::Windows::Forms::Button());
 			this->panel20 = (gcnew System::Windows::Forms::Panel());
@@ -574,9 +587,6 @@ namespace TabelaUspjehaUcenika {
 			this->label40 = (gcnew System::Windows::Forms::Label());
 			this->listBox10 = (gcnew System::Windows::Forms::ListBox());
 			this->label43 = (gcnew System::Windows::Forms::Label());
-			this->tabBtnTabelaUspjehaUcenika = (gcnew System::Windows::Forms::Button());
-			this->button19 = (gcnew System::Windows::Forms::Button());
-			this->button20 = (gcnew System::Windows::Forms::Button());
 			this->pocetnaStrana->SuspendLayout();
 			this->meniPocetnaStrana->SuspendLayout();
 			this->panel1->SuspendLayout();
@@ -587,9 +597,6 @@ namespace TabelaUspjehaUcenika {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->xUcenici))->BeginInit();
 			this->dodajUcenikaStrana->SuspendLayout();
 			this->groupBox1->SuspendLayout();
-			this->groupBox4->SuspendLayout();
-			this->groupBox3->SuspendLayout();
-			this->groupBox2->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->xDodajUcenika))->BeginInit();
@@ -794,6 +801,7 @@ namespace TabelaUspjehaUcenika {
 			this->uceniciStrana->Size = System::Drawing::Size(1024, 720);
 			this->uceniciStrana->TabIndex = 3;
 			this->uceniciStrana->Visible = false;
+			this->uceniciStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::uceniciStrana_VisibleChanged);
 			// 
 			// meniUcenici
 			// 
@@ -939,8 +947,8 @@ namespace TabelaUspjehaUcenika {
 			// 
 			// dodajUcenikaStrana
 			// 
-			this->dodajUcenikaStrana->Controls->Add(this->button4);
-			this->dodajUcenikaStrana->Controls->Add(this->listBox1);
+			this->dodajUcenikaStrana->Controls->Add(this->duBtnDodajUcenika);
+			this->dodajUcenikaStrana->Controls->Add(this->duListaSviUcenici);
 			this->dodajUcenikaStrana->Controls->Add(this->label2);
 			this->dodajUcenikaStrana->Controls->Add(this->groupBox1);
 			this->dodajUcenikaStrana->Controls->Add(this->panel3);
@@ -953,298 +961,193 @@ namespace TabelaUspjehaUcenika {
 			this->dodajUcenikaStrana->Size = System::Drawing::Size(1024, 720);
 			this->dodajUcenikaStrana->TabIndex = 2;
 			this->dodajUcenikaStrana->Visible = false;
+			this->dodajUcenikaStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::dodajUcenikaStrana_VisibleChanged);
 			// 
-			// button4
+			// duBtnDodajUcenika
 			// 
-			this->button4->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->duBtnDodajUcenika->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->duBtnDodajUcenika->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
-			this->button4->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button4->Location = System::Drawing::Point(406, 297);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(235, 84);
-			this->button4->TabIndex = 27;
-			this->button4->Text = L"Dodaj učenika";
-			this->button4->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button4->UseVisualStyleBackColor = false;
+			this->duBtnDodajUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->duBtnDodajUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"duBtnDodajUcenika.Image")));
+			this->duBtnDodajUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->duBtnDodajUcenika->Location = System::Drawing::Point(424, 301);
+			this->duBtnDodajUcenika->Name = L"duBtnDodajUcenika";
+			this->duBtnDodajUcenika->Size = System::Drawing::Size(235, 84);
+			this->duBtnDodajUcenika->TabIndex = 27;
+			this->duBtnDodajUcenika->Text = L"Dodaj učenika";
+			this->duBtnDodajUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->duBtnDodajUcenika->UseVisualStyleBackColor = false;
+			this->duBtnDodajUcenika->Click += gcnew System::EventHandler(this, &MyForm::duBtnDodajUcenika_Click);
 			// 
-			// listBox1
+			// duListaSviUcenici
 			// 
-			this->listBox1->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->duListaSviUcenici->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 26;
-			this->listBox1->Location = System::Drawing::Point(662, 132);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listBox1->Size = System::Drawing::Size(319, 446);
-			this->listBox1->TabIndex = 22;
+			this->duListaSviUcenici->FormattingEnabled = true;
+			this->duListaSviUcenici->ItemHeight = 26;
+			this->duListaSviUcenici->Location = System::Drawing::Point(684, 145);
+			this->duListaSviUcenici->Name = L"duListaSviUcenici";
+			this->duListaSviUcenici->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->duListaSviUcenici->Size = System::Drawing::Size(281, 420);
+			this->duListaSviUcenici->TabIndex = 22;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Open Sans", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Open Sans", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(649, 92);
+			this->label2->Location = System::Drawing::Point(747, 96);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(340, 22);
+			this->label2->Size = System::Drawing::Size(146, 33);
 			this->label2->TabIndex = 21;
-			this->label2->Text = L"Učenici koji su raspoređeni po razredima:";
+			this->label2->Text = L"Svi učenici:";
 			// 
 			// groupBox1
 			// 
-			this->groupBox1->Controls->Add(this->groupBox4);
-			this->groupBox1->Controls->Add(this->groupBox3);
-			this->groupBox1->Controls->Add(this->groupBox2);
-			this->groupBox1->Controls->Add(this->textBox2);
-			this->groupBox1->Controls->Add(this->textBox1);
-			this->groupBox1->Controls->Add(this->textBox6);
+			this->groupBox1->Controls->Add(this->duComboUkor);
+			this->groupBox1->Controls->Add(this->label49);
+			this->groupBox1->Controls->Add(this->duComboSpol);
+			this->groupBox1->Controls->Add(this->label44);
+			this->groupBox1->Controls->Add(this->duComboVladanje);
+			this->groupBox1->Controls->Add(this->duTFPrezime);
+			this->groupBox1->Controls->Add(this->duTFIme);
+			this->groupBox1->Controls->Add(this->duTFNeopravdani);
 			this->groupBox1->Controls->Add(this->labelduIme);
-			this->groupBox1->Controls->Add(this->textBox5);
+			this->groupBox1->Controls->Add(this->duTFOpravdani);
 			this->groupBox1->Controls->Add(this->labelduPrezime);
 			this->groupBox1->Controls->Add(this->labelduIzostanciNP);
 			this->groupBox1->Controls->Add(this->labelduIzostanciOP);
 			this->groupBox1->Controls->Add(this->labelduIzostanci);
-			this->groupBox1->Controls->Add(this->textBox4);
 			this->groupBox1->Controls->Add(this->label1);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox1->Location = System::Drawing::Point(20, 56);
+			this->groupBox1->Location = System::Drawing::Point(20, 126);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(369, 558);
+			this->groupBox1->Size = System::Drawing::Size(381, 437);
 			this->groupBox1->TabIndex = 20;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Unesite tražene podatke";
 			// 
-			// groupBox4
+			// duComboUkor
 			// 
-			this->groupBox4->Controls->Add(this->radioButton10);
-			this->groupBox4->Controls->Add(this->radioButton9);
-			this->groupBox4->Controls->Add(this->radioButton8);
-			this->groupBox4->Controls->Add(this->radioButton7);
-			this->groupBox4->Controls->Add(this->radioButton5);
-			this->groupBox4->Controls->Add(this->radioButton6);
-			this->groupBox4->Location = System::Drawing::Point(58, 422);
-			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(292, 113);
-			this->groupBox4->TabIndex = 21;
-			this->groupBox4->TabStop = false;
-			this->groupBox4->Text = L"Ukor";
-			// 
-			// radioButton10
-			// 
-			this->radioButton10->AutoSize = true;
-			this->radioButton10->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton10->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->duComboUkor->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton10->Location = System::Drawing::Point(6, 37);
-			this->radioButton10->Name = L"radioButton10";
-			this->radioButton10->Size = System::Drawing::Size(99, 38);
-			this->radioButton10->TabIndex = 21;
-			this->radioButton10->TabStop = true;
-			this->radioButton10->Text = L"nema";
-			this->radioButton10->UseVisualStyleBackColor = true;
+			this->duComboUkor->FormattingEnabled = true;
+			this->duComboUkor->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
+				L"Nema", L"Ukor OS", L"Ukor OV", L"Ukor Direktora",
+					L"Ukor NV", L"Isključenje"
+			});
+			this->duComboUkor->Location = System::Drawing::Point(174, 358);
+			this->duComboUkor->Name = L"duComboUkor";
+			this->duComboUkor->Size = System::Drawing::Size(175, 34);
+			this->duComboUkor->TabIndex = 28;
 			// 
-			// radioButton9
+			// label49
 			// 
-			this->radioButton9->AutoSize = true;
-			this->radioButton9->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton9->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label49->AutoSize = true;
+			this->label49->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton9->Location = System::Drawing::Point(204, 69);
-			this->radioButton9->Name = L"radioButton9";
-			this->radioButton9->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->radioButton9->Size = System::Drawing::Size(83, 38);
-			this->radioButton9->TabIndex = 22;
-			this->radioButton9->TabStop = true;
-			this->radioButton9->Text = L"isklj.";
-			this->radioButton9->UseVisualStyleBackColor = true;
+			this->label49->Location = System::Drawing::Point(81, 359);
+			this->label49->Name = L"label49";
+			this->label49->Size = System::Drawing::Size(70, 28);
+			this->label49->TabIndex = 27;
+			this->label49->Text = L"Ukor:";
+			this->label49->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// radioButton8
+			// duComboSpol
 			// 
-			this->radioButton8->AutoSize = true;
-			this->radioButton8->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton8->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->duComboSpol->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton8->Location = System::Drawing::Point(130, 69);
-			this->radioButton8->Name = L"radioButton8";
-			this->radioButton8->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->radioButton8->Size = System::Drawing::Size(67, 38);
-			this->radioButton8->TabIndex = 21;
-			this->radioButton8->TabStop = true;
-			this->radioButton8->Text = L"NV";
-			this->radioButton8->UseVisualStyleBackColor = true;
+			this->duComboSpol->FormattingEnabled = true;
+			this->duComboSpol->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Muško", L"Žensko" });
+			this->duComboSpol->Location = System::Drawing::Point(175, 197);
+			this->duComboSpol->Name = L"duComboSpol";
+			this->duComboSpol->Size = System::Drawing::Size(175, 34);
+			this->duComboSpol->TabIndex = 24;
 			// 
-			// radioButton7
+			// label44
 			// 
-			this->radioButton7->AutoSize = true;
-			this->radioButton7->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton7->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label44->AutoSize = true;
+			this->label44->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton7->Location = System::Drawing::Point(34, 69);
-			this->radioButton7->Name = L"radioButton7";
-			this->radioButton7->Size = System::Drawing::Size(71, 38);
-			this->radioButton7->TabIndex = 2;
-			this->radioButton7->TabStop = true;
-			this->radioButton7->Text = L"dir.";
-			this->radioButton7->UseVisualStyleBackColor = true;
+			this->label44->Location = System::Drawing::Point(89, 202);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(62, 28);
+			this->label44->TabIndex = 23;
+			this->label44->Text = L"Spol:";
+			this->label44->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// radioButton5
+			// duComboVladanje
 			// 
-			this->radioButton5->AutoSize = true;
-			this->radioButton5->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton5->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->duComboVladanje->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton5->Location = System::Drawing::Point(219, 37);
-			this->radioButton5->Name = L"radioButton5";
-			this->radioButton5->Size = System::Drawing::Size(67, 38);
-			this->radioButton5->TabIndex = 1;
-			this->radioButton5->TabStop = true;
-			this->radioButton5->Text = L"OV";
-			this->radioButton5->UseVisualStyleBackColor = true;
+			this->duComboVladanje->FormattingEnabled = true;
+			this->duComboVladanje->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
+				L"Primjerno", L"Vrlo Dobro", L"Dobro", L"Zadovoljavajuće",
+					L"Loše"
+			});
+			this->duComboVladanje->Location = System::Drawing::Point(175, 252);
+			this->duComboVladanje->Name = L"duComboVladanje";
+			this->duComboVladanje->Size = System::Drawing::Size(175, 34);
+			this->duComboVladanje->TabIndex = 22;
 			// 
-			// radioButton6
+			// duTFPrezime
 			// 
-			this->radioButton6->AutoSize = true;
-			this->radioButton6->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton6->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->duTFPrezime->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton6->Location = System::Drawing::Point(131, 37);
-			this->radioButton6->Name = L"radioButton6";
-			this->radioButton6->Size = System::Drawing::Size(66, 38);
-			this->radioButton6->TabIndex = 0;
-			this->radioButton6->TabStop = true;
-			this->radioButton6->Text = L"OS";
-			this->radioButton6->UseVisualStyleBackColor = true;
+			this->duTFPrezime->Location = System::Drawing::Point(175, 143);
+			this->duTFPrezime->Name = L"duTFPrezime";
+			this->duTFPrezime->Size = System::Drawing::Size(176, 36);
+			this->duTFPrezime->TabIndex = 8;
 			// 
-			// groupBox3
+			// duTFIme
 			// 
-			this->groupBox3->Controls->Add(this->radioButton3);
-			this->groupBox3->Controls->Add(this->radioButton4);
-			this->groupBox3->Location = System::Drawing::Point(58, 341);
-			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(293, 81);
-			this->groupBox3->TabIndex = 20;
-			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"Pohvala";
-			// 
-			// radioButton3
-			// 
-			this->radioButton3->AutoSize = true;
-			this->radioButton3->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton3->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->duTFIme->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton3->Location = System::Drawing::Point(195, 37);
-			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(66, 38);
-			this->radioButton3->TabIndex = 1;
-			this->radioButton3->TabStop = true;
-			this->radioButton3->Text = L"NE";
-			this->radioButton3->UseVisualStyleBackColor = true;
+			this->duTFIme->Location = System::Drawing::Point(175, 93);
+			this->duTFIme->Name = L"duTFIme";
+			this->duTFIme->Size = System::Drawing::Size(176, 36);
+			this->duTFIme->TabIndex = 6;
 			// 
-			// radioButton4
+			// duTFNeopravdani
 			// 
-			this->radioButton4->AutoSize = true;
-			this->radioButton4->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton4->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->duTFNeopravdani->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton4->Location = System::Drawing::Point(75, 37);
-			this->radioButton4->Name = L"radioButton4";
-			this->radioButton4->Size = System::Drawing::Size(67, 38);
-			this->radioButton4->TabIndex = 0;
-			this->radioButton4->TabStop = true;
-			this->radioButton4->Text = L"DA";
-			this->radioButton4->UseVisualStyleBackColor = true;
-			// 
-			// groupBox2
-			// 
-			this->groupBox2->Controls->Add(this->radioButton2);
-			this->groupBox2->Controls->Add(this->radioButton1);
-			this->groupBox2->Location = System::Drawing::Point(58, 151);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(293, 81);
-			this->groupBox2->TabIndex = 19;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Spol";
-			// 
-			// radioButton2
-			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton2->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->radioButton2->Location = System::Drawing::Point(171, 37);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(116, 38);
-			this->radioButton2->TabIndex = 1;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"Žensko";
-			this->radioButton2->UseVisualStyleBackColor = true;
-			// 
-			// radioButton1
-			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->radioButton1->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->radioButton1->Location = System::Drawing::Point(54, 37);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(111, 38);
-			this->radioButton1->TabIndex = 0;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Muško";
-			this->radioButton1->UseVisualStyleBackColor = true;
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(174, 103);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(176, 42);
-			this->textBox2->TabIndex = 8;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(174, 55);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(176, 42);
-			this->textBox1->TabIndex = 6;
-			// 
-			// textBox6
-			// 
-			this->textBox6->Location = System::Drawing::Point(304, 293);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(46, 42);
-			this->textBox6->TabIndex = 18;
+			this->duTFNeopravdani->Location = System::Drawing::Point(306, 299);
+			this->duTFNeopravdani->Name = L"duTFNeopravdani";
+			this->duTFNeopravdani->Size = System::Drawing::Size(46, 36);
+			this->duTFNeopravdani->TabIndex = 18;
 			// 
 			// labelduIme
 			// 
 			this->labelduIme->AutoSize = true;
-			this->labelduIme->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->labelduIme->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelduIme->Location = System::Drawing::Point(106, 58);
+			this->labelduIme->Location = System::Drawing::Point(93, 96);
 			this->labelduIme->Name = L"labelduIme";
-			this->labelduIme->Size = System::Drawing::Size(70, 34);
+			this->labelduIme->Size = System::Drawing::Size(58, 28);
 			this->labelduIme->TabIndex = 7;
 			this->labelduIme->Text = L"Ime:";
 			this->labelduIme->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// textBox5
+			// duTFOpravdani
 			// 
-			this->textBox5->Location = System::Drawing::Point(212, 293);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(46, 42);
-			this->textBox5->TabIndex = 17;
+			this->duTFOpravdani->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->duTFOpravdani->Location = System::Drawing::Point(203, 299);
+			this->duTFOpravdani->Name = L"duTFOpravdani";
+			this->duTFOpravdani->Size = System::Drawing::Size(46, 36);
+			this->duTFOpravdani->TabIndex = 17;
 			// 
 			// labelduPrezime
 			// 
 			this->labelduPrezime->AutoSize = true;
-			this->labelduPrezime->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->labelduPrezime->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelduPrezime->Location = System::Drawing::Point(52, 106);
+			this->labelduPrezime->Location = System::Drawing::Point(49, 146);
 			this->labelduPrezime->Name = L"labelduPrezime";
-			this->labelduPrezime->Size = System::Drawing::Size(124, 34);
+			this->labelduPrezime->Size = System::Drawing::Size(102, 28);
 			this->labelduPrezime->TabIndex = 9;
 			this->labelduPrezime->Text = L"Prezime:";
 			this->labelduPrezime->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1252,11 +1155,11 @@ namespace TabelaUspjehaUcenika {
 			// labelduIzostanciNP
 			// 
 			this->labelduIzostanciNP->AutoSize = true;
-			this->labelduIzostanciNP->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelduIzostanciNP->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelduIzostanciNP->Location = System::Drawing::Point(259, 295);
+			this->labelduIzostanciNP->Location = System::Drawing::Point(260, 302);
 			this->labelduIzostanciNP->Name = L"labelduIzostanciNP";
-			this->labelduIzostanciNP->Size = System::Drawing::Size(49, 34);
+			this->labelduIzostanciNP->Size = System::Drawing::Size(41, 28);
 			this->labelduIzostanciNP->TabIndex = 16;
 			this->labelduIzostanciNP->Text = L"NP";
 			this->labelduIzostanciNP->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1264,11 +1167,11 @@ namespace TabelaUspjehaUcenika {
 			// labelduIzostanciOP
 			// 
 			this->labelduIzostanciOP->AutoSize = true;
-			this->labelduIzostanciOP->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelduIzostanciOP->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelduIzostanciOP->Location = System::Drawing::Point(168, 295);
+			this->labelduIzostanciOP->Location = System::Drawing::Point(157, 302);
 			this->labelduIzostanciOP->Name = L"labelduIzostanciOP";
-			this->labelduIzostanciOP->Size = System::Drawing::Size(49, 34);
+			this->labelduIzostanciOP->Size = System::Drawing::Size(41, 28);
 			this->labelduIzostanciOP->TabIndex = 15;
 			this->labelduIzostanciOP->Text = L"OP";
 			this->labelduIzostanciOP->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1276,30 +1179,23 @@ namespace TabelaUspjehaUcenika {
 			// labelduIzostanci
 			// 
 			this->labelduIzostanci->AutoSize = true;
-			this->labelduIzostanci->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->labelduIzostanci->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelduIzostanci->Location = System::Drawing::Point(45, 295);
+			this->labelduIzostanci->Location = System::Drawing::Point(40, 301);
 			this->labelduIzostanci->Name = L"labelduIzostanci";
-			this->labelduIzostanci->Size = System::Drawing::Size(132, 34);
+			this->labelduIzostanci->Size = System::Drawing::Size(111, 28);
 			this->labelduIzostanci->TabIndex = 14;
 			this->labelduIzostanci->Text = L"Izostanci:";
 			this->labelduIzostanci->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(174, 245);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(176, 42);
-			this->textBox4->TabIndex = 12;
-			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(45, 245);
+			this->label1->Location = System::Drawing::Point(42, 253);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(131, 34);
+			this->label1->Size = System::Drawing::Size(109, 28);
 			this->label1->TabIndex = 13;
 			this->label1->Text = L"Vladanje:";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -3126,6 +3022,52 @@ namespace TabelaUspjehaUcenika {
 			this->tabeleStrana->TabIndex = 5;
 			this->tabeleStrana->Visible = false;
 			// 
+			// button20
+			// 
+			this->button20->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->button20->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button20->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button20->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button20->Location = System::Drawing::Point(53, 388);
+			this->button20->Name = L"button20";
+			this->button20->Size = System::Drawing::Size(483, 84);
+			this->button20->TabIndex = 28;
+			this->button20->Text = L"Tabela pregleda vladanja više razreda";
+			this->button20->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->button20->UseVisualStyleBackColor = false;
+			// 
+			// button19
+			// 
+			this->button19->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->button19->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button19->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button19->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button19->Location = System::Drawing::Point(53, 273);
+			this->button19->Name = L"button19";
+			this->button19->Size = System::Drawing::Size(483, 84);
+			this->button19->TabIndex = 27;
+			this->button19->Text = L" Tabela pregleda uspjeha razreda u učenju";
+			this->button19->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->button19->UseVisualStyleBackColor = false;
+			// 
+			// tabBtnTabelaUspjehaUcenika
+			// 
+			this->tabBtnTabelaUspjehaUcenika->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tabBtnTabelaUspjehaUcenika->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->tabBtnTabelaUspjehaUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->tabBtnTabelaUspjehaUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->tabBtnTabelaUspjehaUcenika->Location = System::Drawing::Point(53, 159);
+			this->tabBtnTabelaUspjehaUcenika->Name = L"tabBtnTabelaUspjehaUcenika";
+			this->tabBtnTabelaUspjehaUcenika->Size = System::Drawing::Size(483, 84);
+			this->tabBtnTabelaUspjehaUcenika->TabIndex = 26;
+			this->tabBtnTabelaUspjehaUcenika->Text = L"         Tabela pregleda uspjeha učenika u razredu na kraju polugodišta";
+			this->tabBtnTabelaUspjehaUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->tabBtnTabelaUspjehaUcenika->UseVisualStyleBackColor = false;
+			this->tabBtnTabelaUspjehaUcenika->Click += gcnew System::EventHandler(this, &MyForm::tabBtnTabelaUspjehaUcenika_Click);
+			// 
 			// panel19
 			// 
 			this->panel19->BackColor = System::Drawing::SystemColors::ControlDarkDark;
@@ -3141,7 +3083,6 @@ namespace TabelaUspjehaUcenika {
 			this->tabBtnNazad->Font = (gcnew System::Drawing::Font(L"Open Sans", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tabBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tabBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"tabBtnNazad.Image")));
 			this->tabBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->tabBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->tabBtnNazad->Name = L"tabBtnNazad";
@@ -3165,7 +3106,6 @@ namespace TabelaUspjehaUcenika {
 			// 
 			// pictureBox2
 			// 
-			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->pictureBox2->Location = System::Drawing::Point(1001, 6);
 			this->pictureBox2->Name = L"pictureBox2";
@@ -3210,75 +3150,27 @@ namespace TabelaUspjehaUcenika {
 			this->label43->TabIndex = 1;
 			this->label43->Text = L"Razredi:";
 			// 
-			// tabBtnTabelaUspjehaUcenika
-			// 
-			this->tabBtnTabelaUspjehaUcenika->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tabBtnTabelaUspjehaUcenika->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->tabBtnTabelaUspjehaUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->tabBtnTabelaUspjehaUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"tabBtnTabelaUspjehaUcenika.Image")));
-			this->tabBtnTabelaUspjehaUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->tabBtnTabelaUspjehaUcenika->Location = System::Drawing::Point(53, 159);
-			this->tabBtnTabelaUspjehaUcenika->Name = L"tabBtnTabelaUspjehaUcenika";
-			this->tabBtnTabelaUspjehaUcenika->Size = System::Drawing::Size(483, 84);
-			this->tabBtnTabelaUspjehaUcenika->TabIndex = 26;
-			this->tabBtnTabelaUspjehaUcenika->Text = L"         Tabela pregleda uspjeha učenika u razredu na kraju polugodišta";
-			this->tabBtnTabelaUspjehaUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->tabBtnTabelaUspjehaUcenika->UseVisualStyleBackColor = false;
-			this->tabBtnTabelaUspjehaUcenika->Click += gcnew System::EventHandler(this, &MyForm::tabBtnTabelaUspjehaUcenika_Click);
-			// 
-			// button19
-			// 
-			this->button19->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button19->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button19->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button19.Image")));
-			this->button19->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button19->Location = System::Drawing::Point(53, 273);
-			this->button19->Name = L"button19";
-			this->button19->Size = System::Drawing::Size(483, 84);
-			this->button19->TabIndex = 27;
-			this->button19->Text = L" Tabela pregleda uspjeha razreda u učenju";
-			this->button19->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button19->UseVisualStyleBackColor = false;
-			// 
-			// button20
-			// 
-			this->button20->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button20->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button20->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button20.Image")));
-			this->button20->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button20->Location = System::Drawing::Point(53, 388);
-			this->button20->Name = L"button20";
-			this->button20->Size = System::Drawing::Size(483, 84);
-			this->button20->TabIndex = 28;
-			this->button20->Text = L"Tabela pregleda vladanja više razreda";
-			this->button20->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button20->UseVisualStyleBackColor = false;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1023, 720);
-			this->Controls->Add(this->tabeleStrana);
-			this->Controls->Add(this->uceniciStrana);
-			this->Controls->Add(this->izmjeniRazredStrana);
-			this->Controls->Add(this->dodajRazredStrana);
-			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->Controls->Add(this->dodajUcenikaStrana);
 			this->Controls->Add(this->unesiOcjeneStrana);
 			this->Controls->Add(this->rasporediUcenikeStrana);
 			this->Controls->Add(this->razrediStrana);
 			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
 			this->Controls->Add(this->pocetnaStrana);
+			this->Controls->Add(this->tabeleStrana);
+			this->Controls->Add(this->uceniciStrana);
+			this->Controls->Add(this->izmjeniRazredStrana);
+			this->Controls->Add(this->dodajRazredStrana);
+			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->pocetnaStrana->ResumeLayout(false);
 			this->pocetnaStrana->PerformLayout();
 			this->meniPocetnaStrana->ResumeLayout(false);
@@ -3295,12 +3187,6 @@ namespace TabelaUspjehaUcenika {
 			this->dodajUcenikaStrana->PerformLayout();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
-			this->groupBox4->ResumeLayout(false);
-			this->groupBox4->PerformLayout();
-			this->groupBox3->ResumeLayout(false);
-			this->groupBox3->PerformLayout();
-			this->groupBox2->ResumeLayout(false);
-			this->groupBox2->PerformLayout();
 			this->panel3->ResumeLayout(false);
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
@@ -3372,6 +3258,10 @@ namespace TabelaUspjehaUcenika {
 			return ime + " " + prezime;
 		}
 
+		/*String^ spojiImePrezime(string ime, string prezime) {
+			return gcnew String(ime.c_str()) + " " + gcnew String(prezime.c_str());
+		}*/
+
 		//	************* X - IKSEVI - EXIT BUTTONS *************
 
 	private: System::Void xPocetnaStrana_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3407,35 +3297,40 @@ namespace TabelaUspjehaUcenika {
 
 		   //  ************* X - IKSEVI - EXIT BUTTONS END *************
 
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		
+		string imeUcenika;
+		string prezimeUcenika;
+		int ucenikID;
+		ifstream inFile("my_file.txt");
+	
+
+		while (inFile >> ucenikID) {
+			inFile >> imeUcenika;
+			inFile >> prezimeUcenika;
+			Ucenik ucenikBaza(imeUcenika, prezimeUcenika,"muško", 2, 2, ucenikID);
+			sviUcenici.push_back(ucenikBaza);
+		}
+	
+	}
+
 	private: System::Void umBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
 		pocetnaStrana->Visible = true;
 		uceniciStrana->Visible = false;
 	}
+
+	private: System::Void uceniciStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+		listaUceniciNeURazredu->Items->Clear();
+		listaUceniciURazredu->Items->Clear();
+		
+		for (auto ucenik:sviUcenici)
+			listaUceniciNeURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika()).c_str()));
+	}
+
 	private: System::Void psBtnUcenici_Click(System::Object^ sender, System::EventArgs^ e) {
 		pocetnaStrana->Visible = false;
 		uceniciStrana->Visible = true;
-		listaUceniciNeURazredu->Items->Clear();
-		listaUceniciURazredu->Items->Clear();
-		Ucenik noviUcenik;
-		noviUcenik.ime = "test";
-		noviUcenik.prezime = "test2";
-		sviUcenici.push_back(noviUcenik);
-
-
-
-
-		for (auto ucenik : sviUcenici) {
-			listaUceniciNeURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.ime, ucenik.prezime).c_str()));
-		}
-
-
-
-
 	}
-
-
-
-
 
 	private: System::Void umBtnDodajUcenika_Click(System::Object^ sender, System::EventArgs^ e) {
 		uceniciStrana->Visible = false;
@@ -3508,9 +3403,6 @@ namespace TabelaUspjehaUcenika {
 		razrediStrana->Visible = false;
 		unesiOcjeneStrana->Visible = true;
 	}
-
-
-
 
 	private: System::Void psBtnTabele_Click(System::Object^ sender, System::EventArgs^ e) {
 		pocetnaStrana->Visible = false;
@@ -3605,7 +3497,67 @@ namespace TabelaUspjehaUcenika {
 		job2->AutoSize = true;
 		stranaTabelaUspjehaUcenika->Controls->Add(job2);*/
 	}
-	};
+	private: System::Void duBtnDodajUcenika_Click(System::Object^ sender, System::EventArgs^ e) {
+		string novoIme = msclr::interop::marshal_as< std::string >(duTFIme->Text); 
+		string novoPrezime = msclr::interop::marshal_as< std::string >(duTFPrezime->Text);
+		string noviSpol = msclr::interop::marshal_as< std::string >(duComboSpol ->Text);
+		Vladanje novoVladanjeEnm;
+
+		switch (duComboVladanje->SelectedIndex)
+		{
+		case 1: novoVladanjeEnm = vrloDobro;
+			break;
+		case 2: novoVladanjeEnm = dobro;
+			break;
+		case 3: novoVladanjeEnm = zadovoljavajuce;
+			break;
+		case 4: novoVladanjeEnm = lose;
+			break;
+		default: novoVladanjeEnm = primjerno;
+			break;
+		}
+
+		
+		int noviOpravdani = stoi(msclr::interop::marshal_as< std::string >(duTFOpravdani ->Text));
+		int noviNeopravdani = stoi(msclr::interop::marshal_as< std::string >(duTFNeopravdani->Text));
+		
+		int noviUcenikID{ 0 };
+		for (auto ucenik : sviUcenici)
+			noviUcenikID++;
+
+		
+		Ucenik noviUcenik(novoIme, novoPrezime, noviSpol, noviOpravdani, noviNeopravdani, noviUcenikID, novoVladanjeEnm);
+		noviUcenik.izracunajUkupnoIzostanke();
+		sviUcenici.push_back(noviUcenik);
+
+		duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(noviUcenik.getImeUcenika(), noviUcenik.getPrezimeUcenika()).c_str()));
+		
+
+		duTFIme->Text = "";
+		duTFPrezime->Text = "";
+		duTFOpravdani->Text = "";
+		duTFNeopravdani->Text = "";
+		duComboSpol->Text = "";
+		duComboVladanje -> Text = "";
+
+		fstream myFile;
+
+		myFile.open("my_file.txt", fstream::app);
+		if (!myFile) {
+			Application::Exit();
+		}
+		else {
+			myFile << " \n" << noviUcenik.getIDUcenika() << " " << noviUcenik.getImeUcenika() << " " << noviUcenik.getPrezimeUcenika() << " ";
+		}
+		myFile.close();
+	}
+
+
+private: System::Void dodajUcenikaStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+	for (auto ucenik : sviUcenici)
+		duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika()).c_str()));
+}
+};
 }
 
 

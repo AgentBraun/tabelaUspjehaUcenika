@@ -397,7 +397,7 @@
         AQBry4HPUh/zWwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="duBtnDodajUcenika.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
         1wAAAdcBjJIIaAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAcaSURBVHhe7Zp9
@@ -845,7 +845,7 @@
   <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        UgAAAVIBhBvhDQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAArISURBVHhe5ZsN
+        UAAAAVAB++UihAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAArISURBVHhe5ZsN
         cBTlGcepVcd2OgMKd7l8MFqVgOCABASkziCKJFC0oIBVAtpRILmjigUFUdR+0OJHDeIotUggUAIJH6JE
         evm6vSQwFEm5j6jQKigFBBEQFUlyudunz3vwht19/3e5nDATxp353eSe7Pt/n99m7253b9OJiOIT1NKY
         ZcxHTITcbxFVFTWTVvwJbV0/GI5BBLV0kNPEOf/hnCw4BhHUujMrmN1qzob+cEwcYLGVoDaJOcFQK2JC
@@ -1383,4 +1383,10 @@
         AQBry4HPUh/zWwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="listaPredmetaUcenika.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>36</value>
+  </metadata>
 </root>
