@@ -4,12 +4,6 @@
 
 using namespace std;
 
-struct StructIzostanci {
-	int opravdano;
-	int neopravdano;
-	int ukupno;
-};
-
 enum Vladanje {
 	lose = 1,
 	zadovoljavajuce,
@@ -45,7 +39,7 @@ class Ucenik {
 	vector <int> nizOcjena{};
 
 	
-	int ucenikRazredID;
+	int ucenikRazredID{100};
 
 	//izračunati podaci
 	int opciUspjeh{};
@@ -62,7 +56,7 @@ class Ucenik {
 	public:
 
 		// Konstrukcija
-	Ucenik(string ime = "Ime", string prezime = "Prezime", string spol = "Musko", int opravdaniSati = 0, int neopravdaniSati = 0, int noviUcenikID=0, Vladanje vladanje = primjerno, Ukori ukor = nema);
+	Ucenik(string ime = "Ime", string prezime = "Prezime", string spol = "Musko", int opravdaniSati = 0, int neopravdaniSati = 0, int noviUcenikID=0, int noviUcenikRazredID=100, Vladanje vladanje = primjerno, Ukori ukor = nema);
 
 		//funkcije
 	void izracunajProsjekOcjena();
@@ -104,16 +98,18 @@ class Ucenik {
 	
 };
 
-Ucenik::Ucenik(string novoIme, string novoPrezime, string noviSpol, int noviOpravdaniSati, int noviNeopravdaniSati, int noviUcenikID, Vladanje novoVladanje, Ukori noviUkor) {
+Ucenik::Ucenik(string novoIme, string novoPrezime, string noviSpol, int noviOpravdaniSati, int noviNeopravdaniSati, int noviUcenikID, int noviUcenikRazredID, Vladanje novoVladanje, Ukori noviUkor) {
 ime = novoIme;
 prezime = novoPrezime;
 spol = noviSpol;
 opravdaniIzostanci = noviOpravdaniSati;
 neopravdanIzostanci = noviNeopravdaniSati;
 ucenikID = noviUcenikID;
+ucenikRazredID = noviUcenikRazredID;
 vladanje = novoVladanje;
 ukor = noviUkor;
 }
+
 // ime(novoIme), prezime(novoPrezime), spol(noviSpol), opravdaniIzostanci(noviOpravdaniSati), neopravdanIzostanci(noviNeopravdaniSati), ucenikID(noviUcenikID), vladanje(novoVladanje), ukor(noviUkor) 
 
 void Ucenik::izracunajUkupnoIzostanke() {

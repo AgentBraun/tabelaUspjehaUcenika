@@ -87,7 +87,7 @@ namespace TabelaUspjehaUcenika {
 
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::Button^ duBtnIzmjeniUcenika;
+
 	private: System::Windows::Forms::Button^ duBtnNazad;
 
 
@@ -439,7 +439,6 @@ private: System::Windows::Forms::Label^ label44;
 			this->labelduIzostanci = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->duBtnIzmjeniUcenika = (gcnew System::Windows::Forms::Button());
 			this->duBtnNazad = (gcnew System::Windows::Forms::Button());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->xDodajUcenika = (gcnew System::Windows::Forms::PictureBox());
@@ -1203,29 +1202,12 @@ private: System::Windows::Forms::Label^ label44;
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->panel3->Controls->Add(this->duBtnIzmjeniUcenika);
 			this->panel3->Controls->Add(this->duBtnNazad);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->panel3->Location = System::Drawing::Point(0, 620);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(1024, 100);
 			this->panel3->TabIndex = 5;
-			// 
-			// duBtnIzmjeniUcenika
-			// 
-			this->duBtnIzmjeniUcenika->Font = (gcnew System::Drawing::Font(L"Open Sans", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->duBtnIzmjeniUcenika->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->duBtnIzmjeniUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"duBtnIzmjeniUcenika.Image")));
-			this->duBtnIzmjeniUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->duBtnIzmjeniUcenika->Location = System::Drawing::Point(732, 15);
-			this->duBtnIzmjeniUcenika->Name = L"duBtnIzmjeniUcenika";
-			this->duBtnIzmjeniUcenika->Size = System::Drawing::Size(178, 74);
-			this->duBtnIzmjeniUcenika->TabIndex = 2;
-			this->duBtnIzmjeniUcenika->Text = L"Izmjeni učenika";
-			this->duBtnIzmjeniUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->duBtnIzmjeniUcenika->UseVisualStyleBackColor = true;
-			this->duBtnIzmjeniUcenika->Click += gcnew System::EventHandler(this, &MyForm::duBtnIzmjeniUcenika_Click);
 			// 
 			// duBtnNazad
 			// 
@@ -3155,6 +3137,9 @@ private: System::Windows::Forms::Label^ label44;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1023, 720);
+			this->Controls->Add(this->izmjeniRazredStrana);
+			this->Controls->Add(this->dodajRazredStrana);
+			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->Controls->Add(this->dodajUcenikaStrana);
 			this->Controls->Add(this->unesiOcjeneStrana);
 			this->Controls->Add(this->rasporediUcenikeStrana);
@@ -3163,9 +3148,6 @@ private: System::Windows::Forms::Label^ label44;
 			this->Controls->Add(this->pocetnaStrana);
 			this->Controls->Add(this->tabeleStrana);
 			this->Controls->Add(this->uceniciStrana);
-			this->Controls->Add(this->izmjeniRazredStrana);
-			this->Controls->Add(this->dodajRazredStrana);
-			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -3254,8 +3236,25 @@ private: System::Windows::Forms::Label^ label44;
 		}
 #pragma endregion
 
-		string spojiImePrezime(string ime, string prezime) {
-			return ime + " " + prezime;
+		string spojiImePrezime(string ime, string prezime, int ucenikID) {
+			return to_string(ucenikID+1) + " " + ime + " " + prezime;
+		}
+
+		Vladanje provjeriVladanjeInt(Vladanje novoVladanje, int broj) {
+			switch (broj)
+			{
+			case 1: novoVladanje = vrloDobro;
+				break;
+			case 2: novoVladanje = dobro;
+				break;
+			case 3: novoVladanje = zadovoljavajuce;
+				break;
+			case 4: novoVladanje = lose;
+				break;
+			default: novoVladanje = primjerno;
+				break;
+			}
+			return novoVladanje;
 		}
 
 		/*String^ spojiImePrezime(string ime, string prezime) {
@@ -3302,16 +3301,36 @@ private: System::Windows::Forms::Label^ label44;
 		string imeUcenika;
 		string prezimeUcenika;
 		int ucenikID;
+		string spol;
+		int vladanje;
+		int opravdani;
+		int neopravdani;
+		bool pohvala;
+		int ukor;
+		Vladanje novoVladanje;
+		Ukori noviUkor;
+		int ucenikRazredID;
+
 		ifstream inFile("my_file.txt");
 	
 
 		while (inFile >> ucenikID) {
 			inFile >> imeUcenika;
 			inFile >> prezimeUcenika;
-			Ucenik ucenikBaza(imeUcenika, prezimeUcenika,"muško", 2, 2, ucenikID);
+			inFile >> spol;
+			inFile >> vladanje;
+			inFile >> opravdani;
+			inFile >> neopravdani;
+			inFile >> pohvala;
+			inFile >> ukor;
+			inFile >> ucenikRazredID;
+
+			novoVladanje = provjeriVladanjeInt(novoVladanje, vladanje);
+
+			Ucenik ucenikBaza(imeUcenika, prezimeUcenika,spol, opravdani, neopravdani, ucenikID, ucenikRazredID ,novoVladanje);
 			sviUcenici.push_back(ucenikBaza);
 		}
-	
+		inFile.close();
 	}
 
 	private: System::Void umBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3324,7 +3343,7 @@ private: System::Windows::Forms::Label^ label44;
 		listaUceniciURazredu->Items->Clear();
 		
 		for (auto ucenik:sviUcenici)
-			listaUceniciNeURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika()).c_str()));
+			listaUceniciNeURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
 	}
 
 	private: System::Void psBtnUcenici_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3446,8 +3465,11 @@ private: System::Windows::Forms::Label^ label44;
 
 		vector <string> predmeti{ "Bosanski Jezik i književnost","Engleski jezik", "Tjelesni i zdravstveni odgoj", "Historija", "Informatika", "Matematika", "Fizika", "Socijalna demokratija", "Mehanički elementi" };
 		vector <int> ocjene{ 1,2,4,5,3,2,4,1,5 };
-		for (auto predmet : predmeti)
+
+		for (auto predmet : predmeti) 
 			listaPredmetaUcenika->Items->Add(gcnew String(predmet.c_str()));
+		
+			
 
 
 
@@ -3498,12 +3520,17 @@ private: System::Windows::Forms::Label^ label44;
 		stranaTabelaUspjehaUcenika->Controls->Add(job2);*/
 	}
 	private: System::Void duBtnDodajUcenika_Click(System::Object^ sender, System::EventArgs^ e) {
+		//	DODAVANJE UČENIKA //
+		
 		string novoIme = msclr::interop::marshal_as< std::string >(duTFIme->Text); 
 		string novoPrezime = msclr::interop::marshal_as< std::string >(duTFPrezime->Text);
 		string noviSpol = msclr::interop::marshal_as< std::string >(duComboSpol ->Text);
 		Vladanje novoVladanjeEnm;
+		Ukori noviUkor;
 
-		switch (duComboVladanje->SelectedIndex)
+		novoVladanjeEnm = provjeriVladanjeInt(novoVladanjeEnm, duComboVladanje->SelectedIndex);
+
+		/*switch (duComboVladanje->SelectedIndex)
 		{
 		case 1: novoVladanjeEnm = vrloDobro;
 			break;
@@ -3515,8 +3542,23 @@ private: System::Windows::Forms::Label^ label44;
 			break;
 		default: novoVladanjeEnm = primjerno;
 			break;
-		}
+		}*/
 
+		switch (duComboUkor->SelectedIndex)
+		{
+		case 1: noviUkor = ukorOS;
+			break;
+		case 2: noviUkor = ukorOV;
+			break;
+		case 3: noviUkor = ukorDirektora;
+			break;
+		case 4: noviUkor = ukorNV;
+			break;
+		case 5: noviUkor = iskljucenje;
+			break;
+		default: noviUkor = nema;
+			break;
+		}
 		
 		int noviOpravdani = stoi(msclr::interop::marshal_as< std::string >(duTFOpravdani ->Text));
 		int noviNeopravdani = stoi(msclr::interop::marshal_as< std::string >(duTFNeopravdani->Text));
@@ -3525,12 +3567,14 @@ private: System::Windows::Forms::Label^ label44;
 		for (auto ucenik : sviUcenici)
 			noviUcenikID++;
 
-		
-		Ucenik noviUcenik(novoIme, novoPrezime, noviSpol, noviOpravdani, noviNeopravdani, noviUcenikID, novoVladanjeEnm);
+		int noviUcenikRazredID{ 100 };
+
+
+		Ucenik noviUcenik(novoIme, novoPrezime, noviSpol, noviOpravdani, noviNeopravdani, noviUcenikID, noviUcenikRazredID, novoVladanjeEnm, noviUkor);
 		noviUcenik.izracunajUkupnoIzostanke();
 		sviUcenici.push_back(noviUcenik);
 
-		duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(noviUcenik.getImeUcenika(), noviUcenik.getPrezimeUcenika()).c_str()));
+		duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(noviUcenik.getImeUcenika(), noviUcenik.getPrezimeUcenika(), noviUcenik.getIDUcenika()).c_str()));
 		
 
 		duTFIme->Text = "";
@@ -3539,6 +3583,7 @@ private: System::Windows::Forms::Label^ label44;
 		duTFNeopravdani->Text = "";
 		duComboSpol->Text = "";
 		duComboVladanje -> Text = "";
+		duComboUkor -> Text = "";
 
 		fstream myFile;
 
@@ -3547,16 +3592,20 @@ private: System::Windows::Forms::Label^ label44;
 			Application::Exit();
 		}
 		else {
-			myFile << " \n" << noviUcenik.getIDUcenika() << " " << noviUcenik.getImeUcenika() << " " << noviUcenik.getPrezimeUcenika() << " ";
+			myFile << " \n" << noviUcenik.getIDUcenika() << " " << noviUcenik.getImeUcenika() << " " << noviUcenik.getPrezimeUcenika() << " "
+				<< noviUcenik.getSpolUcenika() << " " << duComboVladanje->SelectedIndex << " " << noviUcenik.getOpravdani() << " " << noviUcenik.getNeopravdani() << " "
+				<< noviUcenik.getPohvala() << " " << duComboUkor->SelectedIndex << " " << noviUcenik.getUcenikRazredID() << " ";
 		}
 		myFile.close();
 	}
 
 
-private: System::Void dodajUcenikaStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-	for (auto ucenik : sviUcenici)
-		duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika()).c_str()));
-}
+	private: System::Void dodajUcenikaStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+		duListaSviUcenici->Items->Clear();
+		for (auto ucenik : sviUcenici)
+			duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
+	}
+
 };
 }
 

@@ -3,6 +3,6 @@
 #include <string>
 #include <vector>
 
-//void Ucenik::izracunajUkupnoIzostanke() {
-//	this->ukupnoIzostanci = this->opravdaniIzostanci + this->neopravdanIzostanci;
+//void ucenik::izracunajukupnoizostanke() {
+//	this->ukupnoizostanci = this->opravdaniizostanci + this->neopravdanizostanci;
 //}
