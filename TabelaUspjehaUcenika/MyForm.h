@@ -19,6 +19,7 @@ namespace TabelaUspjehaUcenika {
 
 	vector <Ucenik> sviUcenici;
 	vector <Razred> sviRazredi;
+	vector <Ucenik> uceniciBezRazreda;
 
 	//pomočni vektori
 	vector <string> predmetiZaNoviRazred;
@@ -193,7 +194,8 @@ private: System::Windows::Forms::Button^ duBtnDodajUcenika;
 
 
 	private: System::Windows::Forms::Label^ label17;
-	private: System::Windows::Forms::ListBox^ listaRazredaSaUčenicima;
+private: System::Windows::Forms::ListBox^ listaRazredaSaUcenicima;
+
 	private: System::Windows::Forms::ListBox^ listaRazrediBezUcenika;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label18;
@@ -270,13 +272,19 @@ private: System::Windows::Forms::TextBox^ drTFPredmet;
 	private: System::Windows::Forms::PictureBox^ xIzmjeniRazred;
 	private: System::Windows::Forms::Label^ label28;
 	private: System::Windows::Forms::Panel^ rasporediUcenikeStrana;
-	private: System::Windows::Forms::Button^ button13;
-	private: System::Windows::Forms::Button^ button12;
-	private: System::Windows::Forms::Button^ button11;
+private: System::Windows::Forms::Button^ ruBtnPrikaziUcenike;
+
+private: System::Windows::Forms::Button^ ruBtnIzbaciIZRazreda;
+
+private: System::Windows::Forms::Button^ ruBtnUbaciURazred;
+
 	private: System::Windows::Forms::Label^ label32;
-	private: System::Windows::Forms::ListBox^ listBox6;
-	private: System::Windows::Forms::ListBox^ listBox4;
-	private: System::Windows::Forms::ListBox^ listBox5;
+private: System::Windows::Forms::ListBox^ ruListaUceniciURazredu;
+
+private: System::Windows::Forms::ListBox^ ruListaRazredi;
+
+private: System::Windows::Forms::ListBox^ ruListaUceniciBezRazreda;
+
 	private: System::Windows::Forms::Label^ label29;
 	private: System::Windows::Forms::Label^ label30;
 	private: System::Windows::Forms::Panel^ panel14;
@@ -286,12 +294,17 @@ private: System::Windows::Forms::TextBox^ drTFPredmet;
 	private: System::Windows::Forms::Label^ label31;
 	private: System::Windows::Forms::Panel^ unesiOcjeneStrana;
 	private: System::Windows::Forms::Button^ button14;
-	private: System::Windows::Forms::Button^ button15;
-	private: System::Windows::Forms::Button^ button16;
+private: System::Windows::Forms::Button^ uoBtnDodajOcjenu;
+private: System::Windows::Forms::Button^ uoBtnPromjeniOcjenu;
+
+
 	private: System::Windows::Forms::Label^ label33;
-	private: System::Windows::Forms::ListBox^ listBox7;
-	private: System::Windows::Forms::ListBox^ listBox8;
-	private: System::Windows::Forms::ListBox^ listBox9;
+private: System::Windows::Forms::ListBox^ uoListaOcjene;
+
+private: System::Windows::Forms::ListBox^ uoListaPredmeti;
+
+private: System::Windows::Forms::ListBox^ uoListaUceniciURazredu;
+
 	private: System::Windows::Forms::Label^ label34;
 	private: System::Windows::Forms::Label^ label35;
 	private: System::Windows::Forms::Panel^ panel16;
@@ -301,9 +314,11 @@ private: System::Windows::Forms::TextBox^ drTFPredmet;
 	private: System::Windows::Forms::PictureBox^ xUnesiOcjene;
 
 	private: System::Windows::Forms::Label^ label36;
-	private: System::Windows::Forms::TextBox^ textBox17;
+private: System::Windows::Forms::TextBox^ uoTFOcjena;
+
 	private: System::Windows::Forms::Label^ label37;
-	private: System::Windows::Forms::Button^ button17;
+private: System::Windows::Forms::Button^ uoBtnIzbrisiOcjenu;
+
 	private: System::Windows::Forms::Label^ tuuLabelOpciUspjeh;
 
 
@@ -338,6 +353,7 @@ private: System::Windows::Forms::Label^ label49;
 private: System::Windows::Forms::ComboBox^ duComboSpol;
 
 private: System::Windows::Forms::Label^ label44;
+private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 
 
 
@@ -493,7 +509,7 @@ private: System::Windows::Forms::Label^ label44;
 			this->xIzmjeniUcenika = (gcnew System::Windows::Forms::PictureBox());
 			this->iuGlavniNaslov = (gcnew System::Windows::Forms::Label());
 			this->razrediStrana = (gcnew System::Windows::Forms::Panel());
-			this->listaRazredaSaUčenicima = (gcnew System::Windows::Forms::ListBox());
+			this->listaRazredaSaUcenicima = (gcnew System::Windows::Forms::ListBox());
 			this->listaRazrediBezUcenika = (gcnew System::Windows::Forms::ListBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
@@ -543,13 +559,13 @@ private: System::Windows::Forms::Label^ label44;
 			this->xIzmjeniRazred = (gcnew System::Windows::Forms::PictureBox());
 			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->rasporediUcenikeStrana = (gcnew System::Windows::Forms::Panel());
-			this->button13 = (gcnew System::Windows::Forms::Button());
-			this->button12 = (gcnew System::Windows::Forms::Button());
-			this->button11 = (gcnew System::Windows::Forms::Button());
+			this->ruBtnPrikaziUcenike = (gcnew System::Windows::Forms::Button());
+			this->ruBtnIzbaciIZRazreda = (gcnew System::Windows::Forms::Button());
+			this->ruBtnUbaciURazred = (gcnew System::Windows::Forms::Button());
 			this->label32 = (gcnew System::Windows::Forms::Label());
-			this->listBox6 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox4 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox5 = (gcnew System::Windows::Forms::ListBox());
+			this->ruListaUceniciURazredu = (gcnew System::Windows::Forms::ListBox());
+			this->ruListaRazredi = (gcnew System::Windows::Forms::ListBox());
+			this->ruListaUceniciBezRazreda = (gcnew System::Windows::Forms::ListBox());
 			this->label29 = (gcnew System::Windows::Forms::Label());
 			this->label30 = (gcnew System::Windows::Forms::Label());
 			this->panel14 = (gcnew System::Windows::Forms::Panel());
@@ -558,16 +574,16 @@ private: System::Windows::Forms::Label^ label44;
 			this->xRasporediUcenike = (gcnew System::Windows::Forms::PictureBox());
 			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->unesiOcjeneStrana = (gcnew System::Windows::Forms::Panel());
-			this->textBox17 = (gcnew System::Windows::Forms::TextBox());
+			this->uoTFOcjena = (gcnew System::Windows::Forms::TextBox());
 			this->label37 = (gcnew System::Windows::Forms::Label());
-			this->button17 = (gcnew System::Windows::Forms::Button());
+			this->uoBtnIzbrisiOcjenu = (gcnew System::Windows::Forms::Button());
 			this->button14 = (gcnew System::Windows::Forms::Button());
-			this->button15 = (gcnew System::Windows::Forms::Button());
-			this->button16 = (gcnew System::Windows::Forms::Button());
+			this->uoBtnDodajOcjenu = (gcnew System::Windows::Forms::Button());
+			this->uoBtnPromjeniOcjenu = (gcnew System::Windows::Forms::Button());
 			this->label33 = (gcnew System::Windows::Forms::Label());
-			this->listBox7 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox8 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox9 = (gcnew System::Windows::Forms::ListBox());
+			this->uoListaOcjene = (gcnew System::Windows::Forms::ListBox());
+			this->uoListaPredmeti = (gcnew System::Windows::Forms::ListBox());
+			this->uoListaUceniciURazredu = (gcnew System::Windows::Forms::ListBox());
 			this->label34 = (gcnew System::Windows::Forms::Label());
 			this->label35 = (gcnew System::Windows::Forms::Label());
 			this->panel16 = (gcnew System::Windows::Forms::Panel());
@@ -599,6 +615,7 @@ private: System::Windows::Forms::Label^ label44;
 			this->label40 = (gcnew System::Windows::Forms::Label());
 			this->listBox10 = (gcnew System::Windows::Forms::ListBox());
 			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->uoBtnSacuvajOcjene = (gcnew System::Windows::Forms::Button());
 			this->pocetnaStrana->SuspendLayout();
 			this->meniPocetnaStrana->SuspendLayout();
 			this->panel1->SuspendLayout();
@@ -829,6 +846,7 @@ private: System::Windows::Forms::Label^ label44;
 			// 
 			// umBtnIzmjeniUcenika
 			// 
+			this->umBtnIzmjeniUcenika->Enabled = false;
 			this->umBtnIzmjeniUcenika->Font = (gcnew System::Drawing::Font(L"Open Sans", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->umBtnIzmjeniUcenika->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
@@ -1739,7 +1757,7 @@ private: System::Windows::Forms::Label^ label44;
 			// 
 			// razrediStrana
 			// 
-			this->razrediStrana->Controls->Add(this->listaRazredaSaUčenicima);
+			this->razrediStrana->Controls->Add(this->listaRazredaSaUcenicima);
 			this->razrediStrana->Controls->Add(this->listaRazrediBezUcenika);
 			this->razrediStrana->Controls->Add(this->label16);
 			this->razrediStrana->Controls->Add(this->label18);
@@ -1753,18 +1771,19 @@ private: System::Windows::Forms::Label^ label44;
 			this->razrediStrana->Size = System::Drawing::Size(1024, 720);
 			this->razrediStrana->TabIndex = 3;
 			this->razrediStrana->Visible = false;
+			this->razrediStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::razrediStrana_VisibleChanged);
 			// 
-			// listaRazredaSaUčenicima
+			// listaRazredaSaUcenicima
 			// 
-			this->listaRazredaSaUčenicima->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->listaRazredaSaUcenicima->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listaRazredaSaUčenicima->FormattingEnabled = true;
-			this->listaRazredaSaUčenicima->ItemHeight = 26;
-			this->listaRazredaSaUčenicima->Location = System::Drawing::Point(616, 130);
-			this->listaRazredaSaUčenicima->Name = L"listaRazredaSaUčenicima";
-			this->listaRazredaSaUčenicima->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listaRazredaSaUčenicima->Size = System::Drawing::Size(319, 446);
-			this->listaRazredaSaUčenicima->TabIndex = 7;
+			this->listaRazredaSaUcenicima->FormattingEnabled = true;
+			this->listaRazredaSaUcenicima->ItemHeight = 26;
+			this->listaRazredaSaUcenicima->Location = System::Drawing::Point(616, 130);
+			this->listaRazredaSaUcenicima->Name = L"listaRazredaSaUcenicima";
+			this->listaRazredaSaUcenicima->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->listaRazredaSaUcenicima->Size = System::Drawing::Size(319, 446);
+			this->listaRazredaSaUcenicima->TabIndex = 7;
 			// 
 			// listaRazrediBezUcenika
 			// 
@@ -1816,6 +1835,7 @@ private: System::Windows::Forms::Label^ label44;
 			// 
 			// rBtnIzmjeniRazred
 			// 
+			this->rBtnIzmjeniRazred->Enabled = false;
 			this->rBtnIzmjeniRazred->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->rBtnIzmjeniRazred->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
@@ -2400,13 +2420,13 @@ private: System::Windows::Forms::Label^ label44;
 			// 
 			// rasporediUcenikeStrana
 			// 
-			this->rasporediUcenikeStrana->Controls->Add(this->button13);
-			this->rasporediUcenikeStrana->Controls->Add(this->button12);
-			this->rasporediUcenikeStrana->Controls->Add(this->button11);
+			this->rasporediUcenikeStrana->Controls->Add(this->ruBtnPrikaziUcenike);
+			this->rasporediUcenikeStrana->Controls->Add(this->ruBtnIzbaciIZRazreda);
+			this->rasporediUcenikeStrana->Controls->Add(this->ruBtnUbaciURazred);
 			this->rasporediUcenikeStrana->Controls->Add(this->label32);
-			this->rasporediUcenikeStrana->Controls->Add(this->listBox6);
-			this->rasporediUcenikeStrana->Controls->Add(this->listBox4);
-			this->rasporediUcenikeStrana->Controls->Add(this->listBox5);
+			this->rasporediUcenikeStrana->Controls->Add(this->ruListaUceniciURazredu);
+			this->rasporediUcenikeStrana->Controls->Add(this->ruListaRazredi);
+			this->rasporediUcenikeStrana->Controls->Add(this->ruListaUceniciBezRazreda);
 			this->rasporediUcenikeStrana->Controls->Add(this->label29);
 			this->rasporediUcenikeStrana->Controls->Add(this->label30);
 			this->rasporediUcenikeStrana->Controls->Add(this->panel14);
@@ -2419,54 +2439,58 @@ private: System::Windows::Forms::Label^ label44;
 			this->rasporediUcenikeStrana->Size = System::Drawing::Size(1024, 720);
 			this->rasporediUcenikeStrana->TabIndex = 8;
 			this->rasporediUcenikeStrana->Visible = false;
+			this->rasporediUcenikeStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::rasporediUcenikeStrana_VisibleChanged);
 			// 
-			// button13
+			// ruBtnPrikaziUcenike
 			// 
-			this->button13->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button13->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->ruBtnPrikaziUcenike->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->ruBtnPrikaziUcenike->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button13->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button13.Image")));
-			this->button13->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button13->Location = System::Drawing::Point(285, 448);
-			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(235, 84);
-			this->button13->TabIndex = 28;
-			this->button13->Text = L"Prikaži učenike";
-			this->button13->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button13->UseVisualStyleBackColor = false;
+			this->ruBtnPrikaziUcenike->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->ruBtnPrikaziUcenike->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnPrikaziUcenike.Image")));
+			this->ruBtnPrikaziUcenike->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->ruBtnPrikaziUcenike->Location = System::Drawing::Point(285, 448);
+			this->ruBtnPrikaziUcenike->Name = L"ruBtnPrikaziUcenike";
+			this->ruBtnPrikaziUcenike->Size = System::Drawing::Size(235, 84);
+			this->ruBtnPrikaziUcenike->TabIndex = 28;
+			this->ruBtnPrikaziUcenike->Text = L"Prikaži učenike";
+			this->ruBtnPrikaziUcenike->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->ruBtnPrikaziUcenike->UseVisualStyleBackColor = false;
+			this->ruBtnPrikaziUcenike->Click += gcnew System::EventHandler(this, &MyForm::ruBtnPrikaziUcenike_Click);
 			// 
-			// button12
+			// ruBtnIzbaciIZRazreda
 			// 
-			this->button12->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button12->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->ruBtnIzbaciIZRazreda->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->ruBtnIzbaciIZRazreda->Enabled = false;
+			this->ruBtnIzbaciIZRazreda->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button12->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button12.Image")));
-			this->button12->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button12->Location = System::Drawing::Point(285, 307);
-			this->button12->Name = L"button12";
-			this->button12->Size = System::Drawing::Size(235, 84);
-			this->button12->TabIndex = 27;
-			this->button12->Text = L"Izbaci iz razreda";
-			this->button12->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button12->UseVisualStyleBackColor = false;
+			this->ruBtnIzbaciIZRazreda->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->ruBtnIzbaciIZRazreda->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnIzbaciIZRazreda.Image")));
+			this->ruBtnIzbaciIZRazreda->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->ruBtnIzbaciIZRazreda->Location = System::Drawing::Point(285, 307);
+			this->ruBtnIzbaciIZRazreda->Name = L"ruBtnIzbaciIZRazreda";
+			this->ruBtnIzbaciIZRazreda->Size = System::Drawing::Size(235, 84);
+			this->ruBtnIzbaciIZRazreda->TabIndex = 27;
+			this->ruBtnIzbaciIZRazreda->Text = L"Izbaci iz razreda";
+			this->ruBtnIzbaciIZRazreda->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->ruBtnIzbaciIZRazreda->UseVisualStyleBackColor = false;
 			// 
-			// button11
+			// ruBtnUbaciURazred
 			// 
-			this->button11->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button11->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->ruBtnUbaciURazred->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->ruBtnUbaciURazred->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button11->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button11.Image")));
-			this->button11->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button11->Location = System::Drawing::Point(285, 207);
-			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(235, 84);
-			this->button11->TabIndex = 26;
-			this->button11->Text = L"Ubaci u razred";
-			this->button11->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button11->UseVisualStyleBackColor = false;
+			this->ruBtnUbaciURazred->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->ruBtnUbaciURazred->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnUbaciURazred.Image")));
+			this->ruBtnUbaciURazred->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->ruBtnUbaciURazred->Location = System::Drawing::Point(285, 207);
+			this->ruBtnUbaciURazred->Name = L"ruBtnUbaciURazred";
+			this->ruBtnUbaciURazred->Size = System::Drawing::Size(235, 84);
+			this->ruBtnUbaciURazred->TabIndex = 26;
+			this->ruBtnUbaciURazred->Text = L"Ubaci u razred";
+			this->ruBtnUbaciURazred->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->ruBtnUbaciURazred->UseVisualStyleBackColor = false;
+			this->ruBtnUbaciURazred->Click += gcnew System::EventHandler(this, &MyForm::ruBtnUbaciURazred_Click);
 			// 
 			// label32
 			// 
@@ -2479,41 +2503,41 @@ private: System::Windows::Forms::Label^ label44;
 			this->label32->TabIndex = 9;
 			this->label32->Text = L"Razred";
 			// 
-			// listBox6
+			// ruListaUceniciURazredu
 			// 
-			this->listBox6->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->ruListaUceniciURazredu->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listBox6->FormattingEnabled = true;
-			this->listBox6->ItemHeight = 26;
-			this->listBox6->Location = System::Drawing::Point(722, 126);
-			this->listBox6->Name = L"listBox6";
-			this->listBox6->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listBox6->Size = System::Drawing::Size(217, 446);
-			this->listBox6->TabIndex = 8;
+			this->ruListaUceniciURazredu->FormattingEnabled = true;
+			this->ruListaUceniciURazredu->ItemHeight = 26;
+			this->ruListaUceniciURazredu->Location = System::Drawing::Point(722, 126);
+			this->ruListaUceniciURazredu->Name = L"ruListaUceniciURazredu";
+			this->ruListaUceniciURazredu->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->ruListaUceniciURazredu->Size = System::Drawing::Size(217, 446);
+			this->ruListaUceniciURazredu->TabIndex = 8;
 			// 
-			// listBox4
+			// ruListaRazredi
 			// 
-			this->listBox4->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->ruListaRazredi->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listBox4->FormattingEnabled = true;
-			this->listBox4->ItemHeight = 26;
-			this->listBox4->Location = System::Drawing::Point(564, 126);
-			this->listBox4->Name = L"listBox4";
-			this->listBox4->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listBox4->Size = System::Drawing::Size(115, 446);
-			this->listBox4->TabIndex = 7;
+			this->ruListaRazredi->FormattingEnabled = true;
+			this->ruListaRazredi->ItemHeight = 26;
+			this->ruListaRazredi->Location = System::Drawing::Point(564, 126);
+			this->ruListaRazredi->Name = L"ruListaRazredi";
+			this->ruListaRazredi->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->ruListaRazredi->Size = System::Drawing::Size(115, 446);
+			this->ruListaRazredi->TabIndex = 7;
 			// 
-			// listBox5
+			// ruListaUceniciBezRazreda
 			// 
-			this->listBox5->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->ruListaUceniciBezRazreda->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listBox5->FormattingEnabled = true;
-			this->listBox5->ItemHeight = 26;
-			this->listBox5->Location = System::Drawing::Point(26, 130);
-			this->listBox5->Name = L"listBox5";
-			this->listBox5->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listBox5->Size = System::Drawing::Size(217, 446);
-			this->listBox5->TabIndex = 6;
+			this->ruListaUceniciBezRazreda->FormattingEnabled = true;
+			this->ruListaUceniciBezRazreda->ItemHeight = 26;
+			this->ruListaUceniciBezRazreda->Location = System::Drawing::Point(26, 130);
+			this->ruListaUceniciBezRazreda->Name = L"ruListaUceniciBezRazreda";
+			this->ruListaUceniciBezRazreda->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->ruListaUceniciBezRazreda->Size = System::Drawing::Size(217, 446);
+			this->ruListaUceniciBezRazreda->TabIndex = 6;
 			// 
 			// label29
 			// 
@@ -2601,16 +2625,17 @@ private: System::Windows::Forms::Label^ label44;
 			// 
 			// unesiOcjeneStrana
 			// 
-			this->unesiOcjeneStrana->Controls->Add(this->textBox17);
+			this->unesiOcjeneStrana->Controls->Add(this->uoBtnSacuvajOcjene);
+			this->unesiOcjeneStrana->Controls->Add(this->uoTFOcjena);
 			this->unesiOcjeneStrana->Controls->Add(this->label37);
-			this->unesiOcjeneStrana->Controls->Add(this->button17);
+			this->unesiOcjeneStrana->Controls->Add(this->uoBtnIzbrisiOcjenu);
 			this->unesiOcjeneStrana->Controls->Add(this->button14);
-			this->unesiOcjeneStrana->Controls->Add(this->button15);
-			this->unesiOcjeneStrana->Controls->Add(this->button16);
+			this->unesiOcjeneStrana->Controls->Add(this->uoBtnDodajOcjenu);
+			this->unesiOcjeneStrana->Controls->Add(this->uoBtnPromjeniOcjenu);
 			this->unesiOcjeneStrana->Controls->Add(this->label33);
-			this->unesiOcjeneStrana->Controls->Add(this->listBox7);
-			this->unesiOcjeneStrana->Controls->Add(this->listBox8);
-			this->unesiOcjeneStrana->Controls->Add(this->listBox9);
+			this->unesiOcjeneStrana->Controls->Add(this->uoListaOcjene);
+			this->unesiOcjeneStrana->Controls->Add(this->uoListaPredmeti);
+			this->unesiOcjeneStrana->Controls->Add(this->uoListaUceniciURazredu);
 			this->unesiOcjeneStrana->Controls->Add(this->label34);
 			this->unesiOcjeneStrana->Controls->Add(this->label35);
 			this->unesiOcjeneStrana->Controls->Add(this->panel16);
@@ -2623,15 +2648,16 @@ private: System::Windows::Forms::Label^ label44;
 			this->unesiOcjeneStrana->Size = System::Drawing::Size(1024, 720);
 			this->unesiOcjeneStrana->TabIndex = 29;
 			this->unesiOcjeneStrana->Visible = false;
+			this->unesiOcjeneStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::unesiOcjeneStrana_VisibleChanged);
 			// 
-			// textBox17
+			// uoTFOcjena
 			// 
-			this->textBox17->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->uoTFOcjena->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox17->Location = System::Drawing::Point(884, 155);
-			this->textBox17->Name = L"textBox17";
-			this->textBox17->Size = System::Drawing::Size(61, 33);
-			this->textBox17->TabIndex = 30;
+			this->uoTFOcjena->Location = System::Drawing::Point(884, 155);
+			this->uoTFOcjena->Name = L"uoTFOcjena";
+			this->uoTFOcjena->Size = System::Drawing::Size(61, 33);
+			this->uoTFOcjena->TabIndex = 30;
 			// 
 			// label37
 			// 
@@ -2645,21 +2671,21 @@ private: System::Windows::Forms::Label^ label44;
 			this->label37->Text = L"Ocjena:";
 			this->label37->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// button17
+			// uoBtnIzbrisiOcjenu
 			// 
-			this->button17->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button17->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->uoBtnIzbrisiOcjenu->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnIzbrisiOcjenu->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button17->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button17->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button17.Image")));
-			this->button17->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button17->Location = System::Drawing::Point(746, 425);
-			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(235, 84);
-			this->button17->TabIndex = 29;
-			this->button17->Text = L"Izbriši ocjenu";
-			this->button17->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button17->UseVisualStyleBackColor = false;
+			this->uoBtnIzbrisiOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->uoBtnIzbrisiOcjenu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnIzbrisiOcjenu.Image")));
+			this->uoBtnIzbrisiOcjenu->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->uoBtnIzbrisiOcjenu->Location = System::Drawing::Point(746, 401);
+			this->uoBtnIzbrisiOcjenu->Name = L"uoBtnIzbrisiOcjenu";
+			this->uoBtnIzbrisiOcjenu->Size = System::Drawing::Size(235, 84);
+			this->uoBtnIzbrisiOcjenu->TabIndex = 29;
+			this->uoBtnIzbrisiOcjenu->Text = L"Izbriši ocjenu";
+			this->uoBtnIzbrisiOcjenu->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->uoBtnIzbrisiOcjenu->UseVisualStyleBackColor = false;
 			// 
 			// button14
 			// 
@@ -2669,7 +2695,7 @@ private: System::Windows::Forms::Label^ label44;
 			this->button14->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button14.Image")));
 			this->button14->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button14->Location = System::Drawing::Point(244, 204);
+			this->button14->Location = System::Drawing::Point(246, 310);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(235, 84);
 			this->button14->TabIndex = 28;
@@ -2677,37 +2703,37 @@ private: System::Windows::Forms::Label^ label44;
 			this->button14->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->button14->UseVisualStyleBackColor = false;
 			// 
-			// button15
+			// uoBtnDodajOcjenu
 			// 
-			this->button15->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button15->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->uoBtnDodajOcjenu->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnDodajOcjenu->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button15->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button15.Image")));
-			this->button15->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button15->Location = System::Drawing::Point(746, 204);
-			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(235, 84);
-			this->button15->TabIndex = 27;
-			this->button15->Text = L"Dodaj Ocjenu";
-			this->button15->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button15->UseVisualStyleBackColor = false;
+			this->uoBtnDodajOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->uoBtnDodajOcjenu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnDodajOcjenu.Image")));
+			this->uoBtnDodajOcjenu->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->uoBtnDodajOcjenu->Location = System::Drawing::Point(746, 204);
+			this->uoBtnDodajOcjenu->Name = L"uoBtnDodajOcjenu";
+			this->uoBtnDodajOcjenu->Size = System::Drawing::Size(235, 84);
+			this->uoBtnDodajOcjenu->TabIndex = 27;
+			this->uoBtnDodajOcjenu->Text = L"Dodaj Ocjenu";
+			this->uoBtnDodajOcjenu->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->uoBtnDodajOcjenu->UseVisualStyleBackColor = false;
 			// 
-			// button16
+			// uoBtnPromjeniOcjenu
 			// 
-			this->button16->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button16->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->uoBtnPromjeniOcjenu->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnPromjeniOcjenu->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button16->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button16->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button16.Image")));
-			this->button16->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button16->Location = System::Drawing::Point(746, 307);
-			this->button16->Name = L"button16";
-			this->button16->Size = System::Drawing::Size(235, 84);
-			this->button16->TabIndex = 26;
-			this->button16->Text = L"Promjeni ocjene";
-			this->button16->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button16->UseVisualStyleBackColor = false;
+			this->uoBtnPromjeniOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->uoBtnPromjeniOcjenu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnPromjeniOcjenu.Image")));
+			this->uoBtnPromjeniOcjenu->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->uoBtnPromjeniOcjenu->Location = System::Drawing::Point(746, 301);
+			this->uoBtnPromjeniOcjenu->Name = L"uoBtnPromjeniOcjenu";
+			this->uoBtnPromjeniOcjenu->Size = System::Drawing::Size(235, 84);
+			this->uoBtnPromjeniOcjenu->TabIndex = 26;
+			this->uoBtnPromjeniOcjenu->Text = L"Promjeni ocjenu";
+			this->uoBtnPromjeniOcjenu->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->uoBtnPromjeniOcjenu->UseVisualStyleBackColor = false;
 			// 
 			// label33
 			// 
@@ -2720,41 +2746,41 @@ private: System::Windows::Forms::Label^ label44;
 			this->label33->TabIndex = 9;
 			this->label33->Text = L"Predmeti";
 			// 
-			// listBox7
+			// uoListaOcjene
 			// 
-			this->listBox7->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->uoListaOcjene->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listBox7->FormattingEnabled = true;
-			this->listBox7->ItemHeight = 26;
-			this->listBox7->Location = System::Drawing::Point(626, 132);
-			this->listBox7->Name = L"listBox7";
-			this->listBox7->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listBox7->Size = System::Drawing::Size(83, 446);
-			this->listBox7->TabIndex = 8;
+			this->uoListaOcjene->FormattingEnabled = true;
+			this->uoListaOcjene->ItemHeight = 26;
+			this->uoListaOcjene->Location = System::Drawing::Point(626, 132);
+			this->uoListaOcjene->Name = L"uoListaOcjene";
+			this->uoListaOcjene->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->uoListaOcjene->Size = System::Drawing::Size(83, 446);
+			this->uoListaOcjene->TabIndex = 8;
 			// 
-			// listBox8
+			// uoListaPredmeti
 			// 
-			this->listBox8->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->uoListaPredmeti->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listBox8->FormattingEnabled = true;
-			this->listBox8->ItemHeight = 26;
-			this->listBox8->Location = System::Drawing::Point(495, 132);
-			this->listBox8->Name = L"listBox8";
-			this->listBox8->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listBox8->Size = System::Drawing::Size(115, 446);
-			this->listBox8->TabIndex = 7;
+			this->uoListaPredmeti->FormattingEnabled = true;
+			this->uoListaPredmeti->ItemHeight = 26;
+			this->uoListaPredmeti->Location = System::Drawing::Point(495, 132);
+			this->uoListaPredmeti->Name = L"uoListaPredmeti";
+			this->uoListaPredmeti->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->uoListaPredmeti->Size = System::Drawing::Size(115, 446);
+			this->uoListaPredmeti->TabIndex = 7;
 			// 
-			// listBox9
+			// uoListaUceniciURazredu
 			// 
-			this->listBox9->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->uoListaUceniciURazredu->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listBox9->FormattingEnabled = true;
-			this->listBox9->ItemHeight = 26;
-			this->listBox9->Location = System::Drawing::Point(50, 132);
-			this->listBox9->Name = L"listBox9";
-			this->listBox9->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listBox9->Size = System::Drawing::Size(176, 446);
-			this->listBox9->TabIndex = 6;
+			this->uoListaUceniciURazredu->FormattingEnabled = true;
+			this->uoListaUceniciURazredu->ItemHeight = 26;
+			this->uoListaUceniciURazredu->Location = System::Drawing::Point(50, 132);
+			this->uoListaUceniciURazredu->Name = L"uoListaUceniciURazredu";
+			this->uoListaUceniciURazredu->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->uoListaUceniciURazredu->Size = System::Drawing::Size(176, 446);
+			this->uoListaUceniciURazredu->TabIndex = 6;
 			// 
 			// label34
 			// 
@@ -3149,11 +3175,29 @@ private: System::Windows::Forms::Label^ label44;
 			this->label43->TabIndex = 1;
 			this->label43->Text = L"Razredi:";
 			// 
+			// uoBtnSacuvajOcjene
+			// 
+			this->uoBtnSacuvajOcjene->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnSacuvajOcjene->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->uoBtnSacuvajOcjene->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->uoBtnSacuvajOcjene->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnSacuvajOcjene.Image")));
+			this->uoBtnSacuvajOcjene->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->uoBtnSacuvajOcjene->Location = System::Drawing::Point(746, 501);
+			this->uoBtnSacuvajOcjene->Name = L"uoBtnSacuvajOcjene";
+			this->uoBtnSacuvajOcjene->Size = System::Drawing::Size(235, 84);
+			this->uoBtnSacuvajOcjene->TabIndex = 32;
+			this->uoBtnSacuvajOcjene->Text = L"Sačuvaj ocjene";
+			this->uoBtnSacuvajOcjene->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->uoBtnSacuvajOcjene->UseVisualStyleBackColor = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1023, 720);
+			this->Controls->Add(this->unesiOcjeneStrana);
+			this->Controls->Add(this->rasporediUcenikeStrana);
 			this->Controls->Add(this->razrediStrana);
 			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
 			this->Controls->Add(this->pocetnaStrana);
@@ -3163,8 +3207,6 @@ private: System::Windows::Forms::Label^ label44;
 			this->Controls->Add(this->dodajRazredStrana);
 			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->Controls->Add(this->dodajUcenikaStrana);
-			this->Controls->Add(this->unesiOcjeneStrana);
-			this->Controls->Add(this->rasporediUcenikeStrana);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -3288,7 +3330,9 @@ private: System::Windows::Forms::Label^ label44;
 			return gcnew String(ime.c_str()) + " " + gcnew String(prezime.c_str());
 		}*/
 
-		//	************* X - IKSEVI - EXIT BUTTONS *************
+		///////////////////////////////////////////////////////////////////////////////
+		  //////////////////////		IZLAZ IZ APLIKACIJE	   		 /////////////////////
+		  ///////////////////////////////////////////////////////////////////////////////
 
 	private: System::Void xPocetnaStrana_Click(System::Object^ sender, System::EventArgs^ e) {
 		Application::Exit();
@@ -3322,8 +3366,8 @@ private: System::Windows::Forms::Label^ label44;
 	}
 
 		   ///////////////////////////////////////////////////////////////////////////////
-		   //////////////////////		 OTVARANJE FORME    		 /////////////////////
-		   ///////////////////////////////////////////////////////////////////////////////
+		  //////////////////////		POKRETANJE FORME	   		 /////////////////////
+		  ///////////////////////////////////////////////////////////////////////////////
 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		
@@ -3365,6 +3409,7 @@ private: System::Windows::Forms::Label^ label44;
 		string imeRazreda;
 		string imeRazrednika;
 		vector <string> predmeti;
+		string predmet;
 
 		ifstream inFileRazredi("Razredi.txt");
 
@@ -3372,11 +3417,19 @@ private: System::Windows::Forms::Label^ label44;
 		while (inFileRazredi >> razredID) {
 			inFileRazredi >> imeRazreda;
 			inFileRazredi >> imeRazrednika;
-			
-		
-		
+			for (int i{ 0 }; i < 16; i++) {
+				inFileRazredi >> predmet;
+				if (predmet != "nema")
+					predmeti.push_back(predmet);
+			}
+			Razred noviRazred(razredID, imeRazreda, imeRazrednika, predmeti);
+			sviRazredi.push_back(noviRazred);
 		}
 	}
+
+		   ///////////////////////////////////////////////////////////////////////////////
+		 //////////////////////				 NAVIGACIJE		   		 /////////////////////
+		 ///////////////////////////////////////////////////////////////////////////////
 
 	private: System::Void umBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
 		pocetnaStrana->Visible = true;
@@ -3448,6 +3501,7 @@ private: System::Windows::Forms::Label^ label44;
 	private: System::Void ruBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
 		rasporediUcenikeStrana->Visible = false;
 		razrediStrana->Visible = true;
+		uceniciBezRazreda.clear();
 	}
 
 	private: System::Void rBtnRasporediUcenike_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3493,6 +3547,10 @@ private: System::Windows::Forms::Label^ label44;
 		tabeleStrana->Visible = false;
 		pocetnaStrana->Visible = true;
 	}
+
+		   ///////////////////////////////////////////////////////////////////////////////
+		   //////////////////////		 STRANA TABELA UČENIKA		 /////////////////////
+		   ///////////////////////////////////////////////////////////////////////////////
 
 	private: System::Void tabBtnTabelaUspjehaUcenika_Click(System::Object^ sender, System::EventArgs^ e) {
 		System::Windows::Forms::Form::Width = 1023;
@@ -3560,7 +3618,7 @@ private: System::Windows::Forms::Label^ label44;
 		stranaTabelaUspjehaUcenika->Controls->Add(job2);*/
 	}
 		   ///////////////////////////////////////////////////////////////////////////////
-		   //////////////////////		 STRANA DODAJ RAZRED		 /////////////////////
+		   //////////////////////		 STRANA DODAJ UCENIKA		 /////////////////////
 		   ///////////////////////////////////////////////////////////////////////////////
 			
 
@@ -3619,7 +3677,6 @@ private: System::Windows::Forms::Label^ label44;
 
 		duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(noviUcenik.getImeUcenika(), noviUcenik.getPrezimeUcenika(), noviUcenik.getIDUcenika()).c_str()));
 		
-
 		duTFIme->Text = "";
 		duTFPrezime->Text = "";
 		duTFOpravdani->Text = "";
@@ -3695,8 +3752,9 @@ private: System::Windows::Forms::Label^ label44;
 		drTFImeRazreda->Clear();
 		drTFImeRazrednika->Clear();
 		drTFPredmet->Clear();
-
+		drListaPredmeti->Items->Clear();
 	}
+
 
 	private: System::Void drBtnDodajPredmet_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (drTFPredmet->TextLength!=0) {
@@ -3704,7 +3762,6 @@ private: System::Windows::Forms::Label^ label44;
 			predmetiZaNoviRazred.push_back(msclr::interop::marshal_as< std::string >(drTFPredmet->Text));
 			drTFPredmet->Clear();
 		}
-		
 	}
 
 	private: System::Void drBtnIzbrisiPredmet_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3717,12 +3774,87 @@ private: System::Windows::Forms::Label^ label44;
 	}
 
 	private: System::Void dodajRazredStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-		listaRazredaSaUčenicima->Items->Clear();
-		for (auto razred : sviRazredi)
-			listaRazredaSaUčenicima->Items->Add(gcnew String(razred.getImeRazreda().c_str()));
+		drListaPredmeti->Items->Clear();
+	}
 
+
+		   ///////////////////////////////////////////////////////////////////////////////
+		  //////////////////////		 RAZREDI STRANA				 /////////////////////
+		  ///////////////////////////////////////////////////////////////////////////////
+
+	private: System::Void razrediStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		listaRazrediBezUcenika->Items->Clear();
+		listaRazredaSaUcenicima->Items->Clear();
+		for (auto razred : sviRazredi)
+			listaRazrediBezUcenika->Items->Add(gcnew String(razred.getImeRazreda().c_str()));
 
+		for (auto ucenici : sviUcenici)
+			listaRazredaSaUcenicima->Items->Add(gcnew String(ucenici.getImeUcenika().c_str()));
+	}
+
+		   ///////////////////////////////////////////////////////////////////////////////
+		   //////////////////////	 RASPOREDI UČENIKE STRANA		 /////////////////////
+		   ///////////////////////////////////////////////////////////////////////////////
+	
+
+	private: System::Void rasporediUcenikeStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+		ruListaRazredi->Items->Clear();
+		ruListaUceniciBezRazreda->Items->Clear();
+		ruListaUceniciURazredu->Items->Clear();
+
+		for (auto ucenik : sviUcenici) {
+			if (ucenik.getUcenikRazredID() == 100)
+				uceniciBezRazreda.push_back(ucenik);
+		}
+
+		for (auto ucenik:uceniciBezRazreda)
+			ruListaUceniciBezRazreda->Items->Add(gcnew String(ucenik.getImeUcenika().c_str()));
+
+		for (auto razred:sviRazredi)
+			ruListaRazredi->Items->Add(gcnew String(razred.getImeRazreda().c_str()));
+
+		//ruListaUceniciURazredu->Items->Add();
+	}
+
+
+	private: System::Void ruBtnUbaciURazred_Click(System::Object^ sender, System::EventArgs^ e) {
+		//int broj = ruListaUceniciBezRazreda->SelectedIndex;
+		int ucenikID = uceniciBezRazreda[ruListaUceniciBezRazreda->SelectedIndex].getIDUcenika();
+		int razredID = ruListaRazredi->SelectedIndex;
+		for (auto &ucenik : sviUcenici) {
+			if (ucenik.getIDUcenika() == ucenikID)
+				ucenik.setUcenikRazredID(razredID);
+			uceniciBezRazreda.clear();
+			for (auto ucenik : sviUcenici) {
+				if (ucenik.getUcenikRazredID() == 100)
+					uceniciBezRazreda.push_back(ucenik);
+			}
+		}
+		for (auto ucenik : sviUcenici) {
+			if (ucenik.getUcenikRazredID() == razredID)
+			ruListaUceniciURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
+		}
+		ruListaUceniciBezRazreda->Items->Remove(ruListaUceniciBezRazreda->SelectedItem);
+	}
+
+
+	private: System::Void ruBtnPrikaziUcenike_Click(System::Object^ sender, System::EventArgs^ e) {
+		ruListaUceniciURazredu->Items->Clear();
+		int razredID = ruListaRazredi->SelectedIndex;
+		for (auto ucenik : sviUcenici) {
+			if (ucenik.getUcenikRazredID() == razredID)
+			ruListaUceniciURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
+	}
+}
+		   ///////////////////////////////////////////////////////////////////////////////
+		   //////////////////////	 RASPOREDI UČENIKE STRANA		 /////////////////////
+		   ///////////////////////////////////////////////////////////////////////////////
+
+
+	private: System::Void unesiOcjeneStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+		uoListaUceniciURazredu->Items->Clear();
+		uoListaPredmeti->Items->Clear();
+		uoListaOcjene->Items->Clear();
 	}
 };
 }

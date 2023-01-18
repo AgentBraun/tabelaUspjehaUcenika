@@ -76,6 +76,7 @@ class Ucenik {
 	void toggleAktivan();
 	void togglePohvala();
 	void setUkor(int ukor); // provjeriti kako uraditi unos
+	void setUcenikRazredID(int broj);
 
 	//Geteri
 	int getIDUcenika() { return ucenikID; }
@@ -114,4 +115,8 @@ ukor = noviUkor;
 
 void Ucenik::izracunajUkupnoIzostanke() {
 	this->ukupnoIzostanci = this->opravdaniIzostanci + this->neopravdanIzostanci;
+}
+
+void Ucenik::setUcenikRazredID(int broj) {
+	this->ucenikRazredID = broj;
 }
