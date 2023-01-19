@@ -1,0 +1,5 @@
+0 Haski?  Adna Žensko 0 40 0 0 0 100  
+1 Haskic  Sumeja Žensko 0 97 5 0 0 100  
+2 Horic Alen Muško 0 74 4 0 0 100  
+3 Enes Hrustanovic Muško 0 61 12 0 0 100  
+4 Samir Hurem Muško 0 119 3 0 0 100 

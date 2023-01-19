@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <vector>
 #include <string>
+#include <string.h>
 #include <msclr/marshal_cppstd.h>
 #include <fstream>
 
@@ -19,10 +20,12 @@ namespace TabelaUspjehaUcenika {
 
 	vector <Ucenik> sviUcenici;
 	vector <Razred> sviRazredi;
-	vector <Ucenik> uceniciBezRazreda;
+	
 
 	//pomočni vektori
 	vector <string> predmetiZaNoviRazred;
+	vector <Ucenik> uceniciBezRazreda;
+	vector <Razred> razrediBezUcenika;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -293,7 +296,8 @@ private: System::Windows::Forms::ListBox^ ruListaUceniciBezRazreda;
 	private: System::Windows::Forms::PictureBox^ xRasporediUcenike;
 	private: System::Windows::Forms::Label^ label31;
 	private: System::Windows::Forms::Panel^ unesiOcjeneStrana;
-	private: System::Windows::Forms::Button^ button14;
+private: System::Windows::Forms::Button^ uoBtnPrikaziOcjene;
+
 private: System::Windows::Forms::Button^ uoBtnDodajOcjenu;
 private: System::Windows::Forms::Button^ uoBtnPromjeniOcjenu;
 
@@ -354,6 +358,8 @@ private: System::Windows::Forms::ComboBox^ duComboSpol;
 
 private: System::Windows::Forms::Label^ label44;
 private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
+private: System::Windows::Forms::Button^ ruBtnSpremi;
+
 
 
 
@@ -559,6 +565,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->xIzmjeniRazred = (gcnew System::Windows::Forms::PictureBox());
 			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->rasporediUcenikeStrana = (gcnew System::Windows::Forms::Panel());
+			this->ruBtnSpremi = (gcnew System::Windows::Forms::Button());
 			this->ruBtnPrikaziUcenike = (gcnew System::Windows::Forms::Button());
 			this->ruBtnIzbaciIZRazreda = (gcnew System::Windows::Forms::Button());
 			this->ruBtnUbaciURazred = (gcnew System::Windows::Forms::Button());
@@ -574,10 +581,11 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->xRasporediUcenike = (gcnew System::Windows::Forms::PictureBox());
 			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->unesiOcjeneStrana = (gcnew System::Windows::Forms::Panel());
+			this->uoBtnSacuvajOcjene = (gcnew System::Windows::Forms::Button());
 			this->uoTFOcjena = (gcnew System::Windows::Forms::TextBox());
 			this->label37 = (gcnew System::Windows::Forms::Label());
 			this->uoBtnIzbrisiOcjenu = (gcnew System::Windows::Forms::Button());
-			this->button14 = (gcnew System::Windows::Forms::Button());
+			this->uoBtnPrikaziOcjene = (gcnew System::Windows::Forms::Button());
 			this->uoBtnDodajOcjenu = (gcnew System::Windows::Forms::Button());
 			this->uoBtnPromjeniOcjenu = (gcnew System::Windows::Forms::Button());
 			this->label33 = (gcnew System::Windows::Forms::Label());
@@ -615,7 +623,6 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->label40 = (gcnew System::Windows::Forms::Label());
 			this->listBox10 = (gcnew System::Windows::Forms::ListBox());
 			this->label43 = (gcnew System::Windows::Forms::Label());
-			this->uoBtnSacuvajOcjene = (gcnew System::Windows::Forms::Button());
 			this->pocetnaStrana->SuspendLayout();
 			this->meniPocetnaStrana->SuspendLayout();
 			this->panel1->SuspendLayout();
@@ -2420,6 +2427,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			// 
 			// rasporediUcenikeStrana
 			// 
+			this->rasporediUcenikeStrana->Controls->Add(this->ruBtnSpremi);
 			this->rasporediUcenikeStrana->Controls->Add(this->ruBtnPrikaziUcenike);
 			this->rasporediUcenikeStrana->Controls->Add(this->ruBtnIzbaciIZRazreda);
 			this->rasporediUcenikeStrana->Controls->Add(this->ruBtnUbaciURazred);
@@ -2441,6 +2449,23 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->rasporediUcenikeStrana->Visible = false;
 			this->rasporediUcenikeStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::rasporediUcenikeStrana_VisibleChanged);
 			// 
+			// ruBtnSpremi
+			// 
+			this->ruBtnSpremi->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->ruBtnSpremi->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->ruBtnSpremi->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->ruBtnSpremi->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnSpremi.Image")));
+			this->ruBtnSpremi->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->ruBtnSpremi->Location = System::Drawing::Point(285, 495);
+			this->ruBtnSpremi->Name = L"ruBtnSpremi";
+			this->ruBtnSpremi->Size = System::Drawing::Size(235, 81);
+			this->ruBtnSpremi->TabIndex = 29;
+			this->ruBtnSpremi->Text = L" Spremi  učenike";
+			this->ruBtnSpremi->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->ruBtnSpremi->UseVisualStyleBackColor = false;
+			this->ruBtnSpremi->Click += gcnew System::EventHandler(this, &MyForm::ruBtnSpremi_Click);
+			// 
 			// ruBtnPrikaziUcenike
 			// 
 			this->ruBtnPrikaziUcenike->BackColor = System::Drawing::SystemColors::ControlDarkDark;
@@ -2449,7 +2474,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->ruBtnPrikaziUcenike->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->ruBtnPrikaziUcenike->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnPrikaziUcenike.Image")));
 			this->ruBtnPrikaziUcenike->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ruBtnPrikaziUcenike->Location = System::Drawing::Point(285, 448);
+			this->ruBtnPrikaziUcenike->Location = System::Drawing::Point(285, 371);
 			this->ruBtnPrikaziUcenike->Name = L"ruBtnPrikaziUcenike";
 			this->ruBtnPrikaziUcenike->Size = System::Drawing::Size(235, 84);
 			this->ruBtnPrikaziUcenike->TabIndex = 28;
@@ -2467,7 +2492,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->ruBtnIzbaciIZRazreda->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->ruBtnIzbaciIZRazreda->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnIzbaciIZRazreda.Image")));
 			this->ruBtnIzbaciIZRazreda->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ruBtnIzbaciIZRazreda->Location = System::Drawing::Point(285, 307);
+			this->ruBtnIzbaciIZRazreda->Location = System::Drawing::Point(285, 273);
 			this->ruBtnIzbaciIZRazreda->Name = L"ruBtnIzbaciIZRazreda";
 			this->ruBtnIzbaciIZRazreda->Size = System::Drawing::Size(235, 84);
 			this->ruBtnIzbaciIZRazreda->TabIndex = 27;
@@ -2483,7 +2508,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->ruBtnUbaciURazred->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->ruBtnUbaciURazred->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnUbaciURazred.Image")));
 			this->ruBtnUbaciURazred->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ruBtnUbaciURazred->Location = System::Drawing::Point(285, 207);
+			this->ruBtnUbaciURazred->Location = System::Drawing::Point(285, 179);
 			this->ruBtnUbaciURazred->Name = L"ruBtnUbaciURazred";
 			this->ruBtnUbaciURazred->Size = System::Drawing::Size(235, 84);
 			this->ruBtnUbaciURazred->TabIndex = 26;
@@ -2629,7 +2654,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->unesiOcjeneStrana->Controls->Add(this->uoTFOcjena);
 			this->unesiOcjeneStrana->Controls->Add(this->label37);
 			this->unesiOcjeneStrana->Controls->Add(this->uoBtnIzbrisiOcjenu);
-			this->unesiOcjeneStrana->Controls->Add(this->button14);
+			this->unesiOcjeneStrana->Controls->Add(this->uoBtnPrikaziOcjene);
 			this->unesiOcjeneStrana->Controls->Add(this->uoBtnDodajOcjenu);
 			this->unesiOcjeneStrana->Controls->Add(this->uoBtnPromjeniOcjenu);
 			this->unesiOcjeneStrana->Controls->Add(this->label33);
@@ -2650,11 +2675,27 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->unesiOcjeneStrana->Visible = false;
 			this->unesiOcjeneStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::unesiOcjeneStrana_VisibleChanged);
 			// 
+			// uoBtnSacuvajOcjene
+			// 
+			this->uoBtnSacuvajOcjene->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnSacuvajOcjene->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->uoBtnSacuvajOcjene->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->uoBtnSacuvajOcjene->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnSacuvajOcjene.Image")));
+			this->uoBtnSacuvajOcjene->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->uoBtnSacuvajOcjene->Location = System::Drawing::Point(246, 495);
+			this->uoBtnSacuvajOcjene->Name = L"uoBtnSacuvajOcjene";
+			this->uoBtnSacuvajOcjene->Size = System::Drawing::Size(235, 84);
+			this->uoBtnSacuvajOcjene->TabIndex = 32;
+			this->uoBtnSacuvajOcjene->Text = L"Sačuvaj ocjene";
+			this->uoBtnSacuvajOcjene->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->uoBtnSacuvajOcjene->UseVisualStyleBackColor = false;
+			// 
 			// uoTFOcjena
 			// 
 			this->uoTFOcjena->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->uoTFOcjena->Location = System::Drawing::Point(884, 155);
+			this->uoTFOcjena->Location = System::Drawing::Point(881, 185);
 			this->uoTFOcjena->Name = L"uoTFOcjena";
 			this->uoTFOcjena->Size = System::Drawing::Size(61, 33);
 			this->uoTFOcjena->TabIndex = 30;
@@ -2664,7 +2705,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->label37->AutoSize = true;
 			this->label37->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label37->Location = System::Drawing::Point(787, 156);
+			this->label37->Location = System::Drawing::Point(784, 186);
 			this->label37->Name = L"label37";
 			this->label37->Size = System::Drawing::Size(91, 28);
 			this->label37->TabIndex = 31;
@@ -2679,7 +2720,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->uoBtnIzbrisiOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->uoBtnIzbrisiOcjenu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnIzbrisiOcjenu.Image")));
 			this->uoBtnIzbrisiOcjenu->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnIzbrisiOcjenu->Location = System::Drawing::Point(746, 401);
+			this->uoBtnIzbrisiOcjenu->Location = System::Drawing::Point(748, 425);
 			this->uoBtnIzbrisiOcjenu->Name = L"uoBtnIzbrisiOcjenu";
 			this->uoBtnIzbrisiOcjenu->Size = System::Drawing::Size(235, 84);
 			this->uoBtnIzbrisiOcjenu->TabIndex = 29;
@@ -2687,21 +2728,21 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->uoBtnIzbrisiOcjenu->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->uoBtnIzbrisiOcjenu->UseVisualStyleBackColor = false;
 			// 
-			// button14
+			// uoBtnPrikaziOcjene
 			// 
-			this->button14->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->button14->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->uoBtnPrikaziOcjene->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnPrikaziOcjene->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button14->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button14.Image")));
-			this->button14->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button14->Location = System::Drawing::Point(246, 310);
-			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(235, 84);
-			this->button14->TabIndex = 28;
-			this->button14->Text = L"Prikaži ocjene";
-			this->button14->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button14->UseVisualStyleBackColor = false;
+			this->uoBtnPrikaziOcjene->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->uoBtnPrikaziOcjene->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnPrikaziOcjene.Image")));
+			this->uoBtnPrikaziOcjene->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->uoBtnPrikaziOcjene->Location = System::Drawing::Point(246, 310);
+			this->uoBtnPrikaziOcjene->Name = L"uoBtnPrikaziOcjene";
+			this->uoBtnPrikaziOcjene->Size = System::Drawing::Size(235, 84);
+			this->uoBtnPrikaziOcjene->TabIndex = 28;
+			this->uoBtnPrikaziOcjene->Text = L"Prikaži ocjene";
+			this->uoBtnPrikaziOcjene->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->uoBtnPrikaziOcjene->UseVisualStyleBackColor = false;
 			// 
 			// uoBtnDodajOcjenu
 			// 
@@ -2711,7 +2752,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->uoBtnDodajOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->uoBtnDodajOcjenu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnDodajOcjenu.Image")));
 			this->uoBtnDodajOcjenu->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnDodajOcjenu->Location = System::Drawing::Point(746, 204);
+			this->uoBtnDodajOcjenu->Location = System::Drawing::Point(748, 233);
 			this->uoBtnDodajOcjenu->Name = L"uoBtnDodajOcjenu";
 			this->uoBtnDodajOcjenu->Size = System::Drawing::Size(235, 84);
 			this->uoBtnDodajOcjenu->TabIndex = 27;
@@ -2727,7 +2768,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->uoBtnPromjeniOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->uoBtnPromjeniOcjenu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnPromjeniOcjenu.Image")));
 			this->uoBtnPromjeniOcjenu->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnPromjeniOcjenu->Location = System::Drawing::Point(746, 301);
+			this->uoBtnPromjeniOcjenu->Location = System::Drawing::Point(748, 327);
 			this->uoBtnPromjeniOcjenu->Name = L"uoBtnPromjeniOcjenu";
 			this->uoBtnPromjeniOcjenu->Size = System::Drawing::Size(235, 84);
 			this->uoBtnPromjeniOcjenu->TabIndex = 26;
@@ -3053,6 +3094,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->button20->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button20->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button20.Image")));
 			this->button20->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button20->Location = System::Drawing::Point(53, 388);
 			this->button20->Name = L"button20";
@@ -3068,6 +3110,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->button19->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button19->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button19.Image")));
 			this->button19->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button19->Location = System::Drawing::Point(53, 273);
 			this->button19->Name = L"button19";
@@ -3083,6 +3126,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->tabBtnTabelaUspjehaUcenika->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tabBtnTabelaUspjehaUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->tabBtnTabelaUspjehaUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"tabBtnTabelaUspjehaUcenika.Image")));
 			this->tabBtnTabelaUspjehaUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->tabBtnTabelaUspjehaUcenika->Location = System::Drawing::Point(53, 159);
 			this->tabBtnTabelaUspjehaUcenika->Name = L"tabBtnTabelaUspjehaUcenika";
@@ -3108,6 +3152,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->tabBtnNazad->Font = (gcnew System::Drawing::Font(L"Open Sans", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tabBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tabBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"tabBtnNazad.Image")));
 			this->tabBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->tabBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->tabBtnNazad->Name = L"tabBtnNazad";
@@ -3132,6 +3177,8 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			// pictureBox2
 			// 
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.InitialImage")));
 			this->pictureBox2->Location = System::Drawing::Point(1001, 6);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(21, 23);
@@ -3174,22 +3221,6 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			this->label43->Size = System::Drawing::Size(75, 22);
 			this->label43->TabIndex = 1;
 			this->label43->Text = L"Razredi:";
-			// 
-			// uoBtnSacuvajOcjene
-			// 
-			this->uoBtnSacuvajOcjene->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->uoBtnSacuvajOcjene->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->uoBtnSacuvajOcjene->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->uoBtnSacuvajOcjene->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnSacuvajOcjene.Image")));
-			this->uoBtnSacuvajOcjene->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnSacuvajOcjene->Location = System::Drawing::Point(746, 501);
-			this->uoBtnSacuvajOcjene->Name = L"uoBtnSacuvajOcjene";
-			this->uoBtnSacuvajOcjene->Size = System::Drawing::Size(235, 84);
-			this->uoBtnSacuvajOcjene->TabIndex = 32;
-			this->uoBtnSacuvajOcjene->Text = L"Sačuvaj ocjene";
-			this->uoBtnSacuvajOcjene->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->uoBtnSacuvajOcjene->UseVisualStyleBackColor = false;
 			// 
 			// MyForm
 			// 
@@ -3301,6 +3332,11 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 			return to_string(ucenikID+1) + " " + ime + " " + prezime;
 		}
 
+		String^ spojiRazredIDIme(string ime, int razredID) {
+			return gcnew String(to_string(razredID).c_str()) + " " + gcnew String(ime.c_str());
+				
+		}
+
 		Vladanje provjeriVladanjeInt(Vladanje novoVladanje, int broj) {
 			switch (broj)
 			{
@@ -3326,9 +3362,6 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 					return false;
 			}
 		}
-		/*String^ spojiImePrezime(string ime, string prezime) {
-			return gcnew String(ime.c_str()) + " " + gcnew String(prezime.c_str());
-		}*/
 
 		///////////////////////////////////////////////////////////////////////////////
 		  //////////////////////		IZLAZ IZ APLIKACIJE	   		 /////////////////////
@@ -3440,8 +3473,13 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 		listaUceniciNeURazredu->Items->Clear();
 		listaUceniciURazredu->Items->Clear();
 		
-		for (auto ucenik:sviUcenici)
+		for (Ucenik ucenik : sviUcenici) {
+			if(ucenik.getUcenikRazredID()==100)
 			listaUceniciNeURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
+			else 
+			listaUceniciURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
+		}
+			
 	}
 
 	private: System::Void psBtnUcenici_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3482,6 +3520,19 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 	private: System::Void psBtnRazredi_Click(System::Object^ sender, System::EventArgs^ e) {
 		pocetnaStrana->Visible = false;
 		razrediStrana->Visible = true;
+		listaRazrediBezUcenika->Items->Clear();
+		listaRazredaSaUcenicima->Items->Clear();
+		for (Razred razred : sviRazredi) {
+			int brojac{ 0 };
+			for (Ucenik ucenik : sviUcenici)
+				if (razred.getRazredID() == ucenik.getUcenikRazredID()) {
+					brojac++;
+				}
+			if (brojac != 0)
+				listaRazredaSaUcenicima->Items->Add(spojiRazredIDIme(razred.getImeRazreda(), razred.getRazredID()));
+			else
+				listaRazrediBezUcenika->Items->Add(spojiRazredIDIme(razred.getImeRazreda(), razred.getRazredID()));
+		}
 	}
 
 	private: System::Void rBtnDodajRazred_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3498,23 +3549,11 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 		izmjeniRazredStrana->Visible = true;
 	}
 
-	private: System::Void ruBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
-		rasporediUcenikeStrana->Visible = false;
-		razrediStrana->Visible = true;
-		uceniciBezRazreda.clear();
-	}
+	
 
 	private: System::Void rBtnRasporediUcenike_Click(System::Object^ sender, System::EventArgs^ e) {
 		razrediStrana->Visible = false;
 		rasporediUcenikeStrana->Visible = true;
-	}
-	private: System::Void uoBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
-		unesiOcjeneStrana->Visible = false;
-		razrediStrana->Visible = true;
-	}
-	private: System::Void rBtnUnesiOcjene_Click(System::Object^ sender, System::EventArgs^ e) {
-		razrediStrana->Visible = false;
-		unesiOcjeneStrana->Visible = true;
 	}
 
 	private: System::Void psBtnTabele_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3702,14 +3741,14 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 
 	private: System::Void dodajUcenikaStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		duListaSviUcenici->Items->Clear();
-		for (auto ucenik : sviUcenici)
+		for (Ucenik ucenik : sviUcenici)
 			duListaSviUcenici->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
 	}
+
 		   ///////////////////////////////////////////////////////////////////////////////
 		   //////////////////////		 STRANA DODAJ RAZRED		 /////////////////////
 		   ///////////////////////////////////////////////////////////////////////////////
 
-		   
 	string ispisiPredmete(vector <string> predmeti) {
 		size_t brojac{ predmeti.size() };
 	    string ispis = " ";
@@ -3732,8 +3771,6 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 		vector <string> noviPredmeti;
 		for (auto predmet : predmetiZaNoviRazred)
 			noviPredmeti.push_back(predmet);
-
-
 
 		Razred noviRazred(noviRazredID, novoImeRazreda, novoImeRazrednika, noviPredmeti);
 		sviRazredi.push_back(noviRazred);
@@ -3782,14 +3819,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 		  //////////////////////		 RAZREDI STRANA				 /////////////////////
 		  ///////////////////////////////////////////////////////////////////////////////
 
-	private: System::Void razrediStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-		listaRazrediBezUcenika->Items->Clear();
-		listaRazredaSaUcenicima->Items->Clear();
-		for (auto razred : sviRazredi)
-			listaRazrediBezUcenika->Items->Add(gcnew String(razred.getImeRazreda().c_str()));
-
-		for (auto ucenici : sviUcenici)
-			listaRazredaSaUcenicima->Items->Add(gcnew String(ucenici.getImeUcenika().c_str()));
+	private: System::Void razrediStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {	
 	}
 
 		   ///////////////////////////////////////////////////////////////////////////////
@@ -3802,7 +3832,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 		ruListaUceniciBezRazreda->Items->Clear();
 		ruListaUceniciURazredu->Items->Clear();
 
-		for (auto ucenik : sviUcenici) {
+		for (Ucenik ucenik : sviUcenici) {
 			if (ucenik.getUcenikRazredID() == 100)
 				uceniciBezRazreda.push_back(ucenik);
 		}
@@ -3819,6 +3849,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 
 	private: System::Void ruBtnUbaciURazred_Click(System::Object^ sender, System::EventArgs^ e) {
 		//int broj = ruListaUceniciBezRazreda->SelectedIndex;
+		ruListaUceniciURazredu->Items->Clear();
 		int ucenikID = uceniciBezRazreda[ruListaUceniciBezRazreda->SelectedIndex].getIDUcenika();
 		int razredID = ruListaRazredi->SelectedIndex;
 		for (auto &ucenik : sviUcenici) {
@@ -3830,6 +3861,7 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 					uceniciBezRazreda.push_back(ucenik);
 			}
 		}
+
 		for (auto ucenik : sviUcenici) {
 			if (ucenik.getUcenikRazredID() == razredID)
 			ruListaUceniciURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
@@ -3844,18 +3876,107 @@ private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 		for (auto ucenik : sviUcenici) {
 			if (ucenik.getUcenikRazredID() == razredID)
 			ruListaUceniciURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
+		}
 	}
-}
-		   ///////////////////////////////////////////////////////////////////////////////
-		   //////////////////////	 RASPOREDI UČENIKE STRANA		 /////////////////////
-		   ///////////////////////////////////////////////////////////////////////////////
 
+	private: System::Void ruBtnSpremi_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		fstream myFile;
+		
+		
+			myFile.open("Ucenici.txt", fstream::out | fstream::trunc);
+			if (!myFile) {
+				//Application::Exit();
+			} else {
+				for (Ucenik noviUcenik : sviUcenici) {
+
+					int vladanje{};
+
+					switch (noviUcenik.getVladanjeUcenika()) {
+					case vrloDobro: vladanje = 1;
+						break;
+					case dobro: vladanje = 2;
+						break;
+					case zadovoljavajuce: vladanje = 3;
+						break;
+					case lose: vladanje = 4;
+						break;
+					default: vladanje = 5;
+						break;
+					}
+					int noviUkor{};
+
+					switch (noviUcenik.getUkor()) {
+					case ukorOS: noviUkor = 1;
+						break;
+					case ukorOV: noviUkor = 2;
+						break;
+					case ukorDirektora: noviUkor = 3;
+						break;
+					case ukorNV: noviUkor = 4;
+						break;
+					case iskljucenje: noviUkor = 5;
+						break;
+					default: noviUkor = 0;
+						break;
+					}
+					myFile << " \n" << noviUcenik.getIDUcenika() << " " << noviUcenik.getImeUcenika() << " " << noviUcenik.getPrezimeUcenika() << " "
+						<< noviUcenik.getSpolUcenika() << " " << vladanje << " " << noviUcenik.getOpravdani() << " " << noviUcenik.getNeopravdani() << " "
+						<< noviUcenik.getPohvala() << " " << noviUkor << " " << noviUcenik.getUcenikRazredID() << " ";
+				}
+				myFile.close();
+			}
+		
+	}
+
+	private: System::Void ruBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
+		rasporediUcenikeStrana->Visible = false;
+		razrediStrana->Visible = true;
+		uceniciBezRazreda.clear();
+		
+
+	}
+
+		   ///////////////////////////////////////////////////////////////////////////////
+		   //////////////////////		 UNESI OCJENE STRANA		 /////////////////////
+		   ///////////////////////////////////////////////////////////////////////////////
+	
+		   int razredIDZaUO{};
 
 	private: System::Void unesiOcjeneStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		uoListaUceniciURazredu->Items->Clear();
 		uoListaPredmeti->Items->Clear();
 		uoListaOcjene->Items->Clear();
 	}
+
+	private: System::Void rBtnUnesiOcjene_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		razrediStrana->Visible = false;
+		unesiOcjeneStrana->Visible = true;
+		String^ imeRazredaZaUnos = listaRazredaSaUcenicima->Items[listaRazredaSaUcenicima->SelectedIndex]->ToString();
+		razredIDZaUO = imeRazredaZaUnos[0]-48;
+		
+	}
+		   
+	private: System::Void uoBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
+		unesiOcjeneStrana->Visible = false;
+		razrediStrana->Visible = true;
+		listaRazrediBezUcenika->Items->Clear();
+		listaRazredaSaUcenicima->Items->Clear();
+		for (Razred razred : sviRazredi) {
+			int brojac{ 0 };
+			for (Ucenik ucenik : sviUcenici)
+				if (razred.getRazredID() == ucenik.getUcenikRazredID()) {
+					brojac++;
+				}
+			if (brojac != 0)
+				listaRazredaSaUcenicima->Items->Add(spojiRazredIDIme(razred.getImeRazreda(), razred.getRazredID()));
+			else
+				listaRazrediBezUcenika->Items->Add(spojiRazredIDIme(razred.getImeRazreda(), razred.getRazredID()));
+		}
+	}
+	
+	
 };
 }
 

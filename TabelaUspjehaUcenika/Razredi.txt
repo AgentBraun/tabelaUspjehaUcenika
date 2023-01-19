@@ -1,3 +1,5 @@
  
 0 prviRazred razrednik  adsf asdf asdf asdf asdf nema5 nema6 nema7 nema8 nema9 nema10 nema11 nema12 nema13 nema14 nema15   
-1 novieazred3 imerazrednika4  adf sdf dfgh fghj sdfg nema5 nema6 nema7 nema8 nema9 nema10 nema11 nema12 nema13 nema14 nema15  
+1 novieazred3 imerazrednika4  adf sdf dfgh fghj sdfg nema5 nema6 nema7 nema8 nema9 nema10 nema11 nema12 nema13 nema14 nema15   
+2 I-v Razrednik1  matematika engleski bosanski njema?ki fizika nema5 nema6 nema7 nema8 nema9 nema10 nema11 nema12 nema13 nema14 nema15   
+3 II-S Razrednik  Bosanski jezik i književnost Engleski Jezik Tjelesni i zdravstveni odgoj Historija Informatika Matematika nema6 nema7 nema8 nema9 nema10 nema11 nema12 nema13 nema14 nema15  
