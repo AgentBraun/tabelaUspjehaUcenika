@@ -77,6 +77,7 @@ class Ucenik {
 	void togglePohvala();
 	void setUkor(int ukor); // provjeriti kako uraditi unos
 	void setUcenikRazredID(int broj);
+	void setOcjene(vector <int> ocjene);
 
 	//Geteri
 	int getIDUcenika() { return ucenikID; }
@@ -119,4 +120,8 @@ void Ucenik::izracunajUkupnoIzostanke() {
 
 void Ucenik::setUcenikRazredID(int broj) {
 	this->ucenikRazredID = broj;
+}
+
+void Ucenik::setOcjene(vector <int> ocjene) {
+	this->nizOcjena = ocjene;
 }
