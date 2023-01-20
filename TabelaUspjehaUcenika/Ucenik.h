@@ -120,10 +120,12 @@ void Ucenik::izracunajUkupnoIzostanke() {
 }
 
 void Ucenik::izracunajProsjekOcjena() {
-		int sum{0};
+		float sum{0};
+		float opciUspjeh{};
 		for (auto ocjene : this->nizOcjena)
 			sum += ocjene;
-		this->opciUspjeh = sum / this->nizOcjena.size();
+		opciUspjeh = sum / this->nizOcjena.size();
+		this->opciUspjeh  = round(opciUspjeh);
 	}
 
 void Ucenik::provjeriNeopravdane() {
