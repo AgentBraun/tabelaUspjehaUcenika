@@ -88,10 +88,11 @@ class Ucenik {
 	vector <int> getNizOcjena() {return nizOcjena; }
 	int getOpravdani() { return opravdaniIzostanci; }
 	int getNeopravdani() { return neopravdanIzostanci; }
+	int getUkupIzostanci() { return ukupnoIzostanci; }
 	bool getPohvala() {	return pohvala;}
 	Ukori getUkor() { return ukor; }
 	int getUcenikRazredID() { return ucenikRazredID; }
-	int getOpciUspjeh();
+	int getOpciUspjeh() { return opciUspjeh; }
 	int getBrojNedovoljnih();
 	bool getNeocjenjen();
 	//string getVladanje(Vladanje vladanje);
@@ -116,6 +117,22 @@ ukor = noviUkor;
 
 void Ucenik::izracunajUkupnoIzostanke() {
 	this->ukupnoIzostanci = this->opravdaniIzostanci + this->neopravdanIzostanci;
+}
+
+void Ucenik::izracunajProsjekOcjena() {
+		int sum{0};
+		for (auto ocjene : this->nizOcjena)
+			sum += ocjene;
+		this->opciUspjeh = sum / this->nizOcjena.size();
+	}
+
+void Ucenik::provjeriNeopravdane() {
+	if (this->neopravdanIzostanci > 7)  {
+		if (this->vladanje = primjerno) {
+			this->vladanje = vrloDobro;
+		} else if (this->vladanje = vrloDobro)
+			this->vladanje = dobro;
+	}
 }
 
 void Ucenik::setUcenikRazredID(int broj) {

@@ -334,7 +334,7 @@ private: System::Windows::Forms::TextBox^ uoTFOcjena;
 	private: System::Windows::Forms::Label^ label38;
 	private: System::Windows::Forms::Label^ label41;
 	private: System::Windows::Forms::Label^ label42;
-	private: System::Windows::Forms::Label^ tuuImePrezime1;
+
 	private: System::Windows::Forms::Panel^ stranaTabelaUspjehaUcenika;
 	private: System::Windows::Forms::Label^ label47;
 	private: System::Windows::Forms::Label^ label46;
@@ -362,7 +362,7 @@ private: System::Windows::Forms::Label^ label44;
 private: System::Windows::Forms::Button^ uoBtnSacuvajOcjene;
 private: System::Windows::Forms::ListBox^ tabListaRazrediPuni;
 private: System::Windows::Forms::PictureBox^ xTabUspUcenika;
-private: System::Windows::Forms::Label^ label40;
+
 
 private: System::Windows::Forms::Button^ ruBtnSpremi;
 
@@ -612,7 +612,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->label38 = (gcnew System::Windows::Forms::Label());
 			this->label41 = (gcnew System::Windows::Forms::Label());
 			this->label42 = (gcnew System::Windows::Forms::Label());
-			this->tuuImePrezime1 = (gcnew System::Windows::Forms::Label());
 			this->stranaTabelaUspjehaUcenika = (gcnew System::Windows::Forms::Panel());
 			this->xTabUspUcenika = (gcnew System::Windows::Forms::PictureBox());
 			this->label47 = (gcnew System::Windows::Forms::Label());
@@ -628,7 +627,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->xTabele = (gcnew System::Windows::Forms::PictureBox());
 			this->tabListaRazrediPuni = (gcnew System::Windows::Forms::ListBox());
 			this->label43 = (gcnew System::Windows::Forms::Label());
-			this->label40 = (gcnew System::Windows::Forms::Label());
 			this->pocetnaStrana->SuspendLayout();
 			this->meniPocetnaStrana->SuspendLayout();
 			this->panel1->SuspendLayout();
@@ -2924,11 +2922,12 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->tuuRedniBroj1->AutoSize = true;
 			this->tuuRedniBroj1->Font = (gcnew System::Drawing::Font(L"Open Sans", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tuuRedniBroj1->Location = System::Drawing::Point(50, 200);
+			this->tuuRedniBroj1->Location = System::Drawing::Point(61, 620);
 			this->tuuRedniBroj1->Name = L"tuuRedniBroj1";
-			this->tuuRedniBroj1->Size = System::Drawing::Size(15, 18);
+			this->tuuRedniBroj1->Size = System::Drawing::Size(75, 18);
 			this->tuuRedniBroj1->TabIndex = 9;
-			this->tuuRedniBroj1->Text = L"1";
+			this->tuuRedniBroj1->Text = L"Vrlo dobro";
+			this->tuuRedniBroj1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label39
 			// 
@@ -3000,24 +2999,10 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->label42->Text = L"IZOSTANCI";
 			this->label42->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
-			// tuuImePrezime1
-			// 
-			this->tuuImePrezime1->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->tuuImePrezime1->AutoSize = true;
-			this->tuuImePrezime1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->tuuImePrezime1->Location = System::Drawing::Point(150, 200);
-			this->tuuImePrezime1->Name = L"tuuImePrezime1";
-			this->tuuImePrezime1->Size = System::Drawing::Size(121, 16);
-			this->tuuImePrezime1->TabIndex = 10;
-			this->tuuImePrezime1->Text = L"Allen Al-Shamali";
-			this->tuuImePrezime1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
 			// stranaTabelaUspjehaUcenika
 			// 
 			this->stranaTabelaUspjehaUcenika->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->stranaTabelaUspjehaUcenika->BackColor = System::Drawing::Color::Transparent;
-			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label40);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->xTabUspUcenika);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label47);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label46);
@@ -3029,7 +3014,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->panel5);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label39);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label38);
-			this->stranaTabelaUspjehaUcenika->Controls->Add(this->tuuImePrezime1);
 			this->stranaTabelaUspjehaUcenika->Location = System::Drawing::Point(0, 0);
 			this->stranaTabelaUspjehaUcenika->Name = L"stranaTabelaUspjehaUcenika";
 			this->stranaTabelaUspjehaUcenika->Size = System::Drawing::Size(1023, 720);
@@ -3222,18 +3206,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->label43->Size = System::Drawing::Size(75, 22);
 			this->label43->TabIndex = 1;
 			this->label43->Text = L"Razredi:";
-			// 
-			// label40
-			// 
-			this->label40->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->label40->AutoSize = true;
-			this->label40->Font = (gcnew System::Drawing::Font(L"Open Sans", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label40->Location = System::Drawing::Point(50, 220);
-			this->label40->Name = L"label40";
-			this->label40->Size = System::Drawing::Size(15, 18);
-			this->label40->TabIndex = 15;
-			this->label40->Text = L"1";
 			// 
 			// MyForm
 			// 
@@ -4117,15 +4089,27 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		tabeleStrana->Visible = false;
 		stranaTabelaUspjehaUcenika->Visible = true;
 
+		for (Razred razred : sviRazredi) {
+			if (razred.getRazredID() == razredIDZaTab) {
+				for (auto predmeti : razred.getPredmeti())
+					listaPredmetaUcenika->Items->Add(gcnew String(predmeti.c_str()));
+				break;
+			}
+		}
 		
-		int Xosa = 50;
+		int Xosa = 55;
 		int Yosa = 200;
 		int rb = 1;
 
 		for (Ucenik ucenik : sviUcenici) {
-		
+			int Xosa = 55;
 			if (ucenik.getUcenikRazredID() == razredIDZaTab) {
 
+				ucenik.izracunajProsjekOcjena();
+				ucenik.izracunajUkupnoIzostanke();
+				ucenik.provjeriNeopravdane();
+
+				//ispis rednog broja
 				String^ RB = rb+"";
 				Label^ labelRB = gcnew  Label();
 				labelRB->Text = RB;
@@ -4140,6 +4124,143 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 					static_cast<System::Byte>(0)));
 				stranaTabelaUspjehaUcenika->Controls->Add(labelRB);
 
+				//Ispis imena učenika
+				Xosa = 140;
+
+				String^ imeUcenika = gcnew String(ucenik.getImeUcenika().c_str()) + " " + gcnew String(ucenik.getPrezimeUcenika().c_str());
+				Label^ labelIme = gcnew  Label();
+				labelIme->Text = imeUcenika;
+
+				Point newLocationIme;
+				newLocationIme.X = Xosa;
+				newLocationIme.Y = Yosa;
+				labelIme->Location = newLocationIme;
+				labelIme->AutoSize = true;
+				labelIme->Name = "imeUčenika" + rb;
+				labelIme->Font = (gcnew System::Drawing::Font(L"Open Sans", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				stranaTabelaUspjehaUcenika->Controls->Add(labelIme);
+
+				//ispis ocjena učenika
+				Xosa = 318;
+
+				for (int i{ 0 }; i < ucenik.getNizOcjena().size(); i++) {
+
+					String^ ocjene = "" + ucenik.getNizOcjena()[i];
+					Label^ ocjena = gcnew  Label();
+					ocjena->Text = ocjene;
+
+					Point newLocation;
+					newLocation.X = Xosa;
+					newLocation.Y = Yosa;
+					ocjena->Location = newLocation;
+					ocjena->Name = "ocjena" + i;
+					ocjena->AutoSize = true;
+					ocjena->Font = (gcnew System::Drawing::Font(L"Open Sans", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+						static_cast<System::Byte>(0)));
+					stranaTabelaUspjehaUcenika->Controls->Add(ocjena);
+					Xosa += 23;
+				}
+
+				//Ispis općeg uspjeha učenika
+				Xosa = 730;
+
+				String^ opciUspjeh = "" + ucenik.getOpciUspjeh();
+				Label^ labelprosjek = gcnew  Label();
+				labelprosjek->Text = opciUspjeh;
+
+				Point newLocationProsjek;
+				newLocationProsjek.X = Xosa;
+				newLocationProsjek.Y = Yosa;
+				labelprosjek->Location = newLocationProsjek;
+				labelprosjek->AutoSize = true;
+				labelprosjek->Name = "prosjek" + rb;
+				labelprosjek->Font = (gcnew System::Drawing::Font(L"Open Sans", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				stranaTabelaUspjehaUcenika->Controls->Add(labelprosjek);
+
+				//Ispis opravdanih izostanaka
+				Xosa = 800;
+
+				String^ opIzostanci = "" + ucenik.getOpravdani();
+				Label^ labelopIzostanci = gcnew  Label();
+				labelopIzostanci->Text = opIzostanci;
+
+				Point newLocationopIzostanci;
+				newLocationopIzostanci.X = Xosa;
+				newLocationopIzostanci.Y = Yosa;
+				labelopIzostanci->Location = newLocationopIzostanci;
+				labelopIzostanci->AutoSize = true;
+				labelopIzostanci->Name = "opr" + rb;
+				labelopIzostanci->Font = (gcnew System::Drawing::Font(L"Open Sans", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				stranaTabelaUspjehaUcenika->Controls->Add(labelopIzostanci);
+
+				//Ispis Neopravdanih izostanaka
+				Xosa = 840;
+
+				String^ opNeIzostanci = " " + ucenik.getNeopravdani();
+				Label^ labelopNeIzostanci = gcnew  Label();
+				labelopNeIzostanci->Text = opNeIzostanci;
+
+				Point newLocationNeIzostanci;
+				newLocationNeIzostanci.X = Xosa;
+				newLocationNeIzostanci.Y = Yosa;
+				labelopNeIzostanci->Location = newLocationNeIzostanci;
+				labelopNeIzostanci->AutoSize = true;
+				labelopNeIzostanci->Name = "neopr" + rb;
+				labelopNeIzostanci->Font = (gcnew System::Drawing::Font(L"Open Sans", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				stranaTabelaUspjehaUcenika->Controls->Add(labelopNeIzostanci);
+
+				//Ispis ukupnih izostanaka
+				Xosa = 885;
+
+				String^ UkIzostanci = " " + ucenik.getUkupIzostanci();
+				Label^ labelUkIzostanci = gcnew  Label();
+				labelUkIzostanci->Text = UkIzostanci;
+
+				Point newLocatiUkIzostanci;
+				newLocatiUkIzostanci.X = Xosa;
+				newLocatiUkIzostanci.Y = Yosa;
+				labelUkIzostanci->Location = newLocatiUkIzostanci;
+				labelUkIzostanci->AutoSize = true;
+				labelUkIzostanci->Name = "ukupno" + rb;
+				labelUkIzostanci->Font = (gcnew System::Drawing::Font(L"Open Sans", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				stranaTabelaUspjehaUcenika->Controls->Add(labelUkIzostanci);
+
+				String^ vladanjeStr{};
+
+				switch (ucenik.getVladanjeUcenika()) {
+				case vrloDobro: vladanjeStr = "Vrlo Dobro";
+					break;
+				case dobro: vladanjeStr = "Dobro";
+					break;
+				case zadovoljavajuce: vladanjeStr = "Zadovoljavajuće";
+					break;
+				case lose: vladanjeStr = "Loše";
+					break;
+				default: vladanjeStr = "Primjerno";
+					break;
+				}
+
+				//Ispis vladanja 
+				Xosa = 930;
+
+				String^ vladanje = vladanjeStr;
+				Label^ labelVladanje = gcnew  Label();
+				labelVladanje->Text = vladanje;
+
+				Point newLocatiVladanje;
+				newLocatiVladanje.X = Xosa;
+				newLocatiVladanje.Y = Yosa;
+				labelVladanje->Location = newLocatiVladanje;
+				labelVladanje->AutoSize = true;
+				labelVladanje->Name = "vladanje" + rb;
+				labelVladanje->Font = (gcnew System::Drawing::Font(L"Open Sans", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				stranaTabelaUspjehaUcenika->Controls->Add(labelVladanje);
 
 
 				rb++;
