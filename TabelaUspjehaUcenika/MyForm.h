@@ -2693,7 +2693,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// uoBtnSacuvajOcjene
 			// 
 			this->uoBtnSacuvajOcjene->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->uoBtnSacuvajOcjene->Enabled = false;
 			this->uoBtnSacuvajOcjene->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->uoBtnSacuvajOcjene->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -2716,6 +2715,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->uoTFOcjena->Name = L"uoTFOcjena";
 			this->uoTFOcjena->Size = System::Drawing::Size(61, 33);
 			this->uoTFOcjena->TabIndex = 30;
+			this->uoTFOcjena->TextChanged += gcnew System::EventHandler(this, &MyForm::uoTFOcjena_TextChanged);
 			// 
 			// label37
 			// 
@@ -2732,6 +2732,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// uoBtnPrikaziOcjene
 			// 
 			this->uoBtnPrikaziOcjene->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnPrikaziOcjene->Enabled = false;
 			this->uoBtnPrikaziOcjene->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->uoBtnPrikaziOcjene->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -2749,6 +2750,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// uoBtnDodajOcjenu
 			// 
 			this->uoBtnDodajOcjenu->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnDodajOcjenu->Enabled = false;
 			this->uoBtnDodajOcjenu->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->uoBtnDodajOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -2766,6 +2768,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// uoBtnPromjeniOcjenu
 			// 
 			this->uoBtnPromjeniOcjenu->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->uoBtnPromjeniOcjenu->Enabled = false;
 			this->uoBtnPromjeniOcjenu->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->uoBtnPromjeniOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -2802,6 +2805,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->uoListaOcjene->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->uoListaOcjene->Size = System::Drawing::Size(83, 444);
 			this->uoListaOcjene->TabIndex = 8;
+			this->uoListaOcjene->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::uoListaOcjene_SelectedIndexChanged);
 			// 
 			// uoListaPredmeti
 			// 
@@ -2812,6 +2816,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->uoListaPredmeti->Location = System::Drawing::Point(450, 134);
 			this->uoListaPredmeti->Name = L"uoListaPredmeti";
 			this->uoListaPredmeti->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->uoListaPredmeti->SelectionMode = System::Windows::Forms::SelectionMode::None;
 			this->uoListaPredmeti->Size = System::Drawing::Size(198, 444);
 			this->uoListaPredmeti->TabIndex = 7;
 			// 
@@ -3207,6 +3212,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1023, 720);
+			this->Controls->Add(this->unesiOcjeneStrana);
 			this->Controls->Add(this->rasporediUcenikeStrana);
 			this->Controls->Add(this->razrediStrana);
 			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
@@ -3217,7 +3223,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->Controls->Add(this->dodajRazredStrana);
 			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->Controls->Add(this->dodajUcenikaStrana);
-			this->Controls->Add(this->unesiOcjeneStrana);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -3963,7 +3968,9 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		razredIDZaUO = imeRazredaZaUnos[0]-48;
 		razrediStrana->Visible = false;
 		unesiOcjeneStrana->Visible = true;
-		uoBtnSacuvajOcjene->Enabled = false;
+		uoBtnDodajOcjenu->Enabled = false;
+		uoBtnPromjeniOcjenu->Enabled = false;
+		uoBtnPrikaziOcjene->Enabled = false;
 	}
 
 	private: System::Void unesiOcjeneStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -4004,10 +4011,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 				listaRazrediBezUcenika->Items->Add(spojiRazredIDIme(razred.getImeRazreda(), razred.getRazredID()));
 		}
 		rBtnUnesiOcjene->Enabled = false;
-
-
-
-
 	}
 
 	private: System::Void uoBtnDodajOcjenu_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4022,10 +4025,12 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 	}
 
 	private: System::Void uoBtnPromjeniOcjenu_Click(System::Object^ sender, System::EventArgs^ e) {
-		if(uoTFOcjena->TextLength != 0) {
+		if(uoTFOcjena->TextLength != 0 && uoListaUceniciURazredu->SelectedIndex>=0) {
 			uoListaOcjene->Items[uoListaOcjene->SelectedIndex] = uoTFOcjena->Text;
 			uoTFOcjena->Clear();
 		}
+		else
+			MessageBox::Show("Izaberite ocjenu koju zelite promijeniti zatim ukucajte novu ocjenu.");
 	}
 
 		string ispisiOcjene(vector <int> ocjene) {
@@ -4104,18 +4109,36 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		}		
 	}
 	private: System::Void uoBtnPrikaziOcjene_Click(System::Object^ sender, System::EventArgs^ e) {
-		uoListaOcjene->Items->Clear();
-		int i = uoListaUceniciURazredu->SelectedIndex;
-		int index = uoUcenici[i].getIDUcenika();
-		for (auto ocjena : sviUcenici[index].getNizOcjena())
-			uoListaOcjene->Items->Add(ocjena);
+		if (uoListaUceniciURazredu->SelectedIndex >= 0) {
+			uoListaOcjene->Items->Clear();
+			int i = uoListaUceniciURazredu->SelectedIndex;
+			int index = uoUcenici[i].getIDUcenika();
+			for (auto ocjena : sviUcenici[index].getNizOcjena())
+				uoListaOcjene->Items->Add(ocjena);
+		}
+		else
+			MessageBox::Show("Odaberite ucenika da bi ste mogli prikazati ocjene.");
+		
 	}
 
 
 	private: System::Void uoListaUceniciURazredu_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		uoBtnSacuvajOcjene->Enabled = true;
+		uoBtnPrikaziOcjene->Enabled = true;
 	}
 
+	private: System::Void uoListaOcjene_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (uoListaOcjene->SelectedIndex >= 0)
+			uoBtnPromjeniOcjenu->Enabled = true;
+		else
+			uoBtnPromjeniOcjenu->Enabled = false;
+	}
+
+	private: System::Void uoTFOcjena_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (uoTFOcjena->TextLength > 0)
+			uoBtnDodajOcjenu->Enabled = true;
+		else
+			uoBtnDodajOcjenu->Enabled = false;
+	}
 
 		 ///////////////////////////////////////////////////////////////////////////////
 		//////////////////////				 TABELE	   			 /////////////////////
@@ -4390,13 +4413,8 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		stranaTabelaUspjehaUcenika->Controls->Add(job2);*/
 	}
 
-private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-
-
-
-
-
+	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 
 };
 
