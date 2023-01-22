@@ -2003,6 +2003,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// drBtnIzbrisiPredmet
 			// 
 			this->drBtnIzbrisiPredmet->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->drBtnIzbrisiPredmet->Enabled = false;
 			this->drBtnIzbrisiPredmet->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->drBtnIzbrisiPredmet->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -2010,9 +2011,9 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->drBtnIzbrisiPredmet->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->drBtnIzbrisiPredmet->Location = System::Drawing::Point(406, 329);
 			this->drBtnIzbrisiPredmet->Name = L"drBtnIzbrisiPredmet";
-			this->drBtnIzbrisiPredmet->Size = System::Drawing::Size(235, 84);
+			this->drBtnIzbrisiPredmet->Size = System::Drawing::Size(251, 84);
 			this->drBtnIzbrisiPredmet->TabIndex = 26;
-			this->drBtnIzbrisiPredmet->Text = L"izbriši predmet";
+			this->drBtnIzbrisiPredmet->Text = L"Izmjeni predmet";
 			this->drBtnIzbrisiPredmet->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->drBtnIzbrisiPredmet->UseVisualStyleBackColor = false;
 			this->drBtnIzbrisiPredmet->Click += gcnew System::EventHandler(this, &MyForm::drBtnIzbrisiPredmet_Click);
@@ -2020,6 +2021,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// drBtnDodajPredmet
 			// 
 			this->drBtnDodajPredmet->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->drBtnDodajPredmet->Enabled = false;
 			this->drBtnDodajPredmet->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->drBtnDodajPredmet->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -2029,7 +2031,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->drBtnDodajPredmet->Name = L"drBtnDodajPredmet";
 			this->drBtnDodajPredmet->Size = System::Drawing::Size(235, 84);
 			this->drBtnDodajPredmet->TabIndex = 25;
-			this->drBtnDodajPredmet->Text = L"Dodaj Predmet";
+			this->drBtnDodajPredmet->Text = L"Dodaj predmet";
 			this->drBtnDodajPredmet->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->drBtnDodajPredmet->UseVisualStyleBackColor = false;
 			this->drBtnDodajPredmet->Click += gcnew System::EventHandler(this, &MyForm::drBtnDodajPredmet_Click);
@@ -2045,6 +2047,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->drListaPredmeti->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->drListaPredmeti->Size = System::Drawing::Size(188, 446);
 			this->drListaPredmeti->TabIndex = 24;
+			this->drListaPredmeti->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::drListaPredmeti_SelectedIndexChanged);
 			// 
 			// label19
 			// 
@@ -2124,6 +2127,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->drTFPredmet->Name = L"drTFPredmet";
 			this->drTFPredmet->Size = System::Drawing::Size(176, 33);
 			this->drTFPredmet->TabIndex = 12;
+			this->drTFPredmet->TextChanged += gcnew System::EventHandler(this, &MyForm::drTFPredmet_TextChanged);
 			// 
 			// label25
 			// 
@@ -2476,6 +2480,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// ruBtnPrikaziUcenike
 			// 
 			this->ruBtnPrikaziUcenike->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->ruBtnPrikaziUcenike->Enabled = false;
 			this->ruBtnPrikaziUcenike->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ruBtnPrikaziUcenike->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -2506,6 +2511,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->ruBtnIzbaciIZRazreda->Text = L"Izbaci iz razreda";
 			this->ruBtnIzbaciIZRazreda->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->ruBtnIzbaciIZRazreda->UseVisualStyleBackColor = false;
+			this->ruBtnIzbaciIZRazreda->Click += gcnew System::EventHandler(this, &MyForm::ruBtnIzbaciIZRazreda_Click);
 			// 
 			// ruBtnUbaciURazred
 			// 
@@ -2546,6 +2552,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->ruListaUceniciURazredu->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->ruListaUceniciURazredu->Size = System::Drawing::Size(217, 446);
 			this->ruListaUceniciURazredu->TabIndex = 8;
+			this->ruListaUceniciURazredu->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::ruListaUceniciURazredu_SelectedIndexChanged);
 			// 
 			// ruListaRazredi
 			// 
@@ -2558,6 +2565,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->ruListaRazredi->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->ruListaRazredi->Size = System::Drawing::Size(115, 446);
 			this->ruListaRazredi->TabIndex = 7;
+			this->ruListaRazredi->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::ruListaRazredi_SelectedIndexChanged);
 			// 
 			// ruListaUceniciBezRazreda
 			// 
@@ -3525,11 +3533,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		rBtnUnesiOcjene->Enabled = false;
 	}
 
-	private: System::Void rBtnDodajRazred_Click(System::Object^ sender, System::EventArgs^ e) {
-		dodajRazredStrana->Visible = true;
-		razrediStrana->Visible = false;
-	}
-
 	private: System::Void irBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
 		izmjeniRazredStrana->Visible = false;
 		razrediStrana->Visible = true;
@@ -3537,14 +3540,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 	private: System::Void rBtnIzmjeniRazred_Click(System::Object^ sender, System::EventArgs^ e) {
 		razrediStrana->Visible = false;
 		izmjeniRazredStrana->Visible = true;
-	}
-
-	
-
-	private: System::Void rBtnRasporediUcenike_Click(System::Object^ sender, System::EventArgs^ e) {
-		razrediStrana->Visible = false;
-		rasporediUcenikeStrana->Visible = true;
-		ruBtnUbaciURazred->Enabled = false;
 	}
 
 	private: System::Void psBtnTabele_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3696,35 +3691,39 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 	}
 
 	private: System::Void drBtnDodajRazred_Click(System::Object^ sender, System::EventArgs^ e) {
-		int noviRazredID{ 0 };
+		if (drTFImeRazreda->TextLength > 1 && drTFImeRazrednika->TextLength > 5 && drListaPredmeti->Items->Count > 2) {
+			int noviRazredID{ 0 };
 
-		for (auto Razred : sviRazredi)
-			noviRazredID++;
+			for (auto Razred : sviRazredi)
+				noviRazredID++;
 
-		string novoImeRazreda = msclr::interop::marshal_as< std::string >(drTFImeRazreda->Text);
-		string novoImeRazrednika = msclr::interop::marshal_as< std::string >(drTFImeRazrednika->Text);
-		vector <string> noviPredmeti;
-		for (auto predmet : predmetiZaNoviRazred)
-			noviPredmeti.push_back(predmet);
+			string novoImeRazreda = msclr::interop::marshal_as< std::string >(drTFImeRazreda->Text);
+			string novoImeRazrednika = msclr::interop::marshal_as< std::string >(drTFImeRazrednika->Text);
+			vector <string> noviPredmeti;
+			for (auto predmet : predmetiZaNoviRazred)
+				noviPredmeti.push_back(predmet);
 
-		Razred noviRazred(noviRazredID, novoImeRazreda, novoImeRazrednika, noviPredmeti);
-		sviRazredi.push_back(noviRazred);
+			Razred noviRazred(noviRazredID, novoImeRazreda, novoImeRazrednika, noviPredmeti);
+			sviRazredi.push_back(noviRazred);
 
-		fstream myFile;
+			fstream myFile;
 
-		myFile.open("Razredi.txt", fstream::app);
-		if (!myFile) {
-			Application::Exit();
+			myFile.open("Razredi.txt", fstream::app);
+			if (!myFile) {
+				Application::Exit();
+			}
+			else {
+				myFile << " \n" <<noviRazred.getRazredID() << " " << noviRazred.getImeRazreda() << " " << noviRazred.getImeRazrednika() << " " << ispisiPredmete(noviRazred.getPredmeti()) << " ";
+			}
+			myFile.close();
+
+			drTFImeRazreda->Clear();
+			drTFImeRazrednika->Clear();
+			drTFPredmet->Clear();
+			drListaPredmeti->Items->Clear();
 		}
-		else {
-			myFile << " \n" <<noviRazred.getRazredID() << " " << noviRazred.getImeRazreda() << " " << noviRazred.getImeRazrednika() << " " << ispisiPredmete(noviRazred.getPredmeti()) << " ";
-		}
-		myFile.close();
-
-		drTFImeRazreda->Clear();
-		drTFImeRazrednika->Clear();
-		drTFPredmet->Clear();
-		drListaPredmeti->Items->Clear();
+		else
+			MessageBox::Show("Unesite ime razreda, ime razrednika i minimalno 2 predmeta da bi napravili novi razred.");
 	}
 
 
@@ -3733,11 +3732,16 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			drListaPredmeti->Items->Add(drTFPredmet->Text);
 			predmetiZaNoviRazred.push_back(msclr::interop::marshal_as< std::string >(drTFPredmet->Text));
 			drTFPredmet->Clear();
-		}
+			drBtnDodajPredmet->Enabled = false;
+		}	else
+			MessageBox::Show("Unesite ime predmeta.");
 	}
-
+	
 	private: System::Void drBtnIzbrisiPredmet_Click(System::Object^ sender, System::EventArgs^ e) {
-		//drListaPredmeti->SelectedItems
+		if (drTFPredmet->TextLength != 0) {
+			drListaPredmeti->Items[drListaPredmeti->SelectedIndex] = drTFPredmet->Text;
+			drTFPredmet->Clear();
+		}
 	}
 
 	private: System::Void drBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3749,6 +3753,16 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		drListaPredmeti->Items->Clear();
 	}
 
+	private: System::Void drTFPredmet_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		drBtnDodajPredmet->Enabled = true;
+	}
+
+	private: System::Void drListaPredmeti_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (drListaPredmeti->SelectedIndex >= 0)
+			drBtnIzbrisiPredmet->Enabled = true;
+	}
+
+
 
 		   ///////////////////////////////////////////////////////////////////////////////
 		  //////////////////////		 RAZREDI STRANA				 /////////////////////
@@ -3758,7 +3772,22 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 	}
 
 	private: System::Void listaRazredaSaUcenicima_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		rBtnUnesiOcjene->Enabled = true;
+		if(listaRazredaSaUcenicima->SelectedIndex>=0)
+			rBtnUnesiOcjene->Enabled = true;
+	}
+
+	private: System::Void rBtnRasporediUcenike_Click(System::Object^ sender, System::EventArgs^ e) {
+		razrediStrana->Visible = false;
+		rasporediUcenikeStrana->Visible = true;
+		ruBtnUbaciURazred->Enabled = false;
+		ruBtnPrikaziUcenike->Enabled = false;
+	}
+
+	private: System::Void rBtnDodajRazred_Click(System::Object^ sender, System::EventArgs^ e) {
+		dodajRazredStrana->Visible = true;
+		razrediStrana->Visible = false;
+		drBtnDodajPredmet->Enabled = false;
+		drBtnIzbrisiPredmet->Enabled = false;
 	}
 
 		   ///////////////////////////////////////////////////////////////////////////////
@@ -3816,7 +3845,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 
 
 	private: System::Void ruBtnPrikaziUcenike_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (ruListaUceniciBezRazreda->SelectedIndex >= 0) {
+		if (ruListaRazredi->SelectedIndex >= 0) {
 			ruListaUceniciURazredu->Items->Clear();
 			int razredID = ruListaRazredi->SelectedIndex;
 			for (auto ucenik : sviUcenici) {
@@ -3837,7 +3866,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		
 			myFile.open("Ucenici.txt", fstream::out | fstream::trunc);
 			if (!myFile) {
-				Application::Exit();
+				MessageBox::Show("Spremanje je neuspjesno, pokusajte ponovo.");
 			} else {
 				for (Ucenik noviUcenik : sviUcenici) {
 
@@ -3888,19 +3917,39 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 				}
 				myFile.close();
 			}
-		
+			MessageBox::Show("Podaci su uspjesno spremljeni.");
 	}
 
 	private: System::Void ruBtnNazad_Click(System::Object^ sender, System::EventArgs^ e) {
 		rasporediUcenikeStrana->Visible = false;
 		razrediStrana->Visible = true;
 		uceniciBezRazreda.clear();
+	}
 
+	private: System::Void ruBtnIzbaciIZRazreda_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		
 
 	}
 
+
+	private: System::Void ruListaUceniciURazredu_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (ruListaUceniciURazredu->SelectedIndex >= 0) {
+			ruListaUceniciBezRazreda->SelectedIndex = -1;
+			ruBtnUbaciURazred->Enabled = false;
+		}
+	}
+
+	private: System::Void ruListaRazredi_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (ruListaRazredi->SelectedIndex >= 0)
+			ruBtnPrikaziUcenike->Enabled = true;		
+	}
+
+	private: System::Void ruListaUceniciBezRazreda_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (ruListaUceniciBezRazreda->SelectedIndex >= 0) {
+			ruBtnUbaciURazred->Enabled = true;
+			ruListaUceniciURazredu->SelectedIndex = -1;
+		}
+	}
 		   ///////////////////////////////////////////////////////////////////////////////
 		   //////////////////////		 UNESI OCJENE STRANA		 /////////////////////
 		   ///////////////////////////////////////////////////////////////////////////////
@@ -4343,9 +4392,12 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void ruListaUceniciBezRazreda_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-	ruBtnUbaciURazred->Enabled = true;
-}
+
+
+
+
+
+
 };
 
 }
