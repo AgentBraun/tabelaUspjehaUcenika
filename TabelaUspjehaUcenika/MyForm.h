@@ -327,7 +327,7 @@ private: System::Windows::Forms::TextBox^ uoTFOcjena;
 	private: System::Windows::Forms::Label^ tuuLabelOpciUspjeh;
 
 
-	private: System::Windows::Forms::Label^ tuuRedniBroj1;
+
 	private: System::Windows::Forms::Label^ label39;
 	private: System::Windows::Forms::Panel^ panel5;
 	private: System::Windows::Forms::ToolStrip^ listaPredmetaUcenika;
@@ -605,7 +605,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->xUnesiOcjene = (gcnew System::Windows::Forms::PictureBox());
 			this->label36 = (gcnew System::Windows::Forms::Label());
 			this->tuuLabelOpciUspjeh = (gcnew System::Windows::Forms::Label());
-			this->tuuRedniBroj1 = (gcnew System::Windows::Forms::Label());
 			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->listaPredmetaUcenika = (gcnew System::Windows::Forms::ToolStrip());
@@ -2327,9 +2326,10 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(235, 84);
 			this->button9->TabIndex = 26;
-			this->button9->Text = L"izbriši predmet";
+			this->button9->Text = L"        preimenuj predmet";
 			this->button9->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->button9->UseVisualStyleBackColor = false;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
 			// 
 			// button10
 			// 
@@ -2570,6 +2570,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->ruListaUceniciBezRazreda->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->ruListaUceniciBezRazreda->Size = System::Drawing::Size(217, 446);
 			this->ruListaUceniciBezRazreda->TabIndex = 6;
+			this->ruListaUceniciBezRazreda->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::ruListaUceniciBezRazreda_SelectedIndexChanged);
 			// 
 			// label29
 			// 
@@ -2916,19 +2917,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->tuuLabelOpciUspjeh->Text = L"OPĆI USPJEH";
 			this->tuuLabelOpciUspjeh->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
-			// tuuRedniBroj1
-			// 
-			this->tuuRedniBroj1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->tuuRedniBroj1->AutoSize = true;
-			this->tuuRedniBroj1->Font = (gcnew System::Drawing::Font(L"Open Sans", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->tuuRedniBroj1->Location = System::Drawing::Point(61, 620);
-			this->tuuRedniBroj1->Name = L"tuuRedniBroj1";
-			this->tuuRedniBroj1->Size = System::Drawing::Size(75, 18);
-			this->tuuRedniBroj1->TabIndex = 9;
-			this->tuuRedniBroj1->Text = L"Vrlo dobro";
-			this->tuuRedniBroj1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
-			// 
 			// label39
 			// 
 			this->label39->Anchor = System::Windows::Forms::AnchorStyles::None;
@@ -3008,7 +2996,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label46);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label45);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label41);
-			this->stranaTabelaUspjehaUcenika->Controls->Add(this->tuuRedniBroj1);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label42);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->tuuLabelOpciUspjeh);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->panel5);
@@ -3212,6 +3199,8 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1023, 720);
+			this->Controls->Add(this->rasporediUcenikeStrana);
+			this->Controls->Add(this->razrediStrana);
 			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
 			this->Controls->Add(this->pocetnaStrana);
 			this->Controls->Add(this->tabeleStrana);
@@ -3221,8 +3210,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->Controls->Add(this->dodajUcenikaStrana);
 			this->Controls->Add(this->unesiOcjeneStrana);
-			this->Controls->Add(this->rasporediUcenikeStrana);
-			this->Controls->Add(this->razrediStrana);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -3557,6 +3544,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 	private: System::Void rBtnRasporediUcenike_Click(System::Object^ sender, System::EventArgs^ e) {
 		razrediStrana->Visible = false;
 		rasporediUcenikeStrana->Visible = true;
+		ruBtnUbaciURazred->Enabled = false;
 	}
 
 	private: System::Void psBtnTabele_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3614,6 +3602,8 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		Vladanje novoVladanjeEnm;
 		Ukori noviUkor;
 
+		
+
 		novoVladanjeEnm = provjeriVladanjeInt(novoVladanjeEnm, duComboVladanje->SelectedIndex);
 
 		/*switch (duComboVladanje->SelectedIndex)
@@ -3646,7 +3636,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			break;
 		}
 		
-		int noviOpravdani = stoi(msclr::interop::marshal_as< std::string >(duTFOpravdani ->Text));
+		int noviOpravdani = stoi(msclr::interop::marshal_as< std::string >(duTFOpravdani->Text));
 		int noviNeopravdani = stoi(msclr::interop::marshal_as< std::string >(duTFNeopravdani->Text));
 		
 		int noviUcenikID{ 0 };
@@ -3654,7 +3644,6 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			noviUcenikID++;
 
 		int noviUcenikRazredID{ 100 };
-
 
 		Ucenik noviUcenik(novoIme, novoPrezime, noviSpol, noviOpravdani, noviNeopravdani, noviUcenikID, noviUcenikRazredID, novoVladanjeEnm, noviUkor);
 		noviUcenik.izracunajUkupnoIzostanke();
@@ -3799,34 +3788,46 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 
 	private: System::Void ruBtnUbaciURazred_Click(System::Object^ sender, System::EventArgs^ e) {
 		//int broj = ruListaUceniciBezRazreda->SelectedIndex;
-		ruListaUceniciURazredu->Items->Clear();
-		int ucenikID = uceniciBezRazreda[ruListaUceniciBezRazreda->SelectedIndex].getIDUcenika();
-		int razredID = ruListaRazredi->SelectedIndex;
-		for (auto &ucenik : sviUcenici) {
-			if (ucenik.getIDUcenika() == ucenikID)
-				ucenik.setUcenikRazredID(razredID);
-			uceniciBezRazreda.clear();
-			for (auto ucenik : sviUcenici) {
-				if (ucenik.getUcenikRazredID() == 100)
-					uceniciBezRazreda.push_back(ucenik);
+		
+		if (ruListaRazredi->SelectedIndex >=0 && ruListaUceniciBezRazreda->SelectedIndex>=0) {
+			ruListaUceniciURazredu->Items->Clear();
+			int ucenikID = uceniciBezRazreda[ruListaUceniciBezRazreda->SelectedIndex].getIDUcenika();
+			int razredID = ruListaRazredi->SelectedIndex;
+			for (auto &ucenik : sviUcenici) {
+				if (ucenik.getIDUcenika() == ucenikID)
+					ucenik.setUcenikRazredID(razredID);
+				uceniciBezRazreda.clear();
+				for (auto ucenik : sviUcenici) {
+					if (ucenik.getUcenikRazredID() == 100)
+						uceniciBezRazreda.push_back(ucenik);
+				}
 			}
-		}
 
 		for (auto ucenik : sviUcenici) {
 			if (ucenik.getUcenikRazredID() == razredID)
 			ruListaUceniciURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
 		}
 		ruListaUceniciBezRazreda->Items->Remove(ruListaUceniciBezRazreda->SelectedItem);
+		}
+		else {
+			MessageBox::Show("Morate odabrati jednog ucenika i razred gdje zelite smjestiti odabranog ucenika.");
+		}
 	}
 
 
 	private: System::Void ruBtnPrikaziUcenike_Click(System::Object^ sender, System::EventArgs^ e) {
-		ruListaUceniciURazredu->Items->Clear();
-		int razredID = ruListaRazredi->SelectedIndex;
-		for (auto ucenik : sviUcenici) {
-			if (ucenik.getUcenikRazredID() == razredID)
-			ruListaUceniciURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
+		if (ruListaUceniciBezRazreda->SelectedIndex >= 0) {
+			ruListaUceniciURazredu->Items->Clear();
+			int razredID = ruListaRazredi->SelectedIndex;
+			for (auto ucenik : sviUcenici) {
+				if (ucenik.getUcenikRazredID() == razredID)
+				ruListaUceniciURazredu->Items->Add(gcnew String(spojiImePrezime(ucenik.getImeUcenika(), ucenik.getPrezimeUcenika(), ucenik.getIDUcenika()).c_str()));
+			}
 		}
+		else {
+			MessageBox::Show("Prvo odaberite jednog ucenika sa liste -Ucenici bez razreda-.");
+		}
+		
 	}
 		  // gcnew String(.c_str())
 	private: System::Void ruBtnSpremi_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3870,9 +3871,20 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 					default: noviUkor = 0;
 						break;
 					}
+
+					string ocjene{""};
+					string nula{ "0" };
+					size_t brojac{ noviUcenik.getNizOcjena().size() };
+					for (auto ocjena : noviUcenik.getNizOcjena()) {
+						ocjene += to_string(ocjena) + " ";
+					}
+					for (; brojac < 16; brojac++)
+						ocjene += nula + " ";
+
+
 					myFile << " \n" << noviUcenik.getIDUcenika() << " " << noviUcenik.getImeUcenika() << " " << noviUcenik.getPrezimeUcenika() << " "
 						<< noviUcenik.getSpolUcenika() << " " << vladanje << " " << noviUcenik.getOpravdani() << " " << noviUcenik.getNeopravdani() << " "
-						<< noviUcenik.getPohvala() << " " << noviUkor << " " << noviUcenik.getUcenikRazredID() << " ";
+						<< noviUcenik.getPohvala() << " " << noviUkor << " " << noviUcenik.getUcenikRazredID() << " " << ocjene;
 				}
 				myFile.close();
 			}
@@ -3883,6 +3895,8 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		rasporediUcenikeStrana->Visible = false;
 		razrediStrana->Visible = true;
 		uceniciBezRazreda.clear();
+
+
 		
 
 	}
@@ -3998,7 +4012,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 
 		myFile.open("Ucenici.txt", fstream::out | fstream::trunc);
 		if (!myFile) {
-			Application::Exit();
+			MessageBox::Show("nije uspjelo ucitavanje baze, promjene se nisu spremile.");
 		}
 		else {
 			for (Ucenik noviUcenik : sviUcenici) {
@@ -4044,7 +4058,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		uoListaOcjene->Items->Clear();
 		int i = uoListaUceniciURazredu->SelectedIndex;
 		int index = uoUcenici[i].getIDUcenika();
-		for (auto ocjena : uoUcenici[index].getNizOcjena())
+		for (auto ocjena : sviUcenici[index].getNizOcjena())
 			uoListaOcjene->Items->Add(ocjena);
 	}
 
@@ -4214,7 +4228,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 				stranaTabelaUspjehaUcenika->Controls->Add(labelopNeIzostanci);
 
 				//Ispis ukupnih izostanaka
-				Xosa = 885;
+				Xosa = 877;
 
 				String^ UkIzostanci = " " + ucenik.getUkupIzostanci();
 				Label^ labelUkIzostanci = gcnew  Label();
@@ -4327,6 +4341,11 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 		stranaTabelaUspjehaUcenika->Controls->Add(job2);*/
 	}
 
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void ruListaUceniciBezRazreda_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	ruBtnUbaciURazred->Enabled = true;
+}
 };
 
 }
