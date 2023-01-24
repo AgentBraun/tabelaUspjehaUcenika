@@ -265,7 +265,9 @@ private: System::Windows::Forms::TextBox^ drTFPredmet;
 	private: System::Windows::Forms::Label^ label22;
 	private: System::Windows::Forms::GroupBox^ groupBox10;
 	private: System::Windows::Forms::TextBox^ textBox13;
-	private: System::Windows::Forms::TextBox^ textBox14;
+private: System::Windows::Forms::TextBox^ irImeRazreda;
+
+
 	private: System::Windows::Forms::Label^ label23;
 	private: System::Windows::Forms::Label^ label24;
 	private: System::Windows::Forms::TextBox^ textBox16;
@@ -365,6 +367,22 @@ private: System::Windows::Forms::PictureBox^ xTabUspUcenika;
 
 
 private: System::Windows::Forms::Button^ ruBtnSpremi;
+private: System::Windows::Forms::GroupBox^ groupBox2;
+private: System::Windows::Forms::ComboBox^ comboBox1;
+private: System::Windows::Forms::Label^ label9;
+private: System::Windows::Forms::ComboBox^ comboBox2;
+private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::ComboBox^ comboBox3;
+private: System::Windows::Forms::TextBox^ textBox1;
+private: System::Windows::Forms::TextBox^ textBox2;
+private: System::Windows::Forms::TextBox^ textBox3;
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::TextBox^ textBox4;
+private: System::Windows::Forms::Label^ label12;
+private: System::Windows::Forms::Label^ label13;
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::Label^ label48;
 
 
 
@@ -485,6 +503,22 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->xDodajUcenika = (gcnew System::Windows::Forms::PictureBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->izmjeniUcenikaStrana = (gcnew System::Windows::Forms::Panel());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label48 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -530,7 +564,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->izmjeniRazredStrana = (gcnew System::Windows::Forms::Panel());
 			this->groupBox10 = (gcnew System::Windows::Forms::GroupBox());
 			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
+			this->irImeRazreda = (gcnew System::Windows::Forms::TextBox());
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
@@ -615,6 +649,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->panel4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->xDodajUcenika))->BeginInit();
 			this->izmjeniUcenikaStrana->SuspendLayout();
+			this->groupBox2->SuspendLayout();
 			this->panel6->SuspendLayout();
 			this->panel7->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->xIzmjeniUcenika))->BeginInit();
@@ -1279,6 +1314,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// 
 			// izmjeniUcenikaStrana
 			// 
+			this->izmjeniUcenikaStrana->Controls->Add(this->groupBox2);
 			this->izmjeniUcenikaStrana->Controls->Add(this->button3);
 			this->izmjeniUcenikaStrana->Controls->Add(this->button2);
 			this->izmjeniUcenikaStrana->Controls->Add(this->button1);
@@ -1294,6 +1330,203 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->izmjeniUcenikaStrana->Size = System::Drawing::Size(1024, 720);
 			this->izmjeniUcenikaStrana->TabIndex = 6;
 			this->izmjeniUcenikaStrana->Visible = false;
+			// 
+			// groupBox2
+			// 
+			this->groupBox2->Controls->Add(this->comboBox1);
+			this->groupBox2->Controls->Add(this->label9);
+			this->groupBox2->Controls->Add(this->comboBox2);
+			this->groupBox2->Controls->Add(this->label10);
+			this->groupBox2->Controls->Add(this->comboBox3);
+			this->groupBox2->Controls->Add(this->textBox1);
+			this->groupBox2->Controls->Add(this->textBox2);
+			this->groupBox2->Controls->Add(this->textBox3);
+			this->groupBox2->Controls->Add(this->label11);
+			this->groupBox2->Controls->Add(this->textBox4);
+			this->groupBox2->Controls->Add(this->label12);
+			this->groupBox2->Controls->Add(this->label13);
+			this->groupBox2->Controls->Add(this->label14);
+			this->groupBox2->Controls->Add(this->label40);
+			this->groupBox2->Controls->Add(this->label48);
+			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Open Sans", 18.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->groupBox2->Location = System::Drawing::Point(616, 126);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(381, 437);
+			this->groupBox2->TabIndex = 28;
+			this->groupBox2->TabStop = false;
+			this->groupBox2->Text = L"Promjenite željene podatke";
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
+				L"Nema", L"Ukor OS", L"Ukor OV", L"Ukor Direktora",
+					L"Ukor NV", L"Isključenje"
+			});
+			this->comboBox1->Location = System::Drawing::Point(174, 358);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(175, 34);
+			this->comboBox1->TabIndex = 28;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(81, 359);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(70, 28);
+			this->label9->TabIndex = 27;
+			this->label9->Text = L"Ukor:";
+			this->label9->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Muško", L"Žensko" });
+			this->comboBox2->Location = System::Drawing::Point(175, 197);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(175, 34);
+			this->comboBox2->TabIndex = 24;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->Location = System::Drawing::Point(89, 202);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(62, 28);
+			this->label10->TabIndex = 23;
+			this->label10->Text = L"Spol:";
+			this->label10->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
+				L"Primjerno", L"Vrlo Dobro", L"Dobro", L"Zadovoljavajuće",
+					L"Loše"
+			});
+			this->comboBox3->Location = System::Drawing::Point(175, 252);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(175, 34);
+			this->comboBox3->TabIndex = 22;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox1->Location = System::Drawing::Point(175, 143);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(176, 36);
+			this->textBox1->TabIndex = 8;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox2->Location = System::Drawing::Point(175, 93);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(176, 36);
+			this->textBox2->TabIndex = 6;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox3->Location = System::Drawing::Point(306, 299);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(46, 36);
+			this->textBox3->TabIndex = 18;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label11->Location = System::Drawing::Point(93, 96);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(58, 28);
+			this->label11->TabIndex = 7;
+			this->label11->Text = L"Ime:";
+			this->label11->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox4->Location = System::Drawing::Point(203, 299);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(46, 36);
+			this->textBox4->TabIndex = 17;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label12->Location = System::Drawing::Point(49, 146);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(102, 28);
+			this->label12->TabIndex = 9;
+			this->label12->Text = L"Prezime:";
+			this->label12->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label13->Location = System::Drawing::Point(260, 302);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(41, 28);
+			this->label13->TabIndex = 16;
+			this->label13->Text = L"NP";
+			this->label13->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label14->Location = System::Drawing::Point(157, 302);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(41, 28);
+			this->label14->TabIndex = 15;
+			this->label14->Text = L"OP";
+			this->label14->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label40->Location = System::Drawing::Point(40, 301);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(111, 28);
+			this->label40->TabIndex = 14;
+			this->label40->Text = L"Izostanci:";
+			this->label40->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// label48
+			// 
+			this->label48->AutoSize = true;
+			this->label48->Font = (gcnew System::Drawing::Font(L"Open Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label48->Location = System::Drawing::Point(42, 253);
+			this->label48->Name = L"label48";
+			this->label48->Size = System::Drawing::Size(109, 28);
+			this->label48->TabIndex = 13;
+			this->label48->Text = L"Vladanje:";
+			this->label48->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// button3
 			// 
@@ -1360,7 +1593,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->label15->AutoSize = true;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Open Sans", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(86, 86);
+			this->label15->Location = System::Drawing::Point(70, 100);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(232, 22);
 			this->label15->TabIndex = 23;
@@ -1887,7 +2120,7 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			// groupBox10
 			// 
 			this->groupBox10->Controls->Add(this->textBox13);
-			this->groupBox10->Controls->Add(this->textBox14);
+			this->groupBox10->Controls->Add(this->irImeRazreda);
 			this->groupBox10->Controls->Add(this->label23);
 			this->groupBox10->Controls->Add(this->label24);
 			this->groupBox10->Controls->Add(this->textBox16);
@@ -1910,14 +2143,14 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->textBox13->Size = System::Drawing::Size(176, 33);
 			this->textBox13->TabIndex = 8;
 			// 
-			// textBox14
+			// irImeRazreda
 			// 
-			this->textBox14->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->irImeRazreda->Font = (gcnew System::Drawing::Font(L"Open Sans", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox14->Location = System::Drawing::Point(234, 48);
-			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(176, 33);
-			this->textBox14->TabIndex = 6;
+			this->irImeRazreda->Location = System::Drawing::Point(234, 48);
+			this->irImeRazreda->Name = L"irImeRazreda";
+			this->irImeRazreda->Size = System::Drawing::Size(176, 33);
+			this->irImeRazreda->TabIndex = 6;
 			// 
 			// label23
 			// 
@@ -2874,17 +3107,17 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1023, 720);
-			this->Controls->Add(this->dodajUcenikaStrana);
-			this->Controls->Add(this->uceniciStrana);
-			this->Controls->Add(this->izmjeniRazredStrana);
-			this->Controls->Add(this->dodajRazredStrana);
 			this->Controls->Add(this->izmjeniUcenikaStrana);
+			this->Controls->Add(this->dodajUcenikaStrana);
+			this->Controls->Add(this->izmjeniRazredStrana);
+			this->Controls->Add(this->uceniciStrana);
+			this->Controls->Add(this->dodajRazredStrana);
 			this->Controls->Add(this->unesiOcjeneStrana);
 			this->Controls->Add(this->rasporediUcenikeStrana);
 			this->Controls->Add(this->razrediStrana);
-			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
 			this->Controls->Add(this->pocetnaStrana);
 			this->Controls->Add(this->tabeleStrana);
+			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -2912,6 +3145,8 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->xDodajUcenika))->EndInit();
 			this->izmjeniUcenikaStrana->ResumeLayout(false);
 			this->izmjeniUcenikaStrana->PerformLayout();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
 			this->panel6->ResumeLayout(false);
 			this->panel7->ResumeLayout(false);
 			this->panel7->PerformLayout();
@@ -3826,8 +4061,8 @@ private: System::Windows::Forms::Button^ ruBtnSpremi;
 			uoBtnDodajOcjenu->Enabled = false;
 	}
 
-		 ///////////////////////////////////////////////////////////////////////////////
-		//////////////////////				 TABELE	   			 /////////////////////
+		///////////////////////////////////////////////////////////////////////////////
+		//////////////////////				 TABELE	   			 //////////////////////
 		///////////////////////////////////////////////////////////////////////////////
 
 	private: System::Void tabeleStrana_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
