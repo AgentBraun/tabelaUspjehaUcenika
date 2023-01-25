@@ -697,9 +697,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->pocetnaStrana->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->pocetnaStrana->Location = System::Drawing::Point(0, 0);
-			this->pocetnaStrana->Margin = System::Windows::Forms::Padding(0, 0, 4, 4);
+			this->pocetnaStrana->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->pocetnaStrana->Name = L"pocetnaStrana";
-			this->pocetnaStrana->Size = System::Drawing::Size(1365, 886);
+			this->pocetnaStrana->Size = System::Drawing::Size(1024, 720);
 			this->pocetnaStrana->TabIndex = 1;
 			// 
 			// meniPocetnaStrana
@@ -710,10 +710,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->meniPocetnaStrana->Controls->Add(this->psBtnRazredi);
 			this->meniPocetnaStrana->Controls->Add(this->psBtnUcenici);
 			this->meniPocetnaStrana->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->meniPocetnaStrana->Location = System::Drawing::Point(0, 763);
-			this->meniPocetnaStrana->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->meniPocetnaStrana->Location = System::Drawing::Point(0, 620);
 			this->meniPocetnaStrana->Name = L"meniPocetnaStrana";
-			this->meniPocetnaStrana->Size = System::Drawing::Size(1365, 123);
+			this->meniPocetnaStrana->Size = System::Drawing::Size(1024, 100);
 			this->meniPocetnaStrana->TabIndex = 2;
 			// 
 			// psBtnNapustiApp
@@ -723,10 +722,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->psBtnNapustiApp->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->psBtnNapustiApp->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"psBtnNapustiApp.Image")));
 			this->psBtnNapustiApp->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->psBtnNapustiApp->Location = System::Drawing::Point(1099, 17);
-			this->psBtnNapustiApp->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->psBtnNapustiApp->Location = System::Drawing::Point(824, 14);
 			this->psBtnNapustiApp->Name = L"psBtnNapustiApp";
-			this->psBtnNapustiApp->Size = System::Drawing::Size(237, 91);
+			this->psBtnNapustiApp->Size = System::Drawing::Size(178, 74);
 			this->psBtnNapustiApp->TabIndex = 3;
 			this->psBtnNapustiApp->Text = L"Napusti aplikaciju";
 			this->psBtnNapustiApp->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -740,10 +738,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->psBtnTabele->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->psBtnTabele->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"psBtnTabele.Image")));
 			this->psBtnTabele->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->psBtnTabele->Location = System::Drawing::Point(731, 17);
-			this->psBtnTabele->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->psBtnTabele->Location = System::Drawing::Point(548, 14);
 			this->psBtnTabele->Name = L"psBtnTabele";
-			this->psBtnTabele->Size = System::Drawing::Size(237, 91);
+			this->psBtnTabele->Size = System::Drawing::Size(178, 74);
 			this->psBtnTabele->TabIndex = 2;
 			this->psBtnTabele->Text = L"Tabele";
 			this->psBtnTabele->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -757,10 +754,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->psBtnRazredi->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->psBtnRazredi->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"psBtnRazredi.Image")));
 			this->psBtnRazredi->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->psBtnRazredi->Location = System::Drawing::Point(375, 18);
-			this->psBtnRazredi->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->psBtnRazredi->Location = System::Drawing::Point(281, 15);
 			this->psBtnRazredi->Name = L"psBtnRazredi";
-			this->psBtnRazredi->Size = System::Drawing::Size(237, 91);
+			this->psBtnRazredi->Size = System::Drawing::Size(178, 74);
 			this->psBtnRazredi->TabIndex = 1;
 			this->psBtnRazredi->Text = L"Razredi";
 			this->psBtnRazredi->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -775,10 +771,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->psBtnUcenici->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->psBtnUcenici->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"psBtnUcenici.Image")));
 			this->psBtnUcenici->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->psBtnUcenici->Location = System::Drawing::Point(27, 18);
-			this->psBtnUcenici->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->psBtnUcenici->Location = System::Drawing::Point(20, 15);
 			this->psBtnUcenici->Name = L"psBtnUcenici";
-			this->psBtnUcenici->Size = System::Drawing::Size(237, 91);
+			this->psBtnUcenici->Size = System::Drawing::Size(178, 74);
 			this->psBtnUcenici->TabIndex = 0;
 			this->psBtnUcenici->Text = L"Učenici";
 			this->psBtnUcenici->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -790,10 +785,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(429, 165);
-			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label7->Location = System::Drawing::Point(322, 134);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(545, 25);
+			this->label7->Size = System::Drawing::Size(440, 20);
 			this->label7->TabIndex = 1;
 			this->label7->Text = L"razredu (predmeti, opravani, neopravdani časovi, procenti itd).";
 			// 
@@ -804,19 +798,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel1->Controls->Add(this->glavniNaslov);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1365, 62);
+			this->panel1->Size = System::Drawing::Size(1024, 50);
 			this->panel1->TabIndex = 0;
 			// 
 			// xPocetnaStrana
 			// 
 			this->xPocetnaStrana->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xPocetnaStrana.BackgroundImage")));
 			this->xPocetnaStrana->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->xPocetnaStrana->Location = System::Drawing::Point(1335, 7);
-			this->xPocetnaStrana->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xPocetnaStrana->Location = System::Drawing::Point(1001, 6);
 			this->xPocetnaStrana->Name = L"xPocetnaStrana";
-			this->xPocetnaStrana->Size = System::Drawing::Size(28, 28);
+			this->xPocetnaStrana->Size = System::Drawing::Size(21, 23);
 			this->xPocetnaStrana->TabIndex = 1;
 			this->xPocetnaStrana->TabStop = false;
 			this->xPocetnaStrana->Click += gcnew System::EventHandler(this, &MyForm::xPocetnaStrana_Click);
@@ -828,10 +820,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->glavniNaslov->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->glavniNaslov->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->glavniNaslov->Location = System::Drawing::Point(532, 4);
-			this->glavniNaslov->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->glavniNaslov->Location = System::Drawing::Point(399, 3);
 			this->glavniNaslov->Name = L"glavniNaslov";
-			this->glavniNaslov->Size = System::Drawing::Size(290, 42);
+			this->glavniNaslov->Size = System::Drawing::Size(228, 33);
 			this->glavniNaslov->TabIndex = 0;
 			this->glavniNaslov->Text = L"Početna Strana";
 			this->glavniNaslov->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -841,10 +832,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(360, 138);
-			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label8->Location = System::Drawing::Point(270, 112);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(640, 25);
+			this->label8->Size = System::Drawing::Size(519, 20);
 			this->label8->TabIndex = 0;
 			this->label8->Text = L"Dobro došli u alpha fazi aplikacije za tabelarni prikaz uspjeha učenika po ";
 			// 
@@ -857,9 +847,8 @@ private: System::Windows::Forms::Label^ label48;
 			this->uceniciStrana->Controls->Add(this->label3);
 			this->uceniciStrana->Controls->Add(this->label4);
 			this->uceniciStrana->Location = System::Drawing::Point(0, 0);
-			this->uceniciStrana->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->uceniciStrana->Name = L"uceniciStrana";
-			this->uceniciStrana->Size = System::Drawing::Size(1365, 886);
+			this->uceniciStrana->Size = System::Drawing::Size(1024, 720);
 			this->uceniciStrana->TabIndex = 3;
 			this->uceniciStrana->Visible = false;
 			this->uceniciStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::uceniciStrana_VisibleChanged);
@@ -871,10 +860,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->meniUcenici->Controls->Add(this->umBtnDodajUcenika);
 			this->meniUcenici->Controls->Add(this->umBtnNazad);
 			this->meniUcenici->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->meniUcenici->Location = System::Drawing::Point(0, 763);
-			this->meniUcenici->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->meniUcenici->Location = System::Drawing::Point(0, 620);
 			this->meniUcenici->Name = L"meniUcenici";
-			this->meniUcenici->Size = System::Drawing::Size(1365, 123);
+			this->meniUcenici->Size = System::Drawing::Size(1024, 100);
 			this->meniUcenici->TabIndex = 4;
 			// 
 			// umBtnIzmjeniUcenika
@@ -885,10 +873,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->umBtnIzmjeniUcenika->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->umBtnIzmjeniUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"umBtnIzmjeniUcenika.Image")));
 			this->umBtnIzmjeniUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->umBtnIzmjeniUcenika->Location = System::Drawing::Point(709, 18);
-			this->umBtnIzmjeniUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->umBtnIzmjeniUcenika->Location = System::Drawing::Point(532, 15);
 			this->umBtnIzmjeniUcenika->Name = L"umBtnIzmjeniUcenika";
-			this->umBtnIzmjeniUcenika->Size = System::Drawing::Size(237, 91);
+			this->umBtnIzmjeniUcenika->Size = System::Drawing::Size(178, 74);
 			this->umBtnIzmjeniUcenika->TabIndex = 2;
 			this->umBtnIzmjeniUcenika->Text = L"Izmjeni učenika";
 			this->umBtnIzmjeniUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -902,10 +889,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->umBtnDodajUcenika->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->umBtnDodajUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"umBtnDodajUcenika.Image")));
 			this->umBtnDodajUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->umBtnDodajUcenika->Location = System::Drawing::Point(435, 18);
-			this->umBtnDodajUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->umBtnDodajUcenika->Location = System::Drawing::Point(326, 15);
 			this->umBtnDodajUcenika->Name = L"umBtnDodajUcenika";
-			this->umBtnDodajUcenika->Size = System::Drawing::Size(237, 91);
+			this->umBtnDodajUcenika->Size = System::Drawing::Size(178, 74);
 			this->umBtnDodajUcenika->TabIndex = 1;
 			this->umBtnDodajUcenika->Text = L"Dodaj učenika";
 			this->umBtnDodajUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -919,10 +905,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->umBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->umBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"umBtnNazad.Image")));
 			this->umBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->umBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->umBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->umBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->umBtnNazad->Name = L"umBtnNazad";
-			this->umBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->umBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->umBtnNazad->TabIndex = 0;
 			this->umBtnNazad->Text = L"Nazad";
 			this->umBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -936,19 +921,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel2->Controls->Add(this->label5);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel2->Location = System::Drawing::Point(0, 0);
-			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1365, 62);
+			this->panel2->Size = System::Drawing::Size(1024, 50);
 			this->panel2->TabIndex = 4;
 			// 
 			// xUcenici
 			// 
 			this->xUcenici->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xUcenici.BackgroundImage")));
 			this->xUcenici->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->xUcenici->Location = System::Drawing::Point(1335, 7);
-			this->xUcenici->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xUcenici->Location = System::Drawing::Point(1001, 6);
 			this->xUcenici->Name = L"xUcenici";
-			this->xUcenici->Size = System::Drawing::Size(28, 28);
+			this->xUcenici->Size = System::Drawing::Size(21, 23);
 			this->xUcenici->TabIndex = 1;
 			this->xUcenici->TabStop = false;
 			this->xUcenici->Click += gcnew System::EventHandler(this, &MyForm::xUcenici_Click);
@@ -960,10 +943,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label5->Location = System::Drawing::Point(579, 7);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Location = System::Drawing::Point(434, 6);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(148, 42);
+			this->label5->Size = System::Drawing::Size(119, 33);
 			this->label5->TabIndex = 0;
 			this->label5->Text = L"Učenici";
 			this->label5->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -973,12 +955,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->listaUceniciNeURazredu->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->listaUceniciNeURazredu->FormattingEnabled = true;
-			this->listaUceniciNeURazredu->ItemHeight = 29;
-			this->listaUceniciNeURazredu->Location = System::Drawing::Point(827, 160);
-			this->listaUceniciNeURazredu->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->listaUceniciNeURazredu->ItemHeight = 24;
+			this->listaUceniciNeURazredu->Location = System::Drawing::Point(620, 130);
 			this->listaUceniciNeURazredu->Name = L"listaUceniciNeURazredu";
 			this->listaUceniciNeURazredu->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listaUceniciNeURazredu->Size = System::Drawing::Size(424, 526);
+			this->listaUceniciNeURazredu->Size = System::Drawing::Size(319, 412);
 			this->listaUceniciNeURazredu->TabIndex = 3;
 			this->listaUceniciNeURazredu->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::listaUceniciNeURazredu_SelectedIndexChanged);
 			// 
@@ -987,12 +968,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->listaUceniciURazredu->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->listaUceniciURazredu->FormattingEnabled = true;
-			this->listaUceniciURazredu->ItemHeight = 29;
-			this->listaUceniciURazredu->Location = System::Drawing::Point(91, 160);
-			this->listaUceniciURazredu->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->listaUceniciURazredu->ItemHeight = 24;
+			this->listaUceniciURazredu->Location = System::Drawing::Point(68, 130);
 			this->listaUceniciURazredu->Name = L"listaUceniciURazredu";
 			this->listaUceniciURazredu->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listaUceniciURazredu->Size = System::Drawing::Size(424, 526);
+			this->listaUceniciURazredu->Size = System::Drawing::Size(319, 412);
 			this->listaUceniciURazredu->TabIndex = 2;
 			this->listaUceniciURazredu->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::listaUceniciURazredu_SelectedIndexChanged);
 			// 
@@ -1001,10 +981,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(777, 111);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(583, 90);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(426, 25);
+			this->label3->Size = System::Drawing::Size(352, 20);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"Učenici koji nisu raspoređeni po razredima:";
 			// 
@@ -1013,10 +992,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(63, 111);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(47, 90);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(409, 25);
+			this->label4->Size = System::Drawing::Size(338, 20);
 			this->label4->TabIndex = 0;
 			this->label4->Text = L"Učenici koji su raspoređeni po razredima:";
 			// 
@@ -1031,9 +1009,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->dodajUcenikaStrana->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->dodajUcenikaStrana->Location = System::Drawing::Point(0, 0);
-			this->dodajUcenikaStrana->Margin = System::Windows::Forms::Padding(0, 0, 4, 4);
+			this->dodajUcenikaStrana->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->dodajUcenikaStrana->Name = L"dodajUcenikaStrana";
-			this->dodajUcenikaStrana->Size = System::Drawing::Size(1365, 886);
+			this->dodajUcenikaStrana->Size = System::Drawing::Size(1024, 720);
 			this->dodajUcenikaStrana->TabIndex = 2;
 			this->dodajUcenikaStrana->Visible = false;
 			this->dodajUcenikaStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::dodajUcenikaStrana_VisibleChanged);
@@ -1046,10 +1024,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->duBtnDodajUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->duBtnDodajUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"duBtnDodajUcenika.Image")));
 			this->duBtnDodajUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->duBtnDodajUcenika->Location = System::Drawing::Point(565, 370);
-			this->duBtnDodajUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duBtnDodajUcenika->Location = System::Drawing::Point(424, 301);
 			this->duBtnDodajUcenika->Name = L"duBtnDodajUcenika";
-			this->duBtnDodajUcenika->Size = System::Drawing::Size(313, 103);
+			this->duBtnDodajUcenika->Size = System::Drawing::Size(235, 84);
 			this->duBtnDodajUcenika->TabIndex = 27;
 			this->duBtnDodajUcenika->Text = L"Dodaj učenika";
 			this->duBtnDodajUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1061,13 +1038,12 @@ private: System::Windows::Forms::Label^ label48;
 			this->duListaSviUcenici->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->duListaSviUcenici->FormattingEnabled = true;
-			this->duListaSviUcenici->ItemHeight = 29;
-			this->duListaSviUcenici->Location = System::Drawing::Point(912, 178);
-			this->duListaSviUcenici->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duListaSviUcenici->ItemHeight = 24;
+			this->duListaSviUcenici->Location = System::Drawing::Point(684, 145);
 			this->duListaSviUcenici->Name = L"duListaSviUcenici";
 			this->duListaSviUcenici->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->duListaSviUcenici->SelectionMode = System::Windows::Forms::SelectionMode::None;
-			this->duListaSviUcenici->Size = System::Drawing::Size(373, 497);
+			this->duListaSviUcenici->Size = System::Drawing::Size(281, 388);
 			this->duListaSviUcenici->TabIndex = 22;
 			// 
 			// label2
@@ -1075,10 +1051,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(996, 118);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(747, 96);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(179, 36);
+			this->label2->Size = System::Drawing::Size(146, 29);
 			this->label2->TabIndex = 21;
 			this->label2->Text = L"Svi učenici:";
 			// 
@@ -1101,11 +1076,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->groupBox1->Controls->Add(this->label1);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox1->Location = System::Drawing::Point(27, 155);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Location = System::Drawing::Point(20, 126);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox1->Size = System::Drawing::Size(508, 538);
+			this->groupBox1->Size = System::Drawing::Size(381, 437);
 			this->groupBox1->TabIndex = 20;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Unesite tražene podatke";
@@ -1119,10 +1092,9 @@ private: System::Windows::Forms::Label^ label48;
 				L"Nema", L"Ukor OS", L"Ukor OV", L"Ukor Direktora",
 					L"Ukor NV", L"Isključenje"
 			});
-			this->duComboUkor->Location = System::Drawing::Point(232, 441);
-			this->duComboUkor->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duComboUkor->Location = System::Drawing::Point(174, 358);
 			this->duComboUkor->Name = L"duComboUkor";
-			this->duComboUkor->Size = System::Drawing::Size(232, 37);
+			this->duComboUkor->Size = System::Drawing::Size(175, 32);
 			this->duComboUkor->TabIndex = 28;
 			// 
 			// label49
@@ -1130,10 +1102,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label49->AutoSize = true;
 			this->label49->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label49->Location = System::Drawing::Point(108, 442);
-			this->label49->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label49->Location = System::Drawing::Point(81, 359);
 			this->label49->Name = L"label49";
-			this->label49->Size = System::Drawing::Size(85, 31);
+			this->label49->Size = System::Drawing::Size(68, 25);
 			this->label49->TabIndex = 27;
 			this->label49->Text = L"Ukor:";
 			this->label49->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1144,10 +1115,9 @@ private: System::Windows::Forms::Label^ label48;
 				static_cast<System::Byte>(0)));
 			this->duComboSpol->FormattingEnabled = true;
 			this->duComboSpol->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Muško", L"Žensko" });
-			this->duComboSpol->Location = System::Drawing::Point(233, 242);
-			this->duComboSpol->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duComboSpol->Location = System::Drawing::Point(175, 197);
 			this->duComboSpol->Name = L"duComboSpol";
-			this->duComboSpol->Size = System::Drawing::Size(232, 37);
+			this->duComboSpol->Size = System::Drawing::Size(175, 32);
 			this->duComboSpol->TabIndex = 24;
 			// 
 			// label44
@@ -1155,10 +1125,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label44->AutoSize = true;
 			this->label44->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label44->Location = System::Drawing::Point(119, 249);
-			this->label44->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label44->Location = System::Drawing::Point(89, 202);
 			this->label44->Name = L"label44";
-			this->label44->Size = System::Drawing::Size(81, 31);
+			this->label44->Size = System::Drawing::Size(66, 25);
 			this->label44->TabIndex = 23;
 			this->label44->Text = L"Spol:";
 			this->label44->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1172,40 +1141,36 @@ private: System::Windows::Forms::Label^ label48;
 				L"Primjerno", L"Vrlo Dobro", L"Dobro", L"Zadovoljavajuće",
 					L"Loše"
 			});
-			this->duComboVladanje->Location = System::Drawing::Point(233, 310);
-			this->duComboVladanje->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duComboVladanje->Location = System::Drawing::Point(175, 252);
 			this->duComboVladanje->Name = L"duComboVladanje";
-			this->duComboVladanje->Size = System::Drawing::Size(232, 37);
+			this->duComboVladanje->Size = System::Drawing::Size(175, 32);
 			this->duComboVladanje->TabIndex = 22;
 			// 
 			// duTFPrezime
 			// 
 			this->duTFPrezime->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->duTFPrezime->Location = System::Drawing::Point(233, 176);
-			this->duTFPrezime->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duTFPrezime->Location = System::Drawing::Point(175, 143);
 			this->duTFPrezime->Name = L"duTFPrezime";
-			this->duTFPrezime->Size = System::Drawing::Size(233, 37);
+			this->duTFPrezime->Size = System::Drawing::Size(176, 31);
 			this->duTFPrezime->TabIndex = 8;
 			// 
 			// duTFIme
 			// 
 			this->duTFIme->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->duTFIme->Location = System::Drawing::Point(233, 114);
-			this->duTFIme->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duTFIme->Location = System::Drawing::Point(175, 93);
 			this->duTFIme->Name = L"duTFIme";
-			this->duTFIme->Size = System::Drawing::Size(233, 37);
+			this->duTFIme->Size = System::Drawing::Size(176, 31);
 			this->duTFIme->TabIndex = 6;
 			// 
 			// duTFNeopravdani
 			// 
 			this->duTFNeopravdani->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->duTFNeopravdani->Location = System::Drawing::Point(408, 368);
-			this->duTFNeopravdani->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duTFNeopravdani->Location = System::Drawing::Point(306, 299);
 			this->duTFNeopravdani->Name = L"duTFNeopravdani";
-			this->duTFNeopravdani->Size = System::Drawing::Size(60, 37);
+			this->duTFNeopravdani->Size = System::Drawing::Size(46, 31);
 			this->duTFNeopravdani->TabIndex = 18;
 			// 
 			// labelduIme
@@ -1213,10 +1178,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->labelduIme->AutoSize = true;
 			this->labelduIme->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelduIme->Location = System::Drawing::Point(124, 118);
-			this->labelduIme->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->labelduIme->Location = System::Drawing::Point(93, 96);
 			this->labelduIme->Name = L"labelduIme";
-			this->labelduIme->Size = System::Drawing::Size(71, 31);
+			this->labelduIme->Size = System::Drawing::Size(56, 25);
 			this->labelduIme->TabIndex = 7;
 			this->labelduIme->Text = L"Ime:";
 			this->labelduIme->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1225,10 +1189,9 @@ private: System::Windows::Forms::Label^ label48;
 			// 
 			this->duTFOpravdani->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->duTFOpravdani->Location = System::Drawing::Point(271, 368);
-			this->duTFOpravdani->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duTFOpravdani->Location = System::Drawing::Point(203, 299);
 			this->duTFOpravdani->Name = L"duTFOpravdani";
-			this->duTFOpravdani->Size = System::Drawing::Size(60, 37);
+			this->duTFOpravdani->Size = System::Drawing::Size(46, 31);
 			this->duTFOpravdani->TabIndex = 17;
 			// 
 			// labelduPrezime
@@ -1236,10 +1199,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->labelduPrezime->AutoSize = true;
 			this->labelduPrezime->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelduPrezime->Location = System::Drawing::Point(65, 180);
-			this->labelduPrezime->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->labelduPrezime->Location = System::Drawing::Point(49, 146);
 			this->labelduPrezime->Name = L"labelduPrezime";
-			this->labelduPrezime->Size = System::Drawing::Size(129, 31);
+			this->labelduPrezime->Size = System::Drawing::Size(104, 25);
 			this->labelduPrezime->TabIndex = 9;
 			this->labelduPrezime->Text = L"Prezime:";
 			this->labelduPrezime->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1249,10 +1211,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->labelduIzostanciNP->AutoSize = true;
 			this->labelduIzostanciNP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->labelduIzostanciNP->Location = System::Drawing::Point(347, 372);
-			this->labelduIzostanciNP->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->labelduIzostanciNP->Location = System::Drawing::Point(260, 302);
 			this->labelduIzostanciNP->Name = L"labelduIzostanciNP";
-			this->labelduIzostanciNP->Size = System::Drawing::Size(52, 31);
+			this->labelduIzostanciNP->Size = System::Drawing::Size(41, 25);
 			this->labelduIzostanciNP->TabIndex = 16;
 			this->labelduIzostanciNP->Text = L"NP";
 			this->labelduIzostanciNP->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1262,10 +1223,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->labelduIzostanciOP->AutoSize = true;
 			this->labelduIzostanciOP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->labelduIzostanciOP->Location = System::Drawing::Point(209, 372);
-			this->labelduIzostanciOP->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->labelduIzostanciOP->Location = System::Drawing::Point(157, 302);
 			this->labelduIzostanciOP->Name = L"labelduIzostanciOP";
-			this->labelduIzostanciOP->Size = System::Drawing::Size(53, 31);
+			this->labelduIzostanciOP->Size = System::Drawing::Size(42, 25);
 			this->labelduIzostanciOP->TabIndex = 15;
 			this->labelduIzostanciOP->Text = L"OP";
 			this->labelduIzostanciOP->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1275,10 +1235,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->labelduIzostanci->AutoSize = true;
 			this->labelduIzostanci->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelduIzostanci->Location = System::Drawing::Point(53, 370);
-			this->labelduIzostanci->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->labelduIzostanci->Location = System::Drawing::Point(40, 301);
 			this->labelduIzostanci->Name = L"labelduIzostanci";
-			this->labelduIzostanci->Size = System::Drawing::Size(141, 31);
+			this->labelduIzostanci->Size = System::Drawing::Size(113, 25);
 			this->labelduIzostanci->TabIndex = 14;
 			this->labelduIzostanci->Text = L"Izostanci:";
 			this->labelduIzostanci->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1288,10 +1247,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(56, 311);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(42, 253);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(136, 31);
+			this->label1->Size = System::Drawing::Size(111, 25);
 			this->label1->TabIndex = 13;
 			this->label1->Text = L"Vladanje:";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1301,10 +1259,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel3->Controls->Add(this->duBtnNazad);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel3->Location = System::Drawing::Point(0, 763);
-			this->panel3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel3->Location = System::Drawing::Point(0, 620);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(1365, 123);
+			this->panel3->Size = System::Drawing::Size(1024, 100);
 			this->panel3->TabIndex = 5;
 			// 
 			// duBtnNazad
@@ -1314,10 +1271,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->duBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->duBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"duBtnNazad.Image")));
 			this->duBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->duBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->duBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->duBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->duBtnNazad->Name = L"duBtnNazad";
-			this->duBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->duBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->duBtnNazad->TabIndex = 0;
 			this->duBtnNazad->Text = L"Nazad";
 			this->duBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1331,19 +1287,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel4->Controls->Add(this->label6);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(0, 0);
-			this->panel4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(1365, 62);
+			this->panel4->Size = System::Drawing::Size(1024, 50);
 			this->panel4->TabIndex = 0;
 			// 
 			// xDodajUcenika
 			// 
 			this->xDodajUcenika->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xDodajUcenika.BackgroundImage")));
 			this->xDodajUcenika->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->xDodajUcenika->Location = System::Drawing::Point(1335, 7);
-			this->xDodajUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xDodajUcenika->Location = System::Drawing::Point(1001, 6);
 			this->xDodajUcenika->Name = L"xDodajUcenika";
-			this->xDodajUcenika->Size = System::Drawing::Size(28, 28);
+			this->xDodajUcenika->Size = System::Drawing::Size(21, 23);
 			this->xDodajUcenika->TabIndex = 1;
 			this->xDodajUcenika->TabStop = false;
 			this->xDodajUcenika->Click += gcnew System::EventHandler(this, &MyForm::xDodajUcenika_Click);
@@ -1355,10 +1309,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label6->Location = System::Drawing::Point(532, 4);
-			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Location = System::Drawing::Point(399, 3);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(275, 42);
+			this->label6->Size = System::Drawing::Size(218, 33);
 			this->label6->TabIndex = 0;
 			this->label6->Text = L"Dodaj Učenika";
 			this->label6->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -1376,9 +1329,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->izmjeniUcenikaStrana->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->izmjeniUcenikaStrana->Location = System::Drawing::Point(0, 0);
-			this->izmjeniUcenikaStrana->Margin = System::Windows::Forms::Padding(0, 0, 4, 4);
+			this->izmjeniUcenikaStrana->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->izmjeniUcenikaStrana->Name = L"izmjeniUcenikaStrana";
-			this->izmjeniUcenikaStrana->Size = System::Drawing::Size(1365, 886);
+			this->izmjeniUcenikaStrana->Size = System::Drawing::Size(1024, 720);
 			this->izmjeniUcenikaStrana->TabIndex = 6;
 			this->izmjeniUcenikaStrana->Visible = false;
 			// 
@@ -1401,11 +1354,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->groupBox2->Controls->Add(this->label48);
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox2->Location = System::Drawing::Point(821, 155);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox2->Location = System::Drawing::Point(616, 126);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox2->Size = System::Drawing::Size(508, 538);
+			this->groupBox2->Size = System::Drawing::Size(381, 437);
 			this->groupBox2->TabIndex = 28;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Promjenite željene podatke";
@@ -1419,10 +1370,9 @@ private: System::Windows::Forms::Label^ label48;
 				L"Nema", L"Ukor OS", L"Ukor OV", L"Ukor Direktora",
 					L"Ukor NV", L"Isključenje"
 			});
-			this->comboBox1->Location = System::Drawing::Point(232, 441);
-			this->comboBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->comboBox1->Location = System::Drawing::Point(174, 358);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(232, 37);
+			this->comboBox1->Size = System::Drawing::Size(175, 32);
 			this->comboBox1->TabIndex = 28;
 			// 
 			// label9
@@ -1430,10 +1380,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(108, 442);
-			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Location = System::Drawing::Point(81, 359);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(85, 31);
+			this->label9->Size = System::Drawing::Size(68, 25);
 			this->label9->TabIndex = 27;
 			this->label9->Text = L"Ukor:";
 			this->label9->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1444,10 +1393,9 @@ private: System::Windows::Forms::Label^ label48;
 				static_cast<System::Byte>(0)));
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Muško", L"Žensko" });
-			this->comboBox2->Location = System::Drawing::Point(233, 242);
-			this->comboBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->comboBox2->Location = System::Drawing::Point(175, 197);
 			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(232, 37);
+			this->comboBox2->Size = System::Drawing::Size(175, 32);
 			this->comboBox2->TabIndex = 24;
 			// 
 			// label10
@@ -1455,10 +1403,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label10->Location = System::Drawing::Point(119, 249);
-			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label10->Location = System::Drawing::Point(89, 202);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(81, 31);
+			this->label10->Size = System::Drawing::Size(66, 25);
 			this->label10->TabIndex = 23;
 			this->label10->Text = L"Spol:";
 			this->label10->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1472,40 +1419,36 @@ private: System::Windows::Forms::Label^ label48;
 				L"Primjerno", L"Vrlo Dobro", L"Dobro", L"Zadovoljavajuće",
 					L"Loše"
 			});
-			this->comboBox3->Location = System::Drawing::Point(233, 310);
-			this->comboBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->comboBox3->Location = System::Drawing::Point(175, 252);
 			this->comboBox3->Name = L"comboBox3";
-			this->comboBox3->Size = System::Drawing::Size(232, 37);
+			this->comboBox3->Size = System::Drawing::Size(175, 32);
 			this->comboBox3->TabIndex = 22;
 			// 
 			// textBox1
 			// 
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(233, 176);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox1->Location = System::Drawing::Point(175, 143);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(233, 37);
+			this->textBox1->Size = System::Drawing::Size(176, 31);
 			this->textBox1->TabIndex = 8;
 			// 
 			// textBox2
 			// 
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox2->Location = System::Drawing::Point(233, 114);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox2->Location = System::Drawing::Point(175, 93);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(233, 37);
+			this->textBox2->Size = System::Drawing::Size(176, 31);
 			this->textBox2->TabIndex = 6;
 			// 
 			// textBox3
 			// 
 			this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox3->Location = System::Drawing::Point(408, 368);
-			this->textBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox3->Location = System::Drawing::Point(306, 299);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(60, 37);
+			this->textBox3->Size = System::Drawing::Size(46, 31);
 			this->textBox3->TabIndex = 18;
 			// 
 			// label11
@@ -1513,10 +1456,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label11->AutoSize = true;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label11->Location = System::Drawing::Point(124, 118);
-			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label11->Location = System::Drawing::Point(93, 96);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(71, 31);
+			this->label11->Size = System::Drawing::Size(56, 25);
 			this->label11->TabIndex = 7;
 			this->label11->Text = L"Ime:";
 			this->label11->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1525,10 +1467,9 @@ private: System::Windows::Forms::Label^ label48;
 			// 
 			this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox4->Location = System::Drawing::Point(271, 368);
-			this->textBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox4->Location = System::Drawing::Point(203, 299);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(60, 37);
+			this->textBox4->Size = System::Drawing::Size(46, 31);
 			this->textBox4->TabIndex = 17;
 			// 
 			// label12
@@ -1536,10 +1477,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label12->AutoSize = true;
 			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label12->Location = System::Drawing::Point(65, 180);
-			this->label12->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label12->Location = System::Drawing::Point(49, 146);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(129, 31);
+			this->label12->Size = System::Drawing::Size(104, 25);
 			this->label12->TabIndex = 9;
 			this->label12->Text = L"Prezime:";
 			this->label12->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1549,10 +1489,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label13->AutoSize = true;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label13->Location = System::Drawing::Point(347, 372);
-			this->label13->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label13->Location = System::Drawing::Point(260, 302);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(52, 31);
+			this->label13->Size = System::Drawing::Size(41, 25);
 			this->label13->TabIndex = 16;
 			this->label13->Text = L"NP";
 			this->label13->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1562,10 +1501,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label14->AutoSize = true;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label14->Location = System::Drawing::Point(209, 372);
-			this->label14->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label14->Location = System::Drawing::Point(157, 302);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(53, 31);
+			this->label14->Size = System::Drawing::Size(42, 25);
 			this->label14->TabIndex = 15;
 			this->label14->Text = L"OP";
 			this->label14->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1575,10 +1513,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label40->AutoSize = true;
 			this->label40->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label40->Location = System::Drawing::Point(53, 370);
-			this->label40->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label40->Location = System::Drawing::Point(40, 301);
 			this->label40->Name = L"label40";
-			this->label40->Size = System::Drawing::Size(141, 31);
+			this->label40->Size = System::Drawing::Size(113, 25);
 			this->label40->TabIndex = 14;
 			this->label40->Text = L"Izostanci:";
 			this->label40->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1588,10 +1525,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label48->AutoSize = true;
 			this->label48->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label48->Location = System::Drawing::Point(56, 311);
-			this->label48->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label48->Location = System::Drawing::Point(42, 253);
 			this->label48->Name = L"label48";
-			this->label48->Size = System::Drawing::Size(136, 31);
+			this->label48->Size = System::Drawing::Size(111, 25);
 			this->label48->TabIndex = 13;
 			this->label48->Text = L"Vladanje:";
 			this->label48->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1604,10 +1540,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->iuBtnIzbrisiUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->iuBtnIzbrisiUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"iuBtnIzbrisiUcenika.Image")));
 			this->iuBtnIzbrisiUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->iuBtnIzbrisiUcenika->Location = System::Drawing::Point(489, 489);
-			this->iuBtnIzbrisiUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->iuBtnIzbrisiUcenika->Location = System::Drawing::Point(367, 397);
 			this->iuBtnIzbrisiUcenika->Name = L"iuBtnIzbrisiUcenika";
-			this->iuBtnIzbrisiUcenika->Size = System::Drawing::Size(313, 103);
+			this->iuBtnIzbrisiUcenika->Size = System::Drawing::Size(235, 84);
 			this->iuBtnIzbrisiUcenika->TabIndex = 27;
 			this->iuBtnIzbrisiUcenika->Text = L"Izbriši učenika";
 			this->iuBtnIzbrisiUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1621,10 +1556,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->iuBtnIzmjeniUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->iuBtnIzmjeniUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"iuBtnIzmjeniUcenika.Image")));
 			this->iuBtnIzmjeniUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->iuBtnIzmjeniUcenika->Location = System::Drawing::Point(489, 370);
-			this->iuBtnIzmjeniUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->iuBtnIzmjeniUcenika->Location = System::Drawing::Point(367, 301);
 			this->iuBtnIzmjeniUcenika->Name = L"iuBtnIzmjeniUcenika";
-			this->iuBtnIzmjeniUcenika->Size = System::Drawing::Size(313, 103);
+			this->iuBtnIzmjeniUcenika->Size = System::Drawing::Size(235, 84);
 			this->iuBtnIzmjeniUcenika->TabIndex = 26;
 			this->iuBtnIzmjeniUcenika->Text = L"Izmjeni učenika";
 			this->iuBtnIzmjeniUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1638,10 +1572,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->iuBtnPrikaziUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->iuBtnPrikaziUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"iuBtnPrikaziUcenika.Image")));
 			this->iuBtnPrikaziUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->iuBtnPrikaziUcenika->Location = System::Drawing::Point(489, 255);
-			this->iuBtnPrikaziUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->iuBtnPrikaziUcenika->Location = System::Drawing::Point(367, 207);
 			this->iuBtnPrikaziUcenika->Name = L"iuBtnPrikaziUcenika";
-			this->iuBtnPrikaziUcenika->Size = System::Drawing::Size(313, 103);
+			this->iuBtnPrikaziUcenika->Size = System::Drawing::Size(235, 84);
 			this->iuBtnPrikaziUcenika->TabIndex = 25;
 			this->iuBtnPrikaziUcenika->Text = L"Prikaži učenika";
 			this->iuBtnPrikaziUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1652,12 +1585,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->iuListaSviUcenici->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->iuListaSviUcenici->FormattingEnabled = true;
-			this->iuListaSviUcenici->ItemHeight = 29;
-			this->iuListaSviUcenici->Location = System::Drawing::Point(50, 171);
-			this->iuListaSviUcenici->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->iuListaSviUcenici->ItemHeight = 24;
+			this->iuListaSviUcenici->Location = System::Drawing::Point(38, 139);
 			this->iuListaSviUcenici->Name = L"iuListaSviUcenici";
 			this->iuListaSviUcenici->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->iuListaSviUcenici->Size = System::Drawing::Size(424, 526);
+			this->iuListaSviUcenici->Size = System::Drawing::Size(319, 412);
 			this->iuListaSviUcenici->TabIndex = 24;
 			// 
 			// label15
@@ -1665,10 +1597,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label15->AutoSize = true;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(93, 142);
-			this->label15->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label15->Location = System::Drawing::Point(70, 115);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(283, 25);
+			this->label15->Size = System::Drawing::Size(232, 20);
 			this->label15->TabIndex = 23;
 			this->label15->Text = L"Svi učenici u bazi podataka:";
 			// 
@@ -1677,10 +1608,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel6->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel6->Controls->Add(this->iuBtnNazad);
 			this->panel6->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel6->Location = System::Drawing::Point(0, 763);
-			this->panel6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel6->Location = System::Drawing::Point(0, 620);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(1365, 123);
+			this->panel6->Size = System::Drawing::Size(1024, 100);
 			this->panel6->TabIndex = 5;
 			// 
 			// iuBtnNazad
@@ -1690,10 +1620,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->iuBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->iuBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"iuBtnNazad.Image")));
 			this->iuBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->iuBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->iuBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->iuBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->iuBtnNazad->Name = L"iuBtnNazad";
-			this->iuBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->iuBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->iuBtnNazad->TabIndex = 0;
 			this->iuBtnNazad->Text = L"Nazad";
 			this->iuBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1707,19 +1636,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel7->Controls->Add(this->iuGlavniNaslov);
 			this->panel7->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel7->Location = System::Drawing::Point(0, 0);
-			this->panel7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(1365, 62);
+			this->panel7->Size = System::Drawing::Size(1024, 50);
 			this->panel7->TabIndex = 0;
 			// 
 			// xIzmjeniUcenika
 			// 
 			this->xIzmjeniUcenika->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xIzmjeniUcenika.BackgroundImage")));
 			this->xIzmjeniUcenika->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->xIzmjeniUcenika->Location = System::Drawing::Point(1335, 7);
-			this->xIzmjeniUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xIzmjeniUcenika->Location = System::Drawing::Point(1001, 6);
 			this->xIzmjeniUcenika->Name = L"xIzmjeniUcenika";
-			this->xIzmjeniUcenika->Size = System::Drawing::Size(28, 28);
+			this->xIzmjeniUcenika->Size = System::Drawing::Size(21, 23);
 			this->xIzmjeniUcenika->TabIndex = 1;
 			this->xIzmjeniUcenika->TabStop = false;
 			this->xIzmjeniUcenika->Click += gcnew System::EventHandler(this, &MyForm::xIzmjeniUcenika_Click);
@@ -1731,10 +1658,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->iuGlavniNaslov->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->iuGlavniNaslov->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->iuGlavniNaslov->Location = System::Drawing::Point(532, 4);
-			this->iuGlavniNaslov->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->iuGlavniNaslov->Location = System::Drawing::Point(399, 3);
 			this->iuGlavniNaslov->Name = L"iuGlavniNaslov";
-			this->iuGlavniNaslov->Size = System::Drawing::Size(295, 42);
+			this->iuGlavniNaslov->Size = System::Drawing::Size(238, 33);
 			this->iuGlavniNaslov->TabIndex = 0;
 			this->iuGlavniNaslov->Text = L"Izmjeni Učenika";
 			this->iuGlavniNaslov->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -1750,9 +1676,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->razrediStrana->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->razrediStrana->Location = System::Drawing::Point(0, 0);
-			this->razrediStrana->Margin = System::Windows::Forms::Padding(0, 0, 4, 4);
+			this->razrediStrana->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->razrediStrana->Name = L"razrediStrana";
-			this->razrediStrana->Size = System::Drawing::Size(1365, 886);
+			this->razrediStrana->Size = System::Drawing::Size(1024, 720);
 			this->razrediStrana->TabIndex = 3;
 			this->razrediStrana->Visible = false;
 			this->razrediStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::razrediStrana_VisibleChanged);
@@ -1762,12 +1688,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->listaRazredaSaUcenicima->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->listaRazredaSaUcenicima->FormattingEnabled = true;
-			this->listaRazredaSaUcenicima->ItemHeight = 29;
-			this->listaRazredaSaUcenicima->Location = System::Drawing::Point(821, 160);
-			this->listaRazredaSaUcenicima->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->listaRazredaSaUcenicima->ItemHeight = 24;
+			this->listaRazredaSaUcenicima->Location = System::Drawing::Point(616, 130);
 			this->listaRazredaSaUcenicima->Name = L"listaRazredaSaUcenicima";
 			this->listaRazredaSaUcenicima->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listaRazredaSaUcenicima->Size = System::Drawing::Size(424, 526);
+			this->listaRazredaSaUcenicima->Size = System::Drawing::Size(319, 412);
 			this->listaRazredaSaUcenicima->TabIndex = 7;
 			this->listaRazredaSaUcenicima->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::listaRazredaSaUcenicima_SelectedIndexChanged);
 			// 
@@ -1776,12 +1701,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->listaRazrediBezUcenika->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->listaRazrediBezUcenika->FormattingEnabled = true;
-			this->listaRazrediBezUcenika->ItemHeight = 29;
-			this->listaRazrediBezUcenika->Location = System::Drawing::Point(85, 160);
-			this->listaRazrediBezUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->listaRazrediBezUcenika->ItemHeight = 24;
+			this->listaRazrediBezUcenika->Location = System::Drawing::Point(64, 130);
 			this->listaRazrediBezUcenika->Name = L"listaRazrediBezUcenika";
 			this->listaRazrediBezUcenika->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->listaRazrediBezUcenika->Size = System::Drawing::Size(424, 526);
+			this->listaRazrediBezUcenika->Size = System::Drawing::Size(319, 412);
 			this->listaRazrediBezUcenika->TabIndex = 6;
 			// 
 			// label16
@@ -1789,10 +1713,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label16->AutoSize = true;
 			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label16->Location = System::Drawing::Point(907, 113);
-			this->label16->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label16->Location = System::Drawing::Point(680, 92);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(217, 25);
+			this->label16->Size = System::Drawing::Size(180, 20);
 			this->label16->TabIndex = 5;
 			this->label16->Text = L"Razredi sa učenicima";
 			// 
@@ -1801,10 +1724,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label18->AutoSize = true;
 			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label18->Location = System::Drawing::Point(171, 113);
-			this->label18->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label18->Location = System::Drawing::Point(128, 92);
 			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(207, 25);
+			this->label18->Size = System::Drawing::Size(172, 20);
 			this->label18->TabIndex = 4;
 			this->label18->Text = L"Razredi bez učenika";
 			// 
@@ -1817,10 +1739,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel8->Controls->Add(this->rBtnDodajRazred);
 			this->panel8->Controls->Add(this->rBtnNazad);
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel8->Location = System::Drawing::Point(0, 763);
-			this->panel8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel8->Location = System::Drawing::Point(0, 620);
 			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(1365, 123);
+			this->panel8->Size = System::Drawing::Size(1024, 100);
 			this->panel8->TabIndex = 2;
 			// 
 			// rBtnIzmjeniRazred
@@ -1831,10 +1752,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->rBtnIzmjeniRazred->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->rBtnIzmjeniRazred->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"rBtnIzmjeniRazred.Image")));
 			this->rBtnIzmjeniRazred->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->rBtnIzmjeniRazred->Location = System::Drawing::Point(565, 18);
-			this->rBtnIzmjeniRazred->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->rBtnIzmjeniRazred->Location = System::Drawing::Point(424, 15);
 			this->rBtnIzmjeniRazred->Name = L"rBtnIzmjeniRazred";
-			this->rBtnIzmjeniRazred->Size = System::Drawing::Size(237, 91);
+			this->rBtnIzmjeniRazred->Size = System::Drawing::Size(178, 74);
 			this->rBtnIzmjeniRazred->TabIndex = 4;
 			this->rBtnIzmjeniRazred->Text = L"   Izmjeni Razred";
 			this->rBtnIzmjeniRazred->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1849,10 +1769,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->rBtnUnesiOcjene->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->rBtnUnesiOcjene->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"rBtnUnesiOcjene.Image")));
 			this->rBtnUnesiOcjene->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->rBtnUnesiOcjene->Location = System::Drawing::Point(1099, 18);
-			this->rBtnUnesiOcjene->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->rBtnUnesiOcjene->Location = System::Drawing::Point(824, 15);
 			this->rBtnUnesiOcjene->Name = L"rBtnUnesiOcjene";
-			this->rBtnUnesiOcjene->Size = System::Drawing::Size(237, 91);
+			this->rBtnUnesiOcjene->Size = System::Drawing::Size(178, 74);
 			this->rBtnUnesiOcjene->TabIndex = 3;
 			this->rBtnUnesiOcjene->Text = L"     Unesi  ocjene";
 			this->rBtnUnesiOcjene->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1866,10 +1785,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->rBtnRasporediUcenike->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->rBtnRasporediUcenike->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"rBtnRasporediUcenike.Image")));
 			this->rBtnRasporediUcenike->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->rBtnRasporediUcenike->Location = System::Drawing::Point(827, 18);
-			this->rBtnRasporediUcenike->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->rBtnRasporediUcenike->Location = System::Drawing::Point(620, 15);
 			this->rBtnRasporediUcenike->Name = L"rBtnRasporediUcenike";
-			this->rBtnRasporediUcenike->Size = System::Drawing::Size(247, 91);
+			this->rBtnRasporediUcenike->Size = System::Drawing::Size(185, 74);
 			this->rBtnRasporediUcenike->TabIndex = 2;
 			this->rBtnRasporediUcenike->Text = L"Rasporedi Učenike";
 			this->rBtnRasporediUcenike->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1883,10 +1801,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->rBtnDodajRazred->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->rBtnDodajRazred->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"rBtnDodajRazred.Image")));
 			this->rBtnDodajRazred->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->rBtnDodajRazred->Location = System::Drawing::Point(297, 18);
-			this->rBtnDodajRazred->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->rBtnDodajRazred->Location = System::Drawing::Point(223, 15);
 			this->rBtnDodajRazred->Name = L"rBtnDodajRazred";
-			this->rBtnDodajRazred->Size = System::Drawing::Size(237, 91);
+			this->rBtnDodajRazred->Size = System::Drawing::Size(178, 74);
 			this->rBtnDodajRazred->TabIndex = 1;
 			this->rBtnDodajRazred->Text = L"        Dodaj razred";
 			this->rBtnDodajRazred->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1900,10 +1817,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->rBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->rBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"rBtnNazad.Image")));
 			this->rBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->rBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->rBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->rBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->rBtnNazad->Name = L"rBtnNazad";
-			this->rBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->rBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->rBtnNazad->TabIndex = 0;
 			this->rBtnNazad->Text = L"Nazad";
 			this->rBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1917,19 +1833,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel9->Controls->Add(this->label17);
 			this->panel9->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel9->Location = System::Drawing::Point(0, 0);
-			this->panel9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(1365, 62);
+			this->panel9->Size = System::Drawing::Size(1024, 50);
 			this->panel9->TabIndex = 0;
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->pictureBox1->Location = System::Drawing::Point(1335, 7);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Location = System::Drawing::Point(1001, 6);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(28, 28);
+			this->pictureBox1->Size = System::Drawing::Size(21, 23);
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyForm::pictureBox1_Click);
@@ -1941,10 +1855,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label17->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label17->Location = System::Drawing::Point(591, 4);
-			this->label17->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label17->Location = System::Drawing::Point(443, 3);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(154, 42);
+			this->label17->Size = System::Drawing::Size(123, 33);
 			this->label17->TabIndex = 0;
 			this->label17->Text = L"Razredi";
 			this->label17->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -1962,9 +1875,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->dodajRazredStrana->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->dodajRazredStrana->Location = System::Drawing::Point(0, 0);
-			this->dodajRazredStrana->Margin = System::Windows::Forms::Padding(0, 0, 4, 4);
+			this->dodajRazredStrana->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->dodajRazredStrana->Name = L"dodajRazredStrana";
-			this->dodajRazredStrana->Size = System::Drawing::Size(1365, 886);
+			this->dodajRazredStrana->Size = System::Drawing::Size(1024, 720);
 			this->dodajRazredStrana->TabIndex = 28;
 			this->dodajRazredStrana->Visible = false;
 			this->dodajRazredStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::dodajRazredStrana_VisibleChanged);
@@ -1977,10 +1890,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->drBtnDodajRazred->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->drBtnDodajRazred->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"drBtnDodajRazred.Image")));
 			this->drBtnDodajRazred->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->drBtnDodajRazred->Location = System::Drawing::Point(359, 534);
-			this->drBtnDodajRazred->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->drBtnDodajRazred->Location = System::Drawing::Point(269, 434);
 			this->drBtnDodajRazred->Name = L"drBtnDodajRazred";
-			this->drBtnDodajRazred->Size = System::Drawing::Size(313, 103);
+			this->drBtnDodajRazred->Size = System::Drawing::Size(235, 84);
 			this->drBtnDodajRazred->TabIndex = 27;
 			this->drBtnDodajRazred->Text = L"Dodaj razred";
 			this->drBtnDodajRazred->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -1996,10 +1908,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->drBtnIzbrisiPredmet->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->drBtnIzbrisiPredmet->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"drBtnIzbrisiPredmet.Image")));
 			this->drBtnIzbrisiPredmet->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->drBtnIzbrisiPredmet->Location = System::Drawing::Point(541, 405);
-			this->drBtnIzbrisiPredmet->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->drBtnIzbrisiPredmet->Location = System::Drawing::Point(406, 329);
 			this->drBtnIzbrisiPredmet->Name = L"drBtnIzbrisiPredmet";
-			this->drBtnIzbrisiPredmet->Size = System::Drawing::Size(335, 103);
+			this->drBtnIzbrisiPredmet->Size = System::Drawing::Size(251, 84);
 			this->drBtnIzbrisiPredmet->TabIndex = 26;
 			this->drBtnIzbrisiPredmet->Text = L"Izmjeni predmet";
 			this->drBtnIzbrisiPredmet->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2015,10 +1926,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->drBtnDodajPredmet->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->drBtnDodajPredmet->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"drBtnDodajPredmet.Image")));
 			this->drBtnDodajPredmet->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->drBtnDodajPredmet->Location = System::Drawing::Point(180, 406);
-			this->drBtnDodajPredmet->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->drBtnDodajPredmet->Location = System::Drawing::Point(135, 330);
 			this->drBtnDodajPredmet->Name = L"drBtnDodajPredmet";
-			this->drBtnDodajPredmet->Size = System::Drawing::Size(313, 103);
+			this->drBtnDodajPredmet->Size = System::Drawing::Size(235, 84);
 			this->drBtnDodajPredmet->TabIndex = 25;
 			this->drBtnDodajPredmet->Text = L"Dodaj predmet";
 			this->drBtnDodajPredmet->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2030,12 +1940,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->drListaPredmeti->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->drListaPredmeti->FormattingEnabled = true;
-			this->drListaPredmeti->ItemHeight = 29;
-			this->drListaPredmeti->Location = System::Drawing::Point(937, 162);
-			this->drListaPredmeti->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->drListaPredmeti->ItemHeight = 24;
+			this->drListaPredmeti->Location = System::Drawing::Point(703, 132);
 			this->drListaPredmeti->Name = L"drListaPredmeti";
 			this->drListaPredmeti->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->drListaPredmeti->Size = System::Drawing::Size(249, 526);
+			this->drListaPredmeti->Size = System::Drawing::Size(188, 412);
 			this->drListaPredmeti->TabIndex = 24;
 			this->drListaPredmeti->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::drListaPredmeti_SelectedIndexChanged);
 			// 
@@ -2044,10 +1953,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label19->AutoSize = true;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label19->Location = System::Drawing::Point(1013, 132);
-			this->label19->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label19->Location = System::Drawing::Point(760, 107);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(97, 25);
+			this->label19->Size = System::Drawing::Size(80, 20);
 			this->label19->TabIndex = 23;
 			this->label19->Text = L"Predmeti";
 			// 
@@ -2061,11 +1969,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->groupBox9->Controls->Add(this->label25);
 			this->groupBox9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox9->Location = System::Drawing::Point(197, 119);
-			this->groupBox9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox9->Location = System::Drawing::Point(148, 97);
 			this->groupBox9->Name = L"groupBox9";
-			this->groupBox9->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox9->Size = System::Drawing::Size(637, 262);
+			this->groupBox9->Size = System::Drawing::Size(478, 213);
 			this->groupBox9->TabIndex = 21;
 			this->groupBox9->TabStop = false;
 			this->groupBox9->Text = L"Unesite tražene podatke";
@@ -2074,20 +1980,18 @@ private: System::Windows::Forms::Label^ label48;
 			// 
 			this->drTFImeRazrednika->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->drTFImeRazrednika->Location = System::Drawing::Point(312, 118);
-			this->drTFImeRazrednika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->drTFImeRazrednika->Location = System::Drawing::Point(234, 96);
 			this->drTFImeRazrednika->Name = L"drTFImeRazrednika";
-			this->drTFImeRazrednika->Size = System::Drawing::Size(233, 34);
+			this->drTFImeRazrednika->Size = System::Drawing::Size(176, 29);
 			this->drTFImeRazrednika->TabIndex = 8;
 			// 
 			// drTFImeRazreda
 			// 
 			this->drTFImeRazreda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->drTFImeRazreda->Location = System::Drawing::Point(312, 59);
-			this->drTFImeRazreda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->drTFImeRazreda->Location = System::Drawing::Point(234, 48);
 			this->drTFImeRazreda->Name = L"drTFImeRazreda";
-			this->drTFImeRazreda->Size = System::Drawing::Size(233, 34);
+			this->drTFImeRazreda->Size = System::Drawing::Size(176, 29);
 			this->drTFImeRazreda->TabIndex = 6;
 			// 
 			// label20
@@ -2095,10 +1999,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label20->AutoSize = true;
 			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label20->Location = System::Drawing::Point(107, 65);
-			this->label20->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label20->Location = System::Drawing::Point(80, 53);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(178, 31);
+			this->label20->Size = System::Drawing::Size(143, 25);
 			this->label20->TabIndex = 7;
 			this->label20->Text = L"Ime razreda:";
 			this->label20->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2108,10 +2011,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label21->AutoSize = true;
 			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label21->Location = System::Drawing::Point(71, 119);
-			this->label21->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label21->Location = System::Drawing::Point(53, 97);
 			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(216, 31);
+			this->label21->Size = System::Drawing::Size(174, 25);
 			this->label21->TabIndex = 9;
 			this->label21->Text = L"Ime razrednika:";
 			this->label21->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2120,10 +2022,9 @@ private: System::Windows::Forms::Label^ label48;
 			// 
 			this->drTFPredmet->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->drTFPredmet->Location = System::Drawing::Point(312, 177);
-			this->drTFPredmet->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->drTFPredmet->Location = System::Drawing::Point(234, 144);
 			this->drTFPredmet->Name = L"drTFPredmet";
-			this->drTFPredmet->Size = System::Drawing::Size(233, 34);
+			this->drTFPredmet->Size = System::Drawing::Size(176, 29);
 			this->drTFPredmet->TabIndex = 12;
 			this->drTFPredmet->TextChanged += gcnew System::EventHandler(this, &MyForm::drTFPredmet_TextChanged);
 			// 
@@ -2132,10 +2033,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label25->AutoSize = true;
 			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label25->Location = System::Drawing::Point(159, 178);
-			this->label25->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label25->Location = System::Drawing::Point(119, 145);
 			this->label25->Name = L"label25";
-			this->label25->Size = System::Drawing::Size(132, 31);
+			this->label25->Size = System::Drawing::Size(106, 25);
 			this->label25->TabIndex = 13;
 			this->label25->Text = L"Predmet:";
 			this->label25->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2145,10 +2045,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel10->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel10->Controls->Add(this->drBtnNazad);
 			this->panel10->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel10->Location = System::Drawing::Point(0, 763);
-			this->panel10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel10->Location = System::Drawing::Point(0, 620);
 			this->panel10->Name = L"panel10";
-			this->panel10->Size = System::Drawing::Size(1365, 123);
+			this->panel10->Size = System::Drawing::Size(1024, 100);
 			this->panel10->TabIndex = 5;
 			// 
 			// drBtnNazad
@@ -2158,10 +2057,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->drBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->drBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"drBtnNazad.Image")));
 			this->drBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->drBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->drBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->drBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->drBtnNazad->Name = L"drBtnNazad";
-			this->drBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->drBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->drBtnNazad->TabIndex = 0;
 			this->drBtnNazad->Text = L"Nazad";
 			this->drBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2175,19 +2073,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel11->Controls->Add(this->label26);
 			this->panel11->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel11->Location = System::Drawing::Point(0, 0);
-			this->panel11->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel11->Name = L"panel11";
-			this->panel11->Size = System::Drawing::Size(1365, 62);
+			this->panel11->Size = System::Drawing::Size(1024, 50);
 			this->panel11->TabIndex = 0;
 			// 
 			// xdodajRazred
 			// 
 			this->xdodajRazred->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xdodajRazred.BackgroundImage")));
 			this->xdodajRazred->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->xdodajRazred->Location = System::Drawing::Point(1335, 7);
-			this->xdodajRazred->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xdodajRazred->Location = System::Drawing::Point(1001, 6);
 			this->xdodajRazred->Name = L"xdodajRazred";
-			this->xdodajRazred->Size = System::Drawing::Size(28, 28);
+			this->xdodajRazred->Size = System::Drawing::Size(21, 23);
 			this->xdodajRazred->TabIndex = 1;
 			this->xdodajRazred->TabStop = false;
 			this->xdodajRazred->Click += gcnew System::EventHandler(this, &MyForm::xdodajRazred_Click);
@@ -2199,10 +2095,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label26->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label26->Location = System::Drawing::Point(532, 4);
-			this->label26->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label26->Location = System::Drawing::Point(399, 3);
 			this->label26->Name = L"label26";
-			this->label26->Size = System::Drawing::Size(259, 42);
+			this->label26->Size = System::Drawing::Size(205, 33);
 			this->label26->TabIndex = 0;
 			this->label26->Text = L"Dodaj Razred";
 			this->label26->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -2220,9 +2115,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->izmjeniRazredStrana->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->izmjeniRazredStrana->Location = System::Drawing::Point(0, 0);
-			this->izmjeniRazredStrana->Margin = System::Windows::Forms::Padding(0, 0, 4, 4);
+			this->izmjeniRazredStrana->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->izmjeniRazredStrana->Name = L"izmjeniRazredStrana";
-			this->izmjeniRazredStrana->Size = System::Drawing::Size(1365, 886);
+			this->izmjeniRazredStrana->Size = System::Drawing::Size(1024, 720);
 			this->izmjeniRazredStrana->TabIndex = 29;
 			this->izmjeniRazredStrana->Visible = false;
 			// 
@@ -2236,11 +2131,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->groupBox10->Controls->Add(this->label27);
 			this->groupBox10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox10->Location = System::Drawing::Point(197, 119);
-			this->groupBox10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox10->Location = System::Drawing::Point(148, 97);
 			this->groupBox10->Name = L"groupBox10";
-			this->groupBox10->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox10->Size = System::Drawing::Size(637, 262);
+			this->groupBox10->Size = System::Drawing::Size(478, 213);
 			this->groupBox10->TabIndex = 21;
 			this->groupBox10->TabStop = false;
 			this->groupBox10->Text = L"Unesite tražene podatke";
@@ -2249,20 +2142,18 @@ private: System::Windows::Forms::Label^ label48;
 			// 
 			this->textBox13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox13->Location = System::Drawing::Point(312, 118);
-			this->textBox13->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox13->Location = System::Drawing::Point(234, 96);
 			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(233, 34);
+			this->textBox13->Size = System::Drawing::Size(176, 29);
 			this->textBox13->TabIndex = 8;
 			// 
 			// irImeRazreda
 			// 
 			this->irImeRazreda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->irImeRazreda->Location = System::Drawing::Point(312, 59);
-			this->irImeRazreda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->irImeRazreda->Location = System::Drawing::Point(234, 48);
 			this->irImeRazreda->Name = L"irImeRazreda";
-			this->irImeRazreda->Size = System::Drawing::Size(233, 34);
+			this->irImeRazreda->Size = System::Drawing::Size(176, 29);
 			this->irImeRazreda->TabIndex = 6;
 			// 
 			// label23
@@ -2270,10 +2161,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label23->AutoSize = true;
 			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label23->Location = System::Drawing::Point(107, 65);
-			this->label23->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label23->Location = System::Drawing::Point(80, 53);
 			this->label23->Name = L"label23";
-			this->label23->Size = System::Drawing::Size(178, 31);
+			this->label23->Size = System::Drawing::Size(143, 25);
 			this->label23->TabIndex = 7;
 			this->label23->Text = L"Ime razreda:";
 			this->label23->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2283,10 +2173,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label24->AutoSize = true;
 			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label24->Location = System::Drawing::Point(71, 119);
-			this->label24->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label24->Location = System::Drawing::Point(53, 97);
 			this->label24->Name = L"label24";
-			this->label24->Size = System::Drawing::Size(216, 31);
+			this->label24->Size = System::Drawing::Size(174, 25);
 			this->label24->TabIndex = 9;
 			this->label24->Text = L"Ime razrednika:";
 			this->label24->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2295,10 +2184,9 @@ private: System::Windows::Forms::Label^ label48;
 			// 
 			this->textBox16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox16->Location = System::Drawing::Point(312, 177);
-			this->textBox16->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox16->Location = System::Drawing::Point(234, 144);
 			this->textBox16->Name = L"textBox16";
-			this->textBox16->Size = System::Drawing::Size(233, 34);
+			this->textBox16->Size = System::Drawing::Size(176, 29);
 			this->textBox16->TabIndex = 12;
 			// 
 			// label27
@@ -2306,10 +2194,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label27->AutoSize = true;
 			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label27->Location = System::Drawing::Point(159, 178);
-			this->label27->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label27->Location = System::Drawing::Point(119, 145);
 			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(132, 31);
+			this->label27->Size = System::Drawing::Size(106, 25);
 			this->label27->TabIndex = 13;
 			this->label27->Text = L"Predmet:";
 			this->label27->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2322,10 +2209,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->button8->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.Image")));
 			this->button8->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button8->Location = System::Drawing::Point(359, 534);
-			this->button8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button8->Location = System::Drawing::Point(269, 434);
 			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(313, 103);
+			this->button8->Size = System::Drawing::Size(235, 84);
 			this->button8->TabIndex = 27;
 			this->button8->Text = L"Spremi Izmjene";
 			this->button8->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2339,10 +2225,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->button9->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
 			this->button9->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button9->Location = System::Drawing::Point(541, 405);
-			this->button9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button9->Location = System::Drawing::Point(406, 329);
 			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(313, 103);
+			this->button9->Size = System::Drawing::Size(235, 84);
 			this->button9->TabIndex = 26;
 			this->button9->Text = L"        preimenuj predmet";
 			this->button9->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2357,10 +2242,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->button10->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button10.Image")));
 			this->button10->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button10->Location = System::Drawing::Point(180, 406);
-			this->button10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button10->Location = System::Drawing::Point(135, 330);
 			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(313, 103);
+			this->button10->Size = System::Drawing::Size(235, 84);
 			this->button10->TabIndex = 25;
 			this->button10->Text = L"Dodaj Predmet";
 			this->button10->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2371,12 +2255,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->lista->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lista->FormattingEnabled = true;
-			this->lista->ItemHeight = 29;
-			this->lista->Location = System::Drawing::Point(937, 162);
-			this->lista->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->lista->ItemHeight = 24;
+			this->lista->Location = System::Drawing::Point(703, 132);
 			this->lista->Name = L"lista";
 			this->lista->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->lista->Size = System::Drawing::Size(249, 526);
+			this->lista->Size = System::Drawing::Size(188, 412);
 			this->lista->TabIndex = 24;
 			// 
 			// label22
@@ -2384,10 +2267,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label22->AutoSize = true;
 			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label22->Location = System::Drawing::Point(1013, 132);
-			this->label22->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label22->Location = System::Drawing::Point(760, 107);
 			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(97, 25);
+			this->label22->Size = System::Drawing::Size(80, 20);
 			this->label22->TabIndex = 23;
 			this->label22->Text = L"Predmeti";
 			// 
@@ -2396,10 +2278,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel12->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel12->Controls->Add(this->irBtnNazad);
 			this->panel12->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel12->Location = System::Drawing::Point(0, 763);
-			this->panel12->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel12->Location = System::Drawing::Point(0, 620);
 			this->panel12->Name = L"panel12";
-			this->panel12->Size = System::Drawing::Size(1365, 123);
+			this->panel12->Size = System::Drawing::Size(1024, 100);
 			this->panel12->TabIndex = 5;
 			// 
 			// irBtnNazad
@@ -2409,10 +2290,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->irBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->irBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"irBtnNazad.Image")));
 			this->irBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->irBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->irBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->irBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->irBtnNazad->Name = L"irBtnNazad";
-			this->irBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->irBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->irBtnNazad->TabIndex = 0;
 			this->irBtnNazad->Text = L"Nazad";
 			this->irBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2426,19 +2306,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel13->Controls->Add(this->label28);
 			this->panel13->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel13->Location = System::Drawing::Point(0, 0);
-			this->panel13->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel13->Name = L"panel13";
-			this->panel13->Size = System::Drawing::Size(1365, 62);
+			this->panel13->Size = System::Drawing::Size(1024, 50);
 			this->panel13->TabIndex = 0;
 			// 
 			// xIzmjeniRazred
 			// 
 			this->xIzmjeniRazred->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xIzmjeniRazred.BackgroundImage")));
 			this->xIzmjeniRazred->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->xIzmjeniRazred->Location = System::Drawing::Point(1335, 7);
-			this->xIzmjeniRazred->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xIzmjeniRazred->Location = System::Drawing::Point(1001, 6);
 			this->xIzmjeniRazred->Name = L"xIzmjeniRazred";
-			this->xIzmjeniRazred->Size = System::Drawing::Size(28, 28);
+			this->xIzmjeniRazred->Size = System::Drawing::Size(21, 23);
 			this->xIzmjeniRazred->TabIndex = 1;
 			this->xIzmjeniRazred->TabStop = false;
 			this->xIzmjeniRazred->Click += gcnew System::EventHandler(this, &MyForm::xIzmjeniRazred_Click);
@@ -2450,10 +2328,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label28->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label28->Location = System::Drawing::Point(532, 4);
-			this->label28->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label28->Location = System::Drawing::Point(399, 3);
 			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(279, 42);
+			this->label28->Size = System::Drawing::Size(225, 33);
 			this->label28->TabIndex = 0;
 			this->label28->Text = L"Izmjeni Razred";
 			this->label28->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -2475,9 +2352,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->rasporediUcenikeStrana->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->rasporediUcenikeStrana->Location = System::Drawing::Point(0, 0);
-			this->rasporediUcenikeStrana->Margin = System::Windows::Forms::Padding(0, 0, 4, 4);
+			this->rasporediUcenikeStrana->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->rasporediUcenikeStrana->Name = L"rasporediUcenikeStrana";
-			this->rasporediUcenikeStrana->Size = System::Drawing::Size(1365, 886);
+			this->rasporediUcenikeStrana->Size = System::Drawing::Size(1024, 720);
 			this->rasporediUcenikeStrana->TabIndex = 8;
 			this->rasporediUcenikeStrana->Visible = false;
 			this->rasporediUcenikeStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::rasporediUcenikeStrana_VisibleChanged);
@@ -2490,10 +2367,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->ruBtnSpremi->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->ruBtnSpremi->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnSpremi.Image")));
 			this->ruBtnSpremi->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ruBtnSpremi->Location = System::Drawing::Point(380, 609);
-			this->ruBtnSpremi->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ruBtnSpremi->Location = System::Drawing::Point(285, 495);
 			this->ruBtnSpremi->Name = L"ruBtnSpremi";
-			this->ruBtnSpremi->Size = System::Drawing::Size(313, 100);
+			this->ruBtnSpremi->Size = System::Drawing::Size(235, 81);
 			this->ruBtnSpremi->TabIndex = 29;
 			this->ruBtnSpremi->Text = L" Spremi  učenike";
 			this->ruBtnSpremi->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2509,10 +2385,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->ruBtnPrikaziUcenike->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->ruBtnPrikaziUcenike->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnPrikaziUcenike.Image")));
 			this->ruBtnPrikaziUcenike->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ruBtnPrikaziUcenike->Location = System::Drawing::Point(380, 457);
-			this->ruBtnPrikaziUcenike->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ruBtnPrikaziUcenike->Location = System::Drawing::Point(285, 371);
 			this->ruBtnPrikaziUcenike->Name = L"ruBtnPrikaziUcenike";
-			this->ruBtnPrikaziUcenike->Size = System::Drawing::Size(313, 103);
+			this->ruBtnPrikaziUcenike->Size = System::Drawing::Size(235, 84);
 			this->ruBtnPrikaziUcenike->TabIndex = 28;
 			this->ruBtnPrikaziUcenike->Text = L"Prikaži učenike";
 			this->ruBtnPrikaziUcenike->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2528,10 +2403,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->ruBtnIzbaciIZRazreda->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->ruBtnIzbaciIZRazreda->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnIzbaciIZRazreda.Image")));
 			this->ruBtnIzbaciIZRazreda->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ruBtnIzbaciIZRazreda->Location = System::Drawing::Point(380, 336);
-			this->ruBtnIzbaciIZRazreda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ruBtnIzbaciIZRazreda->Location = System::Drawing::Point(285, 273);
 			this->ruBtnIzbaciIZRazreda->Name = L"ruBtnIzbaciIZRazreda";
-			this->ruBtnIzbaciIZRazreda->Size = System::Drawing::Size(313, 103);
+			this->ruBtnIzbaciIZRazreda->Size = System::Drawing::Size(235, 84);
 			this->ruBtnIzbaciIZRazreda->TabIndex = 27;
 			this->ruBtnIzbaciIZRazreda->Text = L"Izbaci iz razreda";
 			this->ruBtnIzbaciIZRazreda->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2546,10 +2420,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->ruBtnUbaciURazred->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->ruBtnUbaciURazred->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnUbaciURazred.Image")));
 			this->ruBtnUbaciURazred->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ruBtnUbaciURazred->Location = System::Drawing::Point(380, 220);
-			this->ruBtnUbaciURazred->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ruBtnUbaciURazred->Location = System::Drawing::Point(285, 179);
 			this->ruBtnUbaciURazred->Name = L"ruBtnUbaciURazred";
-			this->ruBtnUbaciURazred->Size = System::Drawing::Size(313, 103);
+			this->ruBtnUbaciURazred->Size = System::Drawing::Size(235, 84);
 			this->ruBtnUbaciURazred->TabIndex = 26;
 			this->ruBtnUbaciURazred->Text = L"Ubaci u razred";
 			this->ruBtnUbaciURazred->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2561,10 +2434,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label32->AutoSize = true;
 			this->label32->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label32->Location = System::Drawing::Point(789, 124);
-			this->label32->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label32->Location = System::Drawing::Point(592, 101);
 			this->label32->Name = L"label32";
-			this->label32->Size = System::Drawing::Size(80, 25);
+			this->label32->Size = System::Drawing::Size(67, 20);
 			this->label32->TabIndex = 9;
 			this->label32->Text = L"Razred";
 			// 
@@ -2573,12 +2445,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->ruListaUceniciURazredu->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ruListaUceniciURazredu->FormattingEnabled = true;
-			this->ruListaUceniciURazredu->ItemHeight = 29;
-			this->ruListaUceniciURazredu->Location = System::Drawing::Point(963, 155);
-			this->ruListaUceniciURazredu->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ruListaUceniciURazredu->ItemHeight = 24;
+			this->ruListaUceniciURazredu->Location = System::Drawing::Point(722, 126);
 			this->ruListaUceniciURazredu->Name = L"ruListaUceniciURazredu";
 			this->ruListaUceniciURazredu->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->ruListaUceniciURazredu->Size = System::Drawing::Size(288, 526);
+			this->ruListaUceniciURazredu->Size = System::Drawing::Size(217, 412);
 			this->ruListaUceniciURazredu->TabIndex = 8;
 			this->ruListaUceniciURazredu->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::ruListaUceniciURazredu_SelectedIndexChanged);
 			// 
@@ -2587,12 +2458,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->ruListaRazredi->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ruListaRazredi->FormattingEnabled = true;
-			this->ruListaRazredi->ItemHeight = 29;
-			this->ruListaRazredi->Location = System::Drawing::Point(752, 155);
-			this->ruListaRazredi->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ruListaRazredi->ItemHeight = 24;
+			this->ruListaRazredi->Location = System::Drawing::Point(564, 126);
 			this->ruListaRazredi->Name = L"ruListaRazredi";
 			this->ruListaRazredi->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->ruListaRazredi->Size = System::Drawing::Size(152, 526);
+			this->ruListaRazredi->Size = System::Drawing::Size(115, 412);
 			this->ruListaRazredi->TabIndex = 7;
 			this->ruListaRazredi->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::ruListaRazredi_SelectedIndexChanged);
 			// 
@@ -2601,12 +2471,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->ruListaUceniciBezRazreda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ruListaUceniciBezRazreda->FormattingEnabled = true;
-			this->ruListaUceniciBezRazreda->ItemHeight = 29;
-			this->ruListaUceniciBezRazreda->Location = System::Drawing::Point(35, 160);
-			this->ruListaUceniciBezRazreda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ruListaUceniciBezRazreda->ItemHeight = 24;
+			this->ruListaUceniciBezRazreda->Location = System::Drawing::Point(26, 130);
 			this->ruListaUceniciBezRazreda->Name = L"ruListaUceniciBezRazreda";
 			this->ruListaUceniciBezRazreda->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->ruListaUceniciBezRazreda->Size = System::Drawing::Size(288, 526);
+			this->ruListaUceniciBezRazreda->Size = System::Drawing::Size(217, 412);
 			this->ruListaUceniciBezRazreda->TabIndex = 6;
 			this->ruListaUceniciBezRazreda->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::ruListaUceniciBezRazreda_SelectedIndexChanged);
 			// 
@@ -2615,10 +2484,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label29->AutoSize = true;
 			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label29->Location = System::Drawing::Point(944, 124);
-			this->label29->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label29->Location = System::Drawing::Point(708, 101);
 			this->label29->Name = L"label29";
-			this->label29->Size = System::Drawing::Size(294, 25);
+			this->label29->Size = System::Drawing::Size(244, 20);
 			this->label29->TabIndex = 5;
 			this->label29->Text = L"Učenici u odabranom razredu";
 			// 
@@ -2627,10 +2495,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label30->AutoSize = true;
 			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label30->Location = System::Drawing::Point(63, 132);
-			this->label30->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label30->Location = System::Drawing::Point(47, 107);
 			this->label30->Name = L"label30";
-			this->label30->Size = System::Drawing::Size(203, 25);
+			this->label30->Size = System::Drawing::Size(168, 20);
 			this->label30->TabIndex = 4;
 			this->label30->Text = L"Učenici bez razreda";
 			// 
@@ -2639,10 +2506,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel14->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel14->Controls->Add(this->ruBtnNazad);
 			this->panel14->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel14->Location = System::Drawing::Point(0, 763);
-			this->panel14->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel14->Location = System::Drawing::Point(0, 620);
 			this->panel14->Name = L"panel14";
-			this->panel14->Size = System::Drawing::Size(1365, 123);
+			this->panel14->Size = System::Drawing::Size(1024, 100);
 			this->panel14->TabIndex = 2;
 			// 
 			// ruBtnNazad
@@ -2652,10 +2518,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->ruBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->ruBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ruBtnNazad.Image")));
 			this->ruBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ruBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->ruBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ruBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->ruBtnNazad->Name = L"ruBtnNazad";
-			this->ruBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->ruBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->ruBtnNazad->TabIndex = 0;
 			this->ruBtnNazad->Text = L"Nazad";
 			this->ruBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2669,19 +2534,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel15->Controls->Add(this->label31);
 			this->panel15->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel15->Location = System::Drawing::Point(0, 0);
-			this->panel15->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel15->Name = L"panel15";
-			this->panel15->Size = System::Drawing::Size(1365, 62);
+			this->panel15->Size = System::Drawing::Size(1024, 50);
 			this->panel15->TabIndex = 0;
 			// 
 			// xRasporediUcenike
 			// 
 			this->xRasporediUcenike->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xRasporediUcenike.BackgroundImage")));
 			this->xRasporediUcenike->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->xRasporediUcenike->Location = System::Drawing::Point(1335, 7);
-			this->xRasporediUcenike->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xRasporediUcenike->Location = System::Drawing::Point(1001, 6);
 			this->xRasporediUcenike->Name = L"xRasporediUcenike";
-			this->xRasporediUcenike->Size = System::Drawing::Size(28, 28);
+			this->xRasporediUcenike->Size = System::Drawing::Size(21, 23);
 			this->xRasporediUcenike->TabIndex = 1;
 			this->xRasporediUcenike->TabStop = false;
 			this->xRasporediUcenike->Click += gcnew System::EventHandler(this, &MyForm::xRasporediUcenike_Click);
@@ -2693,10 +2556,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label31->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label31->Location = System::Drawing::Point(507, 4);
-			this->label31->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label31->Location = System::Drawing::Point(380, 3);
 			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(352, 42);
+			this->label31->Size = System::Drawing::Size(279, 33);
 			this->label31->TabIndex = 0;
 			this->label31->Text = L"Rasporedi Učenike";
 			this->label31->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -2720,9 +2582,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->unesiOcjeneStrana->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->unesiOcjeneStrana->Location = System::Drawing::Point(0, 0);
-			this->unesiOcjeneStrana->Margin = System::Windows::Forms::Padding(0, 0, 4, 4);
+			this->unesiOcjeneStrana->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->unesiOcjeneStrana->Name = L"unesiOcjeneStrana";
-			this->unesiOcjeneStrana->Size = System::Drawing::Size(1365, 886);
+			this->unesiOcjeneStrana->Size = System::Drawing::Size(1024, 720);
 			this->unesiOcjeneStrana->TabIndex = 29;
 			this->unesiOcjeneStrana->Visible = false;
 			this->unesiOcjeneStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::unesiOcjeneStrana_VisibleChanged);
@@ -2735,12 +2597,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->uoBtnSacuvajOcjene->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->uoBtnSacuvajOcjene->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnSacuvajOcjene.Image")));
 			this->uoBtnSacuvajOcjene->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnSacuvajOcjene->Location = System::Drawing::Point(1023, 606);
-			this->uoBtnSacuvajOcjene->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoBtnSacuvajOcjene->Location = System::Drawing::Point(756, 468);
 			this->uoBtnSacuvajOcjene->Name = L"uoBtnSacuvajOcjene";
-			this->uoBtnSacuvajOcjene->Size = System::Drawing::Size(313, 103);
+			this->uoBtnSacuvajOcjene->Size = System::Drawing::Size(235, 84);
 			this->uoBtnSacuvajOcjene->TabIndex = 32;
-			this->uoBtnSacuvajOcjene->Text = L"Sačuvaj ocjene";
+			this->uoBtnSacuvajOcjene->Text = L"Spremi ocjene";
 			this->uoBtnSacuvajOcjene->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->uoBtnSacuvajOcjene->UseVisualStyleBackColor = false;
 			this->uoBtnSacuvajOcjene->Click += gcnew System::EventHandler(this, &MyForm::uoBtnSacuvajOcjene_Click);
@@ -2749,11 +2610,11 @@ private: System::Windows::Forms::Label^ label48;
 			// 
 			this->uoTFOcjena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->uoTFOcjena->Location = System::Drawing::Point(1196, 238);
-			this->uoTFOcjena->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoTFOcjena->Location = System::Drawing::Point(897, 193);
 			this->uoTFOcjena->Name = L"uoTFOcjena";
-			this->uoTFOcjena->Size = System::Drawing::Size(80, 34);
+			this->uoTFOcjena->Size = System::Drawing::Size(61, 29);
 			this->uoTFOcjena->TabIndex = 30;
+			this->uoTFOcjena->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->uoTFOcjena->TextChanged += gcnew System::EventHandler(this, &MyForm::uoTFOcjena_TextChanged);
 			// 
 			// label37
@@ -2761,10 +2622,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label37->AutoSize = true;
 			this->label37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label37->Location = System::Drawing::Point(1067, 239);
-			this->label37->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label37->Location = System::Drawing::Point(795, 193);
 			this->label37->Name = L"label37";
-			this->label37->Size = System::Drawing::Size(115, 31);
+			this->label37->Size = System::Drawing::Size(93, 25);
 			this->label37->TabIndex = 31;
 			this->label37->Text = L"Ocjena:";
 			this->label37->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2778,10 +2638,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->uoBtnPrikaziOcjene->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->uoBtnPrikaziOcjene->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnPrikaziOcjene.Image")));
 			this->uoBtnPrikaziOcjene->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnPrikaziOcjene->Location = System::Drawing::Point(275, 366);
-			this->uoBtnPrikaziOcjene->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoBtnPrikaziOcjene->Location = System::Drawing::Point(223, 297);
 			this->uoBtnPrikaziOcjene->Name = L"uoBtnPrikaziOcjene";
-			this->uoBtnPrikaziOcjene->Size = System::Drawing::Size(313, 103);
+			this->uoBtnPrikaziOcjene->Size = System::Drawing::Size(235, 84);
 			this->uoBtnPrikaziOcjene->TabIndex = 28;
 			this->uoBtnPrikaziOcjene->Text = L"Prikaži ocjene";
 			this->uoBtnPrikaziOcjene->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2797,12 +2656,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->uoBtnDodajOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->uoBtnDodajOcjenu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnDodajOcjenu.Image")));
 			this->uoBtnDodajOcjenu->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnDodajOcjenu->Location = System::Drawing::Point(1019, 297);
-			this->uoBtnDodajOcjenu->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoBtnDodajOcjenu->Location = System::Drawing::Point(756, 243);
 			this->uoBtnDodajOcjenu->Name = L"uoBtnDodajOcjenu";
-			this->uoBtnDodajOcjenu->Size = System::Drawing::Size(313, 103);
+			this->uoBtnDodajOcjenu->Size = System::Drawing::Size(235, 84);
 			this->uoBtnDodajOcjenu->TabIndex = 27;
-			this->uoBtnDodajOcjenu->Text = L"Dodaj Ocjenu";
+			this->uoBtnDodajOcjenu->Text = L"Dodaj ocjenu";
 			this->uoBtnDodajOcjenu->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->uoBtnDodajOcjenu->UseVisualStyleBackColor = false;
 			this->uoBtnDodajOcjenu->Click += gcnew System::EventHandler(this, &MyForm::uoBtnDodajOcjenu_Click);
@@ -2816,10 +2674,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->uoBtnPromjeniOcjenu->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->uoBtnPromjeniOcjenu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnPromjeniOcjenu.Image")));
 			this->uoBtnPromjeniOcjenu->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnPromjeniOcjenu->Location = System::Drawing::Point(1019, 412);
-			this->uoBtnPromjeniOcjenu->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoBtnPromjeniOcjenu->Location = System::Drawing::Point(756, 335);
 			this->uoBtnPromjeniOcjenu->Name = L"uoBtnPromjeniOcjenu";
-			this->uoBtnPromjeniOcjenu->Size = System::Drawing::Size(313, 103);
+			this->uoBtnPromjeniOcjenu->Size = System::Drawing::Size(235, 84);
 			this->uoBtnPromjeniOcjenu->TabIndex = 26;
 			this->uoBtnPromjeniOcjenu->Text = L"Promjeni ocjenu";
 			this->uoBtnPromjeniOcjenu->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2831,10 +2688,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label33->AutoSize = true;
 			this->label33->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label33->Location = System::Drawing::Point(671, 134);
-			this->label33->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label33->Location = System::Drawing::Point(540, 111);
 			this->label33->Name = L"label33";
-			this->label33->Size = System::Drawing::Size(97, 25);
+			this->label33->Size = System::Drawing::Size(80, 20);
 			this->label33->TabIndex = 9;
 			this->label33->Text = L"Predmeti";
 			// 
@@ -2843,12 +2699,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->uoListaOcjene->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->uoListaOcjene->FormattingEnabled = true;
-			this->uoListaOcjene->ItemHeight = 24;
-			this->uoListaOcjene->Location = System::Drawing::Point(885, 165);
-			this->uoListaOcjene->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoListaOcjene->ItemHeight = 18;
+			this->uoListaOcjene->Location = System::Drawing::Point(687, 135);
 			this->uoListaOcjene->Name = L"uoListaOcjene";
 			this->uoListaOcjene->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->uoListaOcjene->Size = System::Drawing::Size(109, 532);
+			this->uoListaOcjene->Size = System::Drawing::Size(33, 418);
 			this->uoListaOcjene->TabIndex = 8;
 			this->uoListaOcjene->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::uoListaOcjene_SelectedIndexChanged);
 			// 
@@ -2857,13 +2712,12 @@ private: System::Windows::Forms::Label^ label48;
 			this->uoListaPredmeti->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->uoListaPredmeti->FormattingEnabled = true;
-			this->uoListaPredmeti->ItemHeight = 24;
-			this->uoListaPredmeti->Location = System::Drawing::Point(600, 165);
-			this->uoListaPredmeti->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoListaPredmeti->ItemHeight = 18;
+			this->uoListaPredmeti->Location = System::Drawing::Point(480, 134);
 			this->uoListaPredmeti->Name = L"uoListaPredmeti";
 			this->uoListaPredmeti->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->uoListaPredmeti->SelectionMode = System::Windows::Forms::SelectionMode::None;
-			this->uoListaPredmeti->Size = System::Drawing::Size(263, 532);
+			this->uoListaPredmeti->Size = System::Drawing::Size(198, 418);
 			this->uoListaPredmeti->TabIndex = 7;
 			// 
 			// uoListaUceniciURazredu
@@ -2871,12 +2725,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->uoListaUceniciURazredu->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->uoListaUceniciURazredu->FormattingEnabled = true;
-			this->uoListaUceniciURazredu->ItemHeight = 25;
-			this->uoListaUceniciURazredu->Location = System::Drawing::Point(35, 165);
-			this->uoListaUceniciURazredu->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoListaUceniciURazredu->ItemHeight = 20;
+			this->uoListaUceniciURazredu->Location = System::Drawing::Point(26, 134);
 			this->uoListaUceniciURazredu->Name = L"uoListaUceniciURazredu";
 			this->uoListaUceniciURazredu->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->uoListaUceniciURazredu->Size = System::Drawing::Size(233, 529);
+			this->uoListaUceniciURazredu->Size = System::Drawing::Size(176, 424);
 			this->uoListaUceniciURazredu->TabIndex = 6;
 			this->uoListaUceniciURazredu->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::uoListaUceniciURazredu_SelectedIndexChanged);
 			// 
@@ -2885,10 +2738,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label34->AutoSize = true;
 			this->label34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label34->Location = System::Drawing::Point(901, 134);
-			this->label34->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label34->Location = System::Drawing::Point(676, 112);
 			this->label34->Name = L"label34";
-			this->label34->Size = System::Drawing::Size(81, 25);
+			this->label34->Size = System::Drawing::Size(65, 20);
 			this->label34->TabIndex = 5;
 			this->label34->Text = L"Ocjene";
 			// 
@@ -2897,10 +2749,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label35->AutoSize = true;
 			this->label35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label35->Location = System::Drawing::Point(45, 134);
-			this->label35->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label35->Location = System::Drawing::Point(34, 112);
 			this->label35->Name = L"label35";
-			this->label35->Size = System::Drawing::Size(180, 25);
+			this->label35->Size = System::Drawing::Size(149, 20);
 			this->label35->TabIndex = 4;
 			this->label35->Text = L"Učenici u razredu";
 			// 
@@ -2909,10 +2760,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel16->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel16->Controls->Add(this->uoBtnNazad);
 			this->panel16->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel16->Location = System::Drawing::Point(0, 763);
-			this->panel16->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel16->Location = System::Drawing::Point(0, 620);
 			this->panel16->Name = L"panel16";
-			this->panel16->Size = System::Drawing::Size(1365, 123);
+			this->panel16->Size = System::Drawing::Size(1024, 100);
 			this->panel16->TabIndex = 2;
 			// 
 			// uoBtnNazad
@@ -2922,10 +2772,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->uoBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->uoBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"uoBtnNazad.Image")));
 			this->uoBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->uoBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->uoBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->uoBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->uoBtnNazad->Name = L"uoBtnNazad";
-			this->uoBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->uoBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->uoBtnNazad->TabIndex = 0;
 			this->uoBtnNazad->Text = L"Nazad";
 			this->uoBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -2939,19 +2788,17 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel17->Controls->Add(this->label36);
 			this->panel17->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel17->Location = System::Drawing::Point(0, 0);
-			this->panel17->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel17->Name = L"panel17";
-			this->panel17->Size = System::Drawing::Size(1365, 62);
+			this->panel17->Size = System::Drawing::Size(1024, 50);
 			this->panel17->TabIndex = 0;
 			// 
 			// xUnesiOcjene
 			// 
 			this->xUnesiOcjene->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xUnesiOcjene.BackgroundImage")));
 			this->xUnesiOcjene->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->xUnesiOcjene->Location = System::Drawing::Point(1335, 7);
-			this->xUnesiOcjene->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xUnesiOcjene->Location = System::Drawing::Point(1001, 6);
 			this->xUnesiOcjene->Name = L"xUnesiOcjene";
-			this->xUnesiOcjene->Size = System::Drawing::Size(28, 28);
+			this->xUnesiOcjene->Size = System::Drawing::Size(21, 23);
 			this->xUnesiOcjene->TabIndex = 1;
 			this->xUnesiOcjene->TabStop = false;
 			this->xUnesiOcjene->Click += gcnew System::EventHandler(this, &MyForm::xUnesiOcjene_Click);
@@ -2963,10 +2810,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label36->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label36->Location = System::Drawing::Point(507, 4);
-			this->label36->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label36->Location = System::Drawing::Point(380, 3);
 			this->label36->Name = L"label36";
-			this->label36->Size = System::Drawing::Size(255, 42);
+			this->label36->Size = System::Drawing::Size(203, 33);
 			this->label36->TabIndex = 0;
 			this->label36->Text = L"Unesi Ocjene";
 			this->label36->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -2977,10 +2823,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->tuuLabelOpciUspjeh->AutoSize = true;
 			this->tuuLabelOpciUspjeh->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tuuLabelOpciUspjeh->Location = System::Drawing::Point(913, 160);
-			this->tuuLabelOpciUspjeh->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->tuuLabelOpciUspjeh->Location = System::Drawing::Point(685, 130);
 			this->tuuLabelOpciUspjeh->Name = L"tuuLabelOpciUspjeh";
-			this->tuuLabelOpciUspjeh->Size = System::Drawing::Size(156, 25);
+			this->tuuLabelOpciUspjeh->Size = System::Drawing::Size(126, 20);
 			this->tuuLabelOpciUspjeh->TabIndex = 5;
 			this->tuuLabelOpciUspjeh->Text = L"OPĆI USPJEH";
 			this->tuuLabelOpciUspjeh->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -2991,10 +2836,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label39->AutoSize = true;
 			this->label39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label39->Location = System::Drawing::Point(60, 146);
-			this->label39->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label39->Location = System::Drawing::Point(45, 119);
 			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(54, 31);
+			this->label39->Size = System::Drawing::Size(43, 25);
 			this->label39->TabIndex = 4;
 			this->label39->Text = L"RB";
 			this->label39->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -3002,10 +2846,9 @@ private: System::Windows::Forms::Label^ label48;
 			// panel5
 			// 
 			this->panel5->Controls->Add(this->listaPredmetaUcenika);
-			this->panel5->Location = System::Drawing::Point(404, 26);
-			this->panel5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel5->Location = System::Drawing::Point(303, 21);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(504, 215);
+			this->panel5->Size = System::Drawing::Size(378, 175);
 			this->panel5->TabIndex = 2;
 			// 
 			// listaPredmetaUcenika
@@ -3017,7 +2860,7 @@ private: System::Windows::Forms::Label^ label48;
 			this->listaPredmetaUcenika->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::HorizontalStackWithOverflow;
 			this->listaPredmetaUcenika->Location = System::Drawing::Point(0, 0);
 			this->listaPredmetaUcenika->Name = L"listaPredmetaUcenika";
-			this->listaPredmetaUcenika->Size = System::Drawing::Size(504, 215);
+			this->listaPredmetaUcenika->Size = System::Drawing::Size(378, 175);
 			this->listaPredmetaUcenika->TabIndex = 1;
 			this->listaPredmetaUcenika->TextDirection = System::Windows::Forms::ToolStripTextDirection::Vertical270;
 			// 
@@ -3026,10 +2869,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label38->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label38->Location = System::Drawing::Point(157, 117);
-			this->label38->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label38->Location = System::Drawing::Point(118, 95);
 			this->label38->Name = L"label38";
-			this->label38->Size = System::Drawing::Size(267, 70);
+			this->label38->Size = System::Drawing::Size(200, 57);
 			this->label38->TabIndex = 3;
 			this->label38->Text = L"IME I PREZIME UČENIKA";
 			this->label38->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -3040,10 +2882,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label41->AutoSize = true;
 			this->label41->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label41->Location = System::Drawing::Point(1228, 160);
-			this->label41->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label41->Location = System::Drawing::Point(921, 130);
 			this->label41->Name = L"label41";
-			this->label41->Size = System::Drawing::Size(125, 25);
+			this->label41->Size = System::Drawing::Size(101, 20);
 			this->label41->TabIndex = 7;
 			this->label41->Text = L"VLADANJE";
 			this->label41->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -3053,10 +2894,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label42->AutoSize = true;
 			this->label42->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label42->Location = System::Drawing::Point(1073, 119);
-			this->label42->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label42->Location = System::Drawing::Point(805, 97);
 			this->label42->Name = L"label42";
-			this->label42->Size = System::Drawing::Size(129, 25);
+			this->label42->Size = System::Drawing::Size(103, 20);
 			this->label42->TabIndex = 8;
 			this->label42->Text = L"IZOSTANCI";
 			this->label42->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -3076,9 +2916,8 @@ private: System::Windows::Forms::Label^ label48;
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label39);
 			this->stranaTabelaUspjehaUcenika->Controls->Add(this->label38);
 			this->stranaTabelaUspjehaUcenika->Location = System::Drawing::Point(0, 0);
-			this->stranaTabelaUspjehaUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->stranaTabelaUspjehaUcenika->Name = L"stranaTabelaUspjehaUcenika";
-			this->stranaTabelaUspjehaUcenika->Size = System::Drawing::Size(1364, 886);
+			this->stranaTabelaUspjehaUcenika->Size = System::Drawing::Size(1023, 720);
 			this->stranaTabelaUspjehaUcenika->TabIndex = 3;
 			this->stranaTabelaUspjehaUcenika->Visible = false;
 			this->stranaTabelaUspjehaUcenika->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::stranaTabelaUspjehaUcenika_Paint);
@@ -3086,10 +2925,9 @@ private: System::Windows::Forms::Label^ label48;
 			// xTabUspUcenika
 			// 
 			this->xTabUspUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xTabUspUcenika.Image")));
-			this->xTabUspUcenika->Location = System::Drawing::Point(1335, 7);
-			this->xTabUspUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xTabUspUcenika->Location = System::Drawing::Point(1001, 6);
 			this->xTabUspUcenika->Name = L"xTabUspUcenika";
-			this->xTabUspUcenika->Size = System::Drawing::Size(25, 26);
+			this->xTabUspUcenika->Size = System::Drawing::Size(19, 21);
 			this->xTabUspUcenika->TabIndex = 14;
 			this->xTabUspUcenika->TabStop = false;
 			this->xTabUspUcenika->Click += gcnew System::EventHandler(this, &MyForm::xTabUspUcenika_Click);
@@ -3099,10 +2937,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label47->AutoSize = true;
 			this->label47->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label47->Location = System::Drawing::Point(1171, 160);
-			this->label47->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label47->Location = System::Drawing::Point(878, 130);
 			this->label47->Name = L"label47";
-			this->label47->Size = System::Drawing::Size(48, 25);
+			this->label47->Size = System::Drawing::Size(38, 20);
 			this->label47->TabIndex = 13;
 			this->label47->Text = L"UK.";
 			this->label47->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -3112,10 +2949,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label46->AutoSize = true;
 			this->label46->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label46->Location = System::Drawing::Point(1116, 160);
-			this->label46->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label46->Location = System::Drawing::Point(837, 130);
 			this->label46->Name = L"label46";
-			this->label46->Size = System::Drawing::Size(47, 25);
+			this->label46->Size = System::Drawing::Size(37, 20);
 			this->label46->TabIndex = 12;
 			this->label46->Text = L"NP.";
 			this->label46->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -3125,10 +2961,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->label45->AutoSize = true;
 			this->label45->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label45->Location = System::Drawing::Point(1061, 160);
-			this->label45->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label45->Location = System::Drawing::Point(796, 130);
 			this->label45->Name = L"label45";
-			this->label45->Size = System::Drawing::Size(49, 25);
+			this->label45->Size = System::Drawing::Size(38, 20);
 			this->label45->TabIndex = 11;
 			this->label45->Text = L"OP.";
 			this->label45->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -3143,9 +2978,8 @@ private: System::Windows::Forms::Label^ label48;
 			this->tabeleStrana->Controls->Add(this->tabListaRazrediPuni);
 			this->tabeleStrana->Controls->Add(this->label43);
 			this->tabeleStrana->Location = System::Drawing::Point(0, 0);
-			this->tabeleStrana->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tabeleStrana->Name = L"tabeleStrana";
-			this->tabeleStrana->Size = System::Drawing::Size(1365, 886);
+			this->tabeleStrana->Size = System::Drawing::Size(1024, 720);
 			this->tabeleStrana->TabIndex = 5;
 			this->tabeleStrana->Visible = false;
 			this->tabeleStrana->VisibleChanged += gcnew System::EventHandler(this, &MyForm::tabeleStrana_VisibleChanged);
@@ -3159,10 +2993,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->button20->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button20.Image")));
 			this->button20->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button20->Location = System::Drawing::Point(71, 478);
-			this->button20->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button20->Location = System::Drawing::Point(53, 388);
 			this->button20->Name = L"button20";
-			this->button20->Size = System::Drawing::Size(644, 103);
+			this->button20->Size = System::Drawing::Size(483, 84);
 			this->button20->TabIndex = 28;
 			this->button20->Text = L"Tabela pregleda vladanja više razreda";
 			this->button20->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -3177,10 +3010,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->button19->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button19.Image")));
 			this->button19->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button19->Location = System::Drawing::Point(71, 336);
-			this->button19->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button19->Location = System::Drawing::Point(53, 273);
 			this->button19->Name = L"button19";
-			this->button19->Size = System::Drawing::Size(644, 103);
+			this->button19->Size = System::Drawing::Size(483, 84);
 			this->button19->TabIndex = 27;
 			this->button19->Text = L" Tabela pregleda uspjeha razreda u učenju";
 			this->button19->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -3195,10 +3027,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->tabBtnTabelaUspjehaUcenika->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->tabBtnTabelaUspjehaUcenika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"tabBtnTabelaUspjehaUcenika.Image")));
 			this->tabBtnTabelaUspjehaUcenika->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->tabBtnTabelaUspjehaUcenika->Location = System::Drawing::Point(71, 196);
-			this->tabBtnTabelaUspjehaUcenika->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tabBtnTabelaUspjehaUcenika->Location = System::Drawing::Point(53, 159);
 			this->tabBtnTabelaUspjehaUcenika->Name = L"tabBtnTabelaUspjehaUcenika";
-			this->tabBtnTabelaUspjehaUcenika->Size = System::Drawing::Size(644, 103);
+			this->tabBtnTabelaUspjehaUcenika->Size = System::Drawing::Size(483, 84);
 			this->tabBtnTabelaUspjehaUcenika->TabIndex = 26;
 			this->tabBtnTabelaUspjehaUcenika->Text = L"         Tabela pregleda uspjeha učenika u razredu na kraju polugodišta";
 			this->tabBtnTabelaUspjehaUcenika->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -3210,10 +3041,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel19->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel19->Controls->Add(this->tabBtnNazad);
 			this->panel19->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel19->Location = System::Drawing::Point(0, 763);
-			this->panel19->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel19->Location = System::Drawing::Point(0, 620);
 			this->panel19->Name = L"panel19";
-			this->panel19->Size = System::Drawing::Size(1365, 123);
+			this->panel19->Size = System::Drawing::Size(1024, 100);
 			this->panel19->TabIndex = 4;
 			// 
 			// tabBtnNazad
@@ -3223,10 +3053,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->tabBtnNazad->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->tabBtnNazad->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"tabBtnNazad.Image")));
 			this->tabBtnNazad->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->tabBtnNazad->Location = System::Drawing::Point(27, 18);
-			this->tabBtnNazad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tabBtnNazad->Location = System::Drawing::Point(20, 15);
 			this->tabBtnNazad->Name = L"tabBtnNazad";
-			this->tabBtnNazad->Size = System::Drawing::Size(237, 91);
+			this->tabBtnNazad->Size = System::Drawing::Size(178, 74);
 			this->tabBtnNazad->TabIndex = 0;
 			this->tabBtnNazad->Text = L"Nazad";
 			this->tabBtnNazad->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -3239,9 +3068,8 @@ private: System::Windows::Forms::Label^ label48;
 			this->panel20->Controls->Add(this->xTabele);
 			this->panel20->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel20->Location = System::Drawing::Point(0, 0);
-			this->panel20->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel20->Name = L"panel20";
-			this->panel20->Size = System::Drawing::Size(1365, 62);
+			this->panel20->Size = System::Drawing::Size(1024, 50);
 			this->panel20->TabIndex = 4;
 			// 
 			// xTabele
@@ -3249,10 +3077,9 @@ private: System::Windows::Forms::Label^ label48;
 			this->xTabele->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->xTabele->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xTabele.Image")));
 			this->xTabele->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"xTabele.InitialImage")));
-			this->xTabele->Location = System::Drawing::Point(1335, 7);
-			this->xTabele->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->xTabele->Location = System::Drawing::Point(1001, 6);
 			this->xTabele->Name = L"xTabele";
-			this->xTabele->Size = System::Drawing::Size(28, 28);
+			this->xTabele->Size = System::Drawing::Size(21, 23);
 			this->xTabele->TabIndex = 1;
 			this->xTabele->TabStop = false;
 			this->xTabele->Click += gcnew System::EventHandler(this, &MyForm::xTabele_Click);
@@ -3262,12 +3089,11 @@ private: System::Windows::Forms::Label^ label48;
 			this->tabListaRazrediPuni->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->tabListaRazrediPuni->FormattingEnabled = true;
-			this->tabListaRazrediPuni->ItemHeight = 29;
-			this->tabListaRazrediPuni->Location = System::Drawing::Point(827, 160);
-			this->tabListaRazrediPuni->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tabListaRazrediPuni->ItemHeight = 24;
+			this->tabListaRazrediPuni->Location = System::Drawing::Point(620, 130);
 			this->tabListaRazrediPuni->Name = L"tabListaRazrediPuni";
 			this->tabListaRazrediPuni->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->tabListaRazrediPuni->Size = System::Drawing::Size(424, 526);
+			this->tabListaRazrediPuni->Size = System::Drawing::Size(319, 412);
 			this->tabListaRazrediPuni->TabIndex = 3;
 			this->tabListaRazrediPuni->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::tabListaRazrediPuni_SelectedIndexChanged);
 			// 
@@ -3276,31 +3102,29 @@ private: System::Windows::Forms::Label^ label48;
 			this->label43->AutoSize = true;
 			this->label43->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label43->Location = System::Drawing::Point(980, 119);
-			this->label43->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label43->Location = System::Drawing::Point(735, 97);
 			this->label43->Name = L"label43";
-			this->label43->Size = System::Drawing::Size(92, 25);
+			this->label43->Size = System::Drawing::Size(76, 20);
 			this->label43->TabIndex = 1;
 			this->label43->Text = L"Razredi:";
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1364, 886);
+			this->ClientSize = System::Drawing::Size(1023, 720);
+			this->Controls->Add(this->unesiOcjeneStrana);
+			this->Controls->Add(this->razrediStrana);
+			this->Controls->Add(this->pocetnaStrana);
+			this->Controls->Add(this->tabeleStrana);
+			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
 			this->Controls->Add(this->rasporediUcenikeStrana);
 			this->Controls->Add(this->izmjeniUcenikaStrana);
 			this->Controls->Add(this->dodajUcenikaStrana);
 			this->Controls->Add(this->izmjeniRazredStrana);
 			this->Controls->Add(this->uceniciStrana);
 			this->Controls->Add(this->dodajRazredStrana);
-			this->Controls->Add(this->unesiOcjeneStrana);
-			this->Controls->Add(this->razrediStrana);
-			this->Controls->Add(this->pocetnaStrana);
-			this->Controls->Add(this->tabeleStrana);
-			this->Controls->Add(this->stranaTabelaUspjehaUcenika);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
@@ -3680,9 +3504,6 @@ private: System::Windows::Forms::Label^ label48;
 		}
 	}
 
-	
-
-		
 		   ///////////////////////////////////////////////////////////////////////////////
 		   //////////////////////		 STRANA DODAJ UCENIKA		 /////////////////////
 		   ///////////////////////////////////////////////////////////////////////////////
@@ -3887,6 +3708,7 @@ private: System::Windows::Forms::Label^ label48;
 		rasporediUcenikeStrana->Visible = true;
 		ruBtnUbaciURazred->Enabled = false;
 		ruBtnPrikaziUcenike->Enabled = false;
+		ruBtnIzbaciIZRazreda->Enabled = false;
 	}
 
 	private: System::Void rBtnDodajRazred_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4026,17 +3848,18 @@ private: System::Windows::Forms::Label^ label48;
 	}
 
 	private: System::Void ruBtnIzbaciIZRazreda_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ imeUcenikaiIDSys = ruListaUceniciURazredu->Items[listaUceniciURazredu->SelectedIndex]->ToString();
+		String^ imeUcenikaiIDSys = ruListaUceniciURazredu->Items[ruListaUceniciURazredu->SelectedIndex]->ToString();
 		string imeUcenikaStr = msclr::interop::marshal_as< std::string >(imeUcenikaiIDSys);
 		string stringUcenik = imeUcenikaStr.substr(0, imeUcenikaStr.find(" "));
-		int ucenikID = stoi(stringUcenik);
+		int ucenikID = stoi(stringUcenik)-1;
 
 		for (Ucenik& ucenik : sviUcenici) {
+			vector <int> brojevi{};
 			if (ucenikID == ucenik.getIDUcenika()) {
 				ucenik.setUcenikRazredID(100);
-				ucenik.getNizOcjena().clear();
-				ruListaUceniciBezRazreda->Items->Add(ruListaUceniciURazredu->Items[listaUceniciURazredu->SelectedIndex]->ToString());
-				ruListaUceniciURazredu->Items->Remove(ruListaUceniciURazredu->SelectedIndex);
+				ucenik.setNizOcjena(brojevi);
+				ruListaUceniciBezRazreda->Items->Add(ruListaUceniciURazredu->Items[ruListaUceniciURazredu->SelectedIndex]->ToString());
+				ruListaUceniciURazredu->Items->RemoveAt(ruListaUceniciURazredu->SelectedIndex);
 			}
 		}
 
@@ -4164,68 +3987,75 @@ private: System::Windows::Forms::Label^ label48;
 		}
 
 	private: System::Void uoBtnSacuvajOcjene_Click(System::Object^ sender, System::EventArgs^ e) {
-		int i = uoListaUceniciURazredu->SelectedIndex;
-		int index = uoUcenici[i].getIDUcenika();
-		vector <int> ocjene;
+		if (uoListaOcjene->Items->Count > 0) {
 
-		for (int i{ 0 }; i < uoListaOcjene->Items->Count; i++) {
-			String^ ocjena = uoListaOcjene->Items[i]->ToString();
-			ocjene.push_back(ocjena[0] - 48);
-		}
-		
-		for (Ucenik &ucenik : sviUcenici)
-			if (ucenik.getIDUcenika() == index) {
-				ucenik.setOcjene(ocjene);
-				break;
+
+			int i = uoListaUceniciURazredu->SelectedIndex;
+			int index = uoUcenici[i].getIDUcenika();
+			vector <int> ocjene;
+
+			for (int i{ 0 }; i < uoListaOcjene->Items->Count; i++) {
+				String^ ocjena = uoListaOcjene->Items[i]->ToString();
+				ocjene.push_back(ocjena[0] - 48);
 			}
-				
-		ocjene.clear();
-		fstream myFile;
 
-
-		myFile.open("Ucenici.txt", fstream::out | fstream::trunc);
-		if (!myFile) {
-			MessageBox::Show("nije uspjelo ucitavanje baze, promjene se nisu spremile.");
-		}
-		else {
-			for (Ucenik noviUcenik : sviUcenici) {
-
-				int vladanje{};
-
-				switch (noviUcenik.getVladanjeUcenika()) {
-				case vrloDobro: vladanje = 1;
-					break;
-				case dobro: vladanje = 2;
-					break;
-				case zadovoljavajuce: vladanje = 3;
-					break;
-				case lose: vladanje = 4;
-					break;
-				default: vladanje = 5;
+			for (Ucenik& ucenik : sviUcenici)
+				if (ucenik.getIDUcenika() == index) {
+					ucenik.setOcjene(ocjene);
 					break;
 				}
-				int noviUkor{};
 
-				switch (noviUcenik.getUkor()) {
-				case ukorOS: noviUkor = 1;
-					break;
-				case ukorOV: noviUkor = 2;
-					break;
-				case ukorDirektora: noviUkor = 3;
-					break;
-				case ukorNV: noviUkor = 4;
-					break;
-				case iskljucenje: noviUkor = 5;
-					break;
-				default: noviUkor = 0;
-					break;
-				}
-				myFile << " \n" << noviUcenik.getIDUcenika() << " " << noviUcenik.getImeUcenika() << " " << noviUcenik.getPrezimeUcenika() << " "
-					<< noviUcenik.getSpolUcenika() << " " << vladanje << " " << noviUcenik.getOpravdani() << " " << noviUcenik.getNeopravdani() << " "
-					<< noviUcenik.getPohvala() << " " << noviUkor << " " << noviUcenik.getUcenikRazredID() << " " << ispisiOcjene(noviUcenik.getNizOcjena());
+			ocjene.clear();
+			fstream myFile;
+
+
+			myFile.open("Ucenici.txt", fstream::out | fstream::trunc);
+			if (!myFile) {
+				MessageBox::Show("nije uspjelo ucitavanje baze, promjene se nisu spremile.");
 			}
-			myFile.close();
-		}		
+			else {
+				for (Ucenik noviUcenik : sviUcenici) {
+
+					int vladanje{};
+
+					switch (noviUcenik.getVladanjeUcenika()) {
+					case vrloDobro: vladanje = 1;
+						break;
+					case dobro: vladanje = 2;
+						break;
+					case zadovoljavajuce: vladanje = 3;
+						break;
+					case lose: vladanje = 4;
+						break;
+					default: vladanje = 5;
+						break;
+					}
+					int noviUkor{};
+
+					switch (noviUcenik.getUkor()) {
+					case ukorOS: noviUkor = 1;
+						break;
+					case ukorOV: noviUkor = 2;
+						break;
+					case ukorDirektora: noviUkor = 3;
+						break;
+					case ukorNV: noviUkor = 4;
+						break;
+					case iskljucenje: noviUkor = 5;
+						break;
+					default: noviUkor = 0;
+						break;
+					}
+					myFile << " \n" << noviUcenik.getIDUcenika() << " " << noviUcenik.getImeUcenika() << " " << noviUcenik.getPrezimeUcenika() << " "
+						<< noviUcenik.getSpolUcenika() << " " << vladanje << " " << noviUcenik.getOpravdani() << " " << noviUcenik.getNeopravdani() << " "
+						<< noviUcenik.getPohvala() << " " << noviUkor << " " << noviUcenik.getUcenikRazredID() << " " << ispisiOcjene(noviUcenik.getNizOcjena());
+				}
+				myFile.close();
+				MessageBox::Show("Podaci su uspjesno spremljeni.");
+			}
+		}
+		else
+			MessageBox::Show("Unesite barem jednu ocjenu.");
 	}
 
 	private: System::Void uoBtnPrikaziOcjene_Click(System::Object^ sender, System::EventArgs^ e) {

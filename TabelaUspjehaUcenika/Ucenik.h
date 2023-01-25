@@ -70,7 +70,7 @@ class Ucenik {
 	void setUcenikID(int noviID) { this->ucenikID = noviID; }
 	void setimeUcenika(string novoIme) { this->ime = novoIme; }
 	void setPrezimeUcenika(string novoPrezime) { this->prezime = novoPrezime; }
-	void setNizOcjena(vector <int> ocjene);
+	void setNizOcjena(vector <int> ocjene) { this->nizOcjena = ocjene; }
 	void setIzostanci(int opravdano, int neopravdano);
 	void setVladanje(int ocjena);
 	void toggleAktivan();
